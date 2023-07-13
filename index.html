@@ -8,7 +8,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <!-- External css -->
   <link rel="stylesheet" href="assets/css/style.css">
-
+  <!-- Excon font -->
+  <link href="https://api.fontshare.com/v2/css?f[]=excon@400,900,700,500,300&display=swap" rel="stylesheet">
   <!-- Bootstrap CSS v5.2.1 -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
@@ -17,7 +18,7 @@
 
 <body>
   <header>
-    <div class="navbar position-absolute w-100 d-flex justify-content-between align-items-center px-4 py-2">
+    <div class="navbar position-absolute w-100 d-flex justify-content-between align-items-center px-5 py-2">
       <div class="bar">
         <svg width="40" height="40" viewBox="0 0 44 44" class="pointer" xmlns="http://www.w3.org/2000/svg">
           <path d="M9.1665 31.1668H23.8332M9.1665 22.0002H34.8332M20.1665 12.8335H34.8332" stroke-width="2"
@@ -25,7 +26,7 @@
         </svg>
       </div>
       <div class="logo">
-        <img src="assets/images/logos.png" width="170">
+        <img src="assets/images/logo.png" width="170">
       </div>
       <a href="#" class="pointer ticket">
         <svg width="40" height="40" viewBox="0 0 44 44" xmlns="http://www.w3.org/2000/svg">
@@ -35,19 +36,89 @@
       </a>
     </div>
   </header>
-  <main>
+  <main class="dark">
     <!-- body section -->
-    <div class="video position-relative">
+    <div class="video position-relative d-inline-block">
       <!-- <video autoplay muted loop class="w-100">
-        <source src="assets/images/video.mp4" type="video/mp4">
-      </video> -->
+    <source src="assets/images/video.mp4" type="video/mp4">
+  </video> -->
       <img src="assets/images/bg.png" class="w-100">
+      <div class="overlay text-center">
+        <img src="assets/images/hashtag.svg">
+      </div>
     </div>
-    <!-- hastag section -->
-    <div class="hastag dark">
-      <div class="container text-white gtext-center">
-        <p>Hello</p>        
-        <p>Hello</p>        
+    <!-- Events section -->
+    <div class="events">
+      <div class="title text-uppercase text-white text-center">
+        <h5 class="yellow extra-sm-title">Our Events</h5>
+        <h2 class="main-title">Upcoming <span class="stroke">Events</span></h2>
+      </div>
+      <div class="details px-5 pb-3">
+        <!-- Gallery -->
+        <div class="row">
+          <div class="col-12 col-lg-7 col-xl-7 mb-4 mb-lg-0">
+            <div class="card rounded-0 pointer">
+              <img class="card-img-top rounded-0" src="assets/images/event.png" alt="Title">
+              <div class="card-body d-flex gap-3 pl-3 py-4">
+                <div class="box bg-yellow py-0 text-center">
+                  <p class="date medium-bold mb-0">15 <span class="d-block"></span></p>
+                  <p class="month small-bold mb-0 text-uppercase">Jul</p>
+                  <p class="time extra-sm-bold mb-0">22:00</p>
+                </div>
+                <div class="event-detail d-flex flex-column text-white">
+                  <div class="upper-row">
+                    <h5 class="extra-sm-title yellow text-uppercase">July 15, 2023</h5>
+                  </div>
+                  <div class="bottom-row">
+                    <h2 class="mid-title text-white text-uppercase">DJ Shivam Costa</h2>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-lg-5 col-xl-5 mb-4 mb-lg-0">
+            <div class="card rounded-0 pointer mb-4">
+              <img class="card-img-top rounded-0" src="assets/images/event2.jpg" alt="Title">
+              <div class="card-body d-flex gap-3 pl-3 py-4">
+                <div class="box bg-yellow px-4 py-0 text-center">
+                  <p class="date medium-bold mb-0">15 <span class="d-block"></span></p>
+                  <p class="month small-bold mb-0 text-uppercase">Jul</p>
+                  <p class="time extra-sm-bold mb-0">22:00</p>
+                </div>
+                <div class="event-detail d-flex flex-column text-white">
+                  <div class="upper-row">
+                    <h5 class="extra-sm-title yellow text-uppercase">July 15, 2023</h5>
+                  </div>
+                  <div class="bottom-row">
+                    <h2 class="mid-title text-white text-uppercase">DJ Shivam Costa</h2>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="card rounded-0 pointer">
+              <img class="card-img-top rounded-0" src="assets/images/event4.jpg" alt="Title">
+              <div class="card-body d-flex gap-3 pl-3 py-4">
+                <div class="box bg-yellow px-4 py-0 text-center">
+                  <p class="date medium-bold mb-0">15 <span class="d-block"></span></p>
+                  <p class="month small-bold mb-0 text-uppercase">Jul</p>
+                  <p class="time extra-sm-bold mb-0">22:00</p>
+                </div>
+                <div class="event-detail d-flex flex-column text-white">
+                  <div class="upper-row">
+                    <h5 class="extra-sm-title yellow text-uppercase">July 15, 2023</h5>
+                  </div>
+                  <div class="bottom-row">
+                    <h2 class="mid-title text-white text-uppercase">DJ Shivam Costa</h2>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="browse my-5 text-center">
+          <a href="#" class="yellow-border small-text text-decoration-none text-uppercase px-5 py-3">Browse All
+            Events</a>
+        </div>
       </div>
     </div>
   </main>

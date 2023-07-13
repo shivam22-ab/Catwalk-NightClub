@@ -2,6 +2,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: 'Excon', sans-serif;
 }
 html,body{
     overflow-x: hidden;
@@ -13,41 +14,76 @@ html,body{
 .dark{
     background: #070707;
 }
+.yellow{
+    color:#FCD406;
+}
+.bg-yellow{
+    background: #FCD406;
+}
 .pointer{
     cursor: pointer;
 }
+.main-title{
+    font-size: 3.5rem;
+    font-weight: 800;
+    line-height: 3rem;
+}
 .mid-title{
-    font-size: 2.5rem;
-    font-weight: 600;
+    font-size: 2.2rem;
+    font-weight: 800;
     line-height: 3rem;
 }
 .low-title{
     font-size: 2.1rem;
     font-weight: 600;
-  }
-  .small-title{
-    font-size: 1.3rem;
+}
+.small-title{
+    font-size: 1.6rem;
     font-weight: 600;
     line-height: 3rem;
-  }
-  .paragraph{
-      font-size: 1.3rem;
-      font-weight: 400;
-      line-height: 2.2rem;
-      letter-spacing: 0.07rem;
-  }
-  .mid-paragraph{
-    font-size: 1.4rem;
+}
+.extra-sm-title{
+    font-size: 1.2rem;
     font-weight: 600;
-    line-height: 2.2rem;
-    letter-spacing: 0.07rem;
-    color: #5c5c5c;
-  }
-  .small-paragraph{
-    font-size: 1rem;
+}
+.medium-text{
+    font-size: 1.4rem;
+}
+.small-text{
+    font-size: 1.2rem;
     font-weight: 400;
+}
+.extra-small{
+    font-size: 0.9rem;
+}
+.medium-bold{
+    font-size: 1.5rem;
+    font-weight: 700;
     line-height: 2rem;
-    letter-spacing: 0.07rem;
+}
+.small-bold{
+    font-size: 1.1rem;
+    font-weight: 600;
+}
+.extra-sm-bold{
+    font-size: 0.7rem;
+    font-weight: 600;
+}
+.stroke{
+    color: inherit;
+    -webkit-text-fill-color: transparent; /* Set the text color to transparent for WebKit browsers */
+    -webkit-text-stroke: 1px #fff; /* Stroke width and color for WebKit browsers */
+    text-fill-color: transparent; /* Set the text color to transparent for other browsers */
+    text-stroke: 1px #fff; /
+  }
+  .yellow-border{
+    color: #FCD406;
+    border:1px solid #FCD406;
+    transition: .3s ease-in;
+  }
+  .yellow-border:hover{
+    background: #FCD406;
+    color: #000000;
   }
 /* Custom classes */
 
@@ -59,12 +95,12 @@ header{
     width: 100%;
 }
 .navbar{
-    /* linear-gradient(to bottom, rgba(0,0,0,0.7) 20%, rgba(255, 255, 255, 0) 100%); */
     top:0;
     z-index: 1;
     background: transparent;
-    background-image: linear-gradient(to bottom, rgba(0,0,0,0.7) 20%, rgba(255, 255, 255, 0) 100%);;
+    background-image: linear-gradient(to bottom, rgba(0,0,0,0.7) 20%, rgba(255, 255, 255, 0) 100%);
 }
+  
 .bar, .ticket{
     transition: .3s ease;
     border-radius: 0.3rem;
@@ -81,5 +117,35 @@ header{
 }
 /* Navbar design */
 /* Body design */
+.overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 20%;
+    background-image: linear-gradient(to top, rgba(7,7,7,1) 30%, rgba(255, 255, 255, 0) 100%);
+  }
+  .overlay img{
+    position: absolute;
+    bottom: 30%;
+    left: 0;
+    right: 0;
+    margin: auto;
+  }
 
-/* Body design */
+  /* Body design */
+  /* Events design */
+  .events{
+    padding-top:4rem ;
+  }
+  .details{
+    margin-top: 3rem;
+  }
+  .details .row .card{
+    background: #181818;
+  }
+  .details .row .card .box{
+    width: 5rem;
+    height: 5rem;
+  }
+   /* Events design */
