@@ -196,12 +196,14 @@ header {
 .overlay img.rotate {
     width:200px;
     height:200px;
+    animation: rotate 15s linear infinite;
+}
+.overlay .center{
     position: absolute;
     bottom: 0;
     left: 0;
     right: 0;
     margin: auto;
-    animation: rotate 15s linear infinite;
 }
 @keyframes rotate {
     from {
@@ -215,10 +217,12 @@ header {
     width:80px;
     height:80px;
     position: absolute;
-    bottom: 40%;
+    top:0;
+    bottom: 0;
     left: 0;
     right: 0;
     margin: auto;
+   
 }
   
 .club-description .container{
@@ -284,7 +288,14 @@ header {
     .club-description .container{
         max-width: 90%;
     }
-    
+    .overlay img.rotate{
+        width: 150px;
+        height: 150px;
+    }
+    .overlay img.hashtext{
+        width: 60px;
+        height: 60px;
+    }
 }
 @media (max-width:767px) {
     .overlay img.rotate{
@@ -330,6 +341,14 @@ header {
         font-size: 0.8rem;
         line-height: 1.3rem;
     }
+    .overlay img.rotate{
+        width: 100px;
+        height: 100px;
+    }
+    .overlay img.hashtext{
+        width: 40px;
+        height: 40px;
+    }
     .details, .blogs-details{
         margin-top: 2rem;
     }
@@ -353,8 +372,8 @@ header {
         width: 80px;
     }
     .overlay img.hashtext{
-        height: 40px;
-        width: 40px;
+        height: 35px;
+        width: 35px;
     }
     .large-title{
         font-size: 2rem;
@@ -397,6 +416,16 @@ header {
     }
     .testimonials{
         height: 30vh;
+    }
+}
+@media (max-width:400px) {
+    .overlay img.rotate{
+        height: 60px;
+        width: 60px;
+    }
+    .overlay img.hashtext{
+        height: 30px;
+        width: 30px;
     }
 }
 
