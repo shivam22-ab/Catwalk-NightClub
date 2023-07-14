@@ -1,121 +1,177 @@
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: 'Excon', sans-serif;
 }
-html,body{
+
+html,
+body {
     overflow-x: hidden;
 }
-:root{
-    --text-color:#FCD406;
+
+:root {
+    --text-color: #FCD406;
 }
+
 /* Custom classes */
-.dark{
+.dark {
     background: #070707;
 }
-.yellow{
-    color:#FCD406;
+
+.yellow {
+    color: #FCD406;
 }
-.bg-yellow{
+
+.bg-yellow {
     background: #FCD406;
 }
-.pointer{
+
+.pointer {
     cursor: pointer;
 }
-.main-title{
+
+.main-title {
     font-size: 3.5rem;
     font-weight: 800;
     line-height: 3rem;
 }
-.mid-title{
-    font-size: 2.2rem;
+
+.mid-title {
+    font-size: 2rem;
     font-weight: 800;
-    line-height: 3rem;
+    line-height: 2.5rem;
 }
-.low-title{
+
+.low-title {
     font-size: 2.1rem;
     font-weight: 600;
 }
-.small-title{
+
+.small-title {
     font-size: 1.6rem;
     font-weight: 600;
     line-height: 3rem;
 }
-.extra-sm-title{
+
+.extra-sm-title {
     font-size: 1.2rem;
     font-weight: 600;
 }
-.medium-text{
+
+.medium-text {
     font-size: 1.4rem;
 }
-.small-text{
+
+.small-text {
     font-size: 1.2rem;
     font-weight: 400;
 }
-.extra-small{
+
+.extra-small {
     font-size: 0.9rem;
 }
-.medium-bold{
-    font-size: 1.5rem;
+
+.medium-bold {
+    font-size: 1.3rem;
     font-weight: 700;
-    line-height: 2rem;
+    line-height: 1.5rem;
 }
-.small-bold{
-    font-size: 1.1rem;
+
+.small-bold {
+    font-size: 1rem;
     font-weight: 600;
 }
-.extra-sm-bold{
+
+.extra-sm-bold {
     font-size: 0.7rem;
     font-weight: 600;
 }
-.stroke{
+
+.stroke {
     color: inherit;
-    -webkit-text-fill-color: transparent; /* Set the text color to transparent for WebKit browsers */
-    -webkit-text-stroke: 1px #fff; /* Stroke width and color for WebKit browsers */
-    text-fill-color: transparent; /* Set the text color to transparent for other browsers */
-    text-stroke: 1px #fff; /
-  }
-  .yellow-border{
+    -webkit-text-fill-color: transparent;
+    /* Set the text color to transparent for WebKit browsers */
+    -webkit-text-stroke: 1px #fff;
+    /* Stroke width and color for WebKit browsers */
+    text-fill-color: transparent;
+    /* Set the text color to transparent for other browsers */
+    text-stroke: 1px #fff;/
+}
+
+.yellow-border {
     color: #FCD406;
-    border:1px solid #FCD406;
+    border: 1px solid #FCD406;
     transition: .3s ease-in;
-  }
-  .yellow-border:hover{
+}
+
+.yellow-border:hover {
     background: #FCD406;
     color: #000000;
-  }
+}
+.card{
+    transition: .3s ease-in;
+}
+.card:hover{
+    scale:1.05;
+}
 /* Custom classes */
 
 /* Navbar design */
-header{
+header {
     position: fixed;
-    top:0;
+    top: 0;
     z-index: 3;
     width: 100%;
 }
-.navbar{
-    top:0;
+
+.navbar {
+    top: 0;
     z-index: 1;
     background: transparent;
-    background-image: linear-gradient(to bottom, rgba(0,0,0,0.7) 20%, rgba(255, 255, 255, 0) 100%);
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.7) 20%, rgba(255, 255, 255, 0) 100%);
 }
-  
-.bar, .ticket{
+
+.bar,
+.ticket {
     transition: .3s ease;
     border-radius: 0.3rem;
 }
-.bar svg path, .ticket svg path  {
+
+.bar svg path,
+.ticket svg path {
     stroke: #fff;
 }
-  
-.bar:hover svg path, .ticket:hover svg path {
+
+.bar:hover svg path,
+.ticket:hover svg path {
     stroke: #000;
 }
-.bar:hover, .ticket:hover{
-    background:var(--text-color);
+
+.bar:hover,
+.ticket:hover {
+    background: var(--text-color);
+}
+
+.logo img{
+    width: 170px;
 }
 /* Navbar design */
+/* Slide down design */
+.slide-down{
+    position: fixed !important;
+    left: 0;
+    top: -150%;
+    z-index: 4;
+    height: 100vh;
+    overflow: auto;
+    transition: 0.4s ease;
+    transition-property: top;
+}
+.active{
+    top: 0% !important;
+}
+/* Slide down design */
 /* Body design */
 .overlay {
     position: absolute;
@@ -123,29 +179,109 @@ header{
     left: 0;
     width: 100%;
     height: 20%;
-    background-image: linear-gradient(to top, rgba(7,7,7,1) 30%, rgba(255, 255, 255, 0) 100%);
-  }
-  .overlay img{
+    background-image: linear-gradient(to top, rgba(7, 7, 7, 1) 30%, rgba(255, 255, 255, 0) 100%);
+}
+
+.overlay img {
+    width:200px;
+    height:200px;
     position: absolute;
     bottom: 30%;
     left: 0;
     right: 0;
     margin: auto;
-  }
+}
 
-  /* Body design */
-  /* Events design */
-  .events{
-    padding-top:4rem ;
-  }
-  .details{
+/* Body design */
+/* Events design */
+.events {
+    padding-top: 4rem;
+}
+
+.details {
     margin-top: 3rem;
-  }
-  .details .row .card{
+}
+
+.details .row .card {
     background: #181818;
-  }
-  .details .row .card .box{
-    width: 5rem;
-    height: 5rem;
-  }
-   /* Events design */
+}
+
+.details .row .card .box {
+    width: 4.2rem;
+    height: 4.2rem;
+}
+/* Events design */
+
+@media (max-width:767px) {
+    .overlay img{
+        height: 120px;
+        width: 120px;
+    }
+    
+}
+
+@media (max-width:600px) {
+    .logo img{
+        width: 100px;
+    }
+    .extra-sm-title{
+        font-size: 1rem;
+    }
+    .main-title{
+        font-size: 2.4rem;
+    }
+    .medium-bold{
+        font-size: 1rem;
+        line-height: 1.1rem;
+    }
+    .mid-title{
+        font-size: 1.5rem;
+        line-height: 1.8rem;
+    }
+    .small-bold{
+        font-size: 0.9rem;
+        line-height: 1rem;
+    }
+    .details{
+        margin-top: 2rem;
+    }
+    .details .row .card .box {
+        width: 3.3rem;
+        height: 3.2rem;
+    }
+}
+@media (max-width:480px) {
+    .overlay img{
+        height: 70px;
+        width: 70px;
+    }
+    .extra-sm-title{
+        font-size: 0.8rem;
+    }
+
+    .extra-sm-title{
+        font-size: 1rem;
+    }
+    .main-title{
+        font-size: 2rem;
+    }
+    .medium-bold{
+        font-size: 0.8rem;
+        line-height: 0.9rem;
+    }
+    .mid-title{
+        font-size: 1.2rem;
+        line-height: 1.4rem;
+    }
+    .small-bold{
+        font-size: 0.8rem;
+        font-weight: 800;
+    }
+    .small-text{
+        font-size: 1rem;
+    }
+    .details .row .card .box {
+        width: 3rem;
+        height: 3rem;
+    }
+}
