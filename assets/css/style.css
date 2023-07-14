@@ -26,11 +26,18 @@ body {
 .bg-yellow {
     background: #FCD406;
 }
-
+.thin-grey{
+    color: #c2c2c2;
+}
 .pointer {
     cursor: pointer;
 }
-
+/* Classes for font sizes */
+.large-title{
+    font-size: 4.5rem;
+    font-weight: 800;
+    line-height: 3rem;
+}
 .main-title {
     font-size: 3.5rem;
     font-weight: 800;
@@ -44,14 +51,14 @@ body {
 }
 
 .low-title {
-    font-size: 2.1rem;
+    font-size: 1.8rem;
     font-weight: 600;
 }
 
 .small-title {
     font-size: 1.6rem;
     font-weight: 600;
-    line-height: 3rem;
+    line-height: 2rem;
 }
 
 .extra-sm-title {
@@ -65,7 +72,8 @@ body {
 
 .small-text {
     font-size: 1.2rem;
-    font-weight: 400;
+    font-weight: 600;
+    line-height: 2rem;
 }
 
 .extra-small {
@@ -87,7 +95,10 @@ body {
     font-size: 0.7rem;
     font-weight: 600;
 }
-
+.paragraph{
+    font-size: 1rem;
+    line-height: 1.5rem;
+}
 .stroke {
     color: inherit;
     -webkit-text-fill-color: transparent;
@@ -113,7 +124,7 @@ body {
     transition: .3s ease-in;
 }
 .card:hover{
-    scale:1.05;
+    scale:1.02;
 }
 /* Custom classes */
 
@@ -182,15 +193,15 @@ header {
     background-image: linear-gradient(to top, rgba(7, 7, 7, 1) 30%, rgba(255, 255, 255, 0) 100%);
 }
 
-.overlay img {
+.overlay img.rotate {
     width:200px;
     height:200px;
     position: absolute;
-    bottom: 30%;
+    bottom: 0;
     left: 0;
     right: 0;
     margin: auto;
-    animation: rotate 10s linear infinite;
+    animation: rotate 15s linear infinite;
 }
 @keyframes rotate {
     from {
@@ -200,7 +211,19 @@ header {
       transform: rotate(360deg);
     }
   }
+  .overlay img.hashtext {
+    width:80px;
+    height:80px;
+    position: absolute;
+    bottom: 40%;
+    left: 0;
+    right: 0;
+    margin: auto;
+}
   
+.club-description .container{
+    max-width: 60%;
+}
 
 /* Body design */
 /* Events design */
@@ -208,24 +231,72 @@ header {
     padding-top: 4rem;
 }
 
-.details {
+.details, .blogs-details {
     margin-top: 3rem;
 }
 
-.details .row .card {
+.details .card {
     background: #181818;
 }
-
+.details .row {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  
+  .details .col-lg-7,
+  .details .col-lg-5, .details .col-lg-6 {
+    display: flex;
+  }
+  
+  .details .col-lg-5 .card {
+    flex: 1;
+    height: 400px;
+  }
+  
+  .details .col-lg-7 .card-img-top,
+  .details .col-lg-5 .card-img-top {
+    height: 100%;
+    object-fit: cover;
+  }
+  .details .col-lg-5{
+    flex-direction: column;
+  }
 .details .row .card .box {
     width: 4.2rem;
     height: 4.2rem;
 }
 /* Events design */
+/* Testimonials design */
+.testimonials{
+    background: url(../images/rectangle.png) no-repeat;
+    background-size: cover;
+    height: 100vh;
+}
 
+/* Testimonials design */
+@media (max-width:1200px) {
+    .testimonials{
+        height: 70vh;
+    }
+    
+}
+@media (max-width:900px) {
+    .club-description .container{
+        max-width: 90%;
+    }
+    
+}
 @media (max-width:767px) {
-    .overlay img{
+    .overlay img.rotate{
         height: 120px;
         width: 120px;
+    }
+    .testimonials{
+        height: 50vh;
+    }
+    .large-title{
+        font-size: 3.5rem;
+        font-weight: 800;
     }
     
 }
@@ -236,6 +307,9 @@ header {
     }
     .extra-sm-title{
         font-size: 1rem;
+    }
+    .large-title{
+        font-size: 2.8rem;
     }
     .main-title{
         font-size: 2.4rem;
@@ -252,7 +326,11 @@ header {
         font-size: 0.9rem;
         line-height: 1rem;
     }
-    .details{
+    .paragraph{
+        font-size: 0.8rem;
+        line-height: 1.3rem;
+    }
+    .details, .blogs-details{
         margin-top: 2rem;
     }
     .details .row .card .box {
@@ -265,18 +343,27 @@ header {
     .card:hover{
         scale:1;
     }
+    .testimonials{
+        height: 40vh;
+    }
 }
 @media (max-width:480px) {
-    .overlay img{
-        height: 60px;
-        width: 60px;
+    .overlay img.rotate{
+        height: 80px;
+        width: 80px;
+    }
+    .overlay img.hashtext{
+        height: 40px;
+        width: 40px;
+    }
+    .large-title{
+        font-size: 2rem;
     }
     .extra-sm-title{
         font-size: 0.8rem;
     }
-
     .extra-sm-title{
-        font-size: 1rem;
+        font-size: 0.8rem;
     }
     .main-title{
         font-size: 2rem;
@@ -286,7 +373,7 @@ header {
         line-height: 0.9rem;
     }
     .mid-title{
-        font-size: 1.2rem;
+        font-size: 1rem;
         line-height: 1.4rem;
     }
     .small-bold{
@@ -296,11 +383,22 @@ header {
     .small-text{
         font-size: 1rem;
     }
+    .paragraph{
+        font-size: 0.7rem;
+        line-height: 1.1rem;
+    }
     .events{
         padding-top: 2rem;
     }
+
     .details .row .card .box {
         width: 3rem;
         height: 3rem;
     }
+    .testimonials{
+        height: 30vh;
+    }
 }
+
+
+  
