@@ -190,7 +190,17 @@ header {
     left: 0;
     right: 0;
     margin: auto;
+    animation: rotate 10s linear infinite;
 }
+@keyframes rotate {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
+  
 
 /* Body design */
 /* Events design */
@@ -249,11 +259,17 @@ header {
         width: 3.3rem;
         height: 3.2rem;
     }
+    .events{
+        padding-top: 3rem;
+    }
+    .card:hover{
+        scale:1;
+    }
 }
 @media (max-width:480px) {
     .overlay img{
-        height: 70px;
-        width: 70px;
+        height: 60px;
+        width: 60px;
     }
     .extra-sm-title{
         font-size: 0.8rem;
@@ -279,6 +295,9 @@ header {
     }
     .small-text{
         font-size: 1rem;
+    }
+    .events{
+        padding-top: 2rem;
     }
     .details .row .card .box {
         width: 3rem;
