@@ -235,7 +235,7 @@ header {
     padding-top: 4rem;
 }
 
-.details, .blogs-details {
+.details, .blogs-details, .gallery-details {
     margin-top: 3rem;
 }
 
@@ -296,6 +296,9 @@ header {
         width: 60px;
         height: 60px;
     }
+    .small-title{
+        font-size: 1.4rem;
+    }
 }
 @media (max-width:767px) {
     .overlay img.rotate{
@@ -349,7 +352,7 @@ header {
         width: 40px;
         height: 40px;
     }
-    .details, .blogs-details{
+    .details, .blogs-details, .gallery-details {
         margin-top: 2rem;
     }
     .details .row .card .box {
@@ -378,22 +381,24 @@ header {
     .large-title{
         font-size: 2rem;
     }
-    .extra-sm-title{
-        font-size: 0.8rem;
+    .small-title{
+        font-size: 1.3rem;
     }
     .extra-sm-title{
         font-size: 0.8rem;
+    }
+    .extra-sm-bold{
+        font-size: 0.6rem;
     }
     .main-title{
         font-size: 2rem;
     }
     .medium-bold{
-        font-size: 0.8rem;
-        line-height: 0.9rem;
+        font-size: 0.9rem;
+        line-height: 1rem;
     }
     .mid-title{
-        font-size: 1rem;
-        line-height: 1.4rem;
+        font-size: 1.3rem;
     }
     .small-bold{
         font-size: 0.8rem;
@@ -403,8 +408,8 @@ header {
         font-size: 1rem;
     }
     .paragraph{
-        font-size: 0.7rem;
-        line-height: 1.1rem;
+        font-size: 0.9rem;
+        line-height: 1.15rem;
     }
     .events{
         padding-top: 2rem;
@@ -416,6 +421,9 @@ header {
     }
     .testimonials{
         height: 30vh;
+    }
+    .card-body a{
+        font-size: 0.9rem;
     }
 }
 @media (max-width:400px) {
