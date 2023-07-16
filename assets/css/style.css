@@ -184,12 +184,21 @@ header {
 }
 /* Slide down design */
 /* Body design */
+.video {
+   width: 100vw;
+   height: 100vh;
+   overflow: hidden;
+}
+.bg-img{
+    height: 100vh;
+    object-fit: cover;
+}
 .overlay {
     position: absolute;
     bottom: 0;
     left: 0;
     width: 100%;
-    height: 20%;
+    height: 10%;
     background-image: linear-gradient(to top, rgba(7, 7, 7, 1) 30%, rgba(255, 255, 255, 0) 100%);
 }
 
@@ -302,8 +311,8 @@ header {
 }
 @media (max-width:767px) {
     .overlay img.rotate{
-        height: 120px;
-        width: 120px;
+        height: 180px;
+        width: 180px;
     }
     .testimonials{
         height: 50vh;
@@ -311,6 +320,9 @@ header {
     .large-title{
         font-size: 3.5rem;
         font-weight: 800;
+    }
+    .video, .bg-img{
+        height: 95vh;
     }
     
 }
@@ -344,13 +356,9 @@ header {
         font-size: 0.8rem;
         line-height: 1.3rem;
     }
-    .overlay img.rotate{
-        width: 100px;
-        height: 100px;
-    }
     .overlay img.hashtext{
-        width: 40px;
-        height: 40px;
+        width: 60px;
+        height: 60px;
     }
     .details, .blogs-details, .gallery-details {
         margin-top: 2rem;
@@ -370,13 +378,8 @@ header {
     }
 }
 @media (max-width:480px) {
-    .overlay img.rotate{
-        height: 80px;
-        width: 80px;
-    }
-    .overlay img.hashtext{
-        height: 35px;
-        width: 35px;
+    .video, .bg-img{
+        height: 97vh;
     }
     .large-title{
         font-size: 2rem;
@@ -426,7 +429,7 @@ header {
         font-size: 0.9rem;
     }
 }
-@media (max-width:400px) {
+/* @media (max-width:400px) {
     .overlay img.rotate{
         height: 60px;
         width: 60px;
@@ -435,7 +438,7 @@ header {
         height: 30px;
         width: 30px;
     }
-}
+} */
 
 
   
