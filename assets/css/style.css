@@ -149,14 +149,21 @@ header {
     border-radius: 0.3rem;
 }
 
+.bar svg,
+.ticket svg{
+    height: 40px;
+    width: 40px;
+}
 .bar svg path,
-.ticket svg path {
+.ticket svg {
     stroke: #fff;
+    color: #fff;
 }
 
 .bar:hover svg path,
-.ticket:hover svg path {
+.ticket:hover svg {
     stroke: #000;
+    color: #000;
 }
 
 .bar:hover,
@@ -356,6 +363,11 @@ header {
         font-size: 0.8rem;
         line-height: 1.3rem;
     }
+    .bar svg,
+    .ticket svg{
+        height: 30px;
+        width: 30px;
+    }
     .overlay img.hashtext{
         width: 60px;
         height: 60px;
@@ -429,16 +441,7 @@ header {
         font-size: 0.9rem;
     }
 }
-/* @media (max-width:400px) {
-    .overlay img.rotate{
-        height: 60px;
-        width: 60px;
-    }
-    .overlay img.hashtext{
-        height: 30px;
-        width: 30px;
-    }
-} */
+
 
 
   
