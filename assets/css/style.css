@@ -411,6 +411,9 @@ header {
         font-size: 0.9rem;
         line-height: 1.15rem;
     }
+    .overlay{
+        bottom: 3%;
+    }
     .events{
         padding-top: 2rem;
     }
