@@ -378,9 +378,6 @@ header {
     }
 }
 @media (max-width:480px) {
-    .video, .bg-img{
-        height: 97vh;
-    }
     .large-title{
         font-size: 2rem;
     }
