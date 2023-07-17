@@ -432,6 +432,9 @@ header {
     .overlay{
         height:25%;
     }
+    .overlay .center{
+        top:0;
+    }
     .events{
         padding-top: 2rem;
     }
@@ -451,3 +454,29 @@ header {
 
 
   
+
+.right-col{
+    padding: 0 1rem !important;
+    overflow-x: hidden;
+}
+
+.right-col img, .left-col img{
+  object-fit: cover;    
+}
+.show{
+    display: none;
+}
+@media (max-width:767px) {
+    .mid-col.d-flex{
+        display: block !important;
+    }
+    .right-col{
+        padding: 0 1.5rem !important;
+    }
+    .show{
+        display: block;
+    }
+    .side-img.d-flex, .end-row.d-flex{
+        display: none !important;
+    }
+}
