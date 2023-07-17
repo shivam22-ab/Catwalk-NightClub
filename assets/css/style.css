@@ -247,45 +247,61 @@ header {
 
 /* Body design */
 /* Events design */
-.events {
-    padding-top: 4rem;
+.browse{
+    margin: 5rem 0;
+}
+.browse a{
+    padding: 1.2rem 3rem;
 }
 
-.details, .blogs-details, .gallery-details {
-    margin-top: 3rem;
+.event-details, .blogs-details, .gallery-details {
+    margin-top: 4rem;
+    padding-bottom: 3rem;
 }
-
-.details .card {
+.event-details .card, .blogs-details .card {
     background: #181818;
 }
-.details .row {
+.event-details .row .card .box {
+    width: 4.2rem;
+    height: 4.2rem;
+}
+.event-details .row {
     display: flex;
     flex-wrap: wrap;
   }
-  
-  .details .col-lg-7,
-  .details .col-lg-5, .details .col-lg-6 {
+  .event-details .col-lg-7,
+  .event-details .col-lg-5, .gallery-details .col-lg-6 {
     display: flex;
   }
   
-  .details .col-lg-5 .card {
+  .event-details .col-lg-5 .card {
     flex: 1;
     height: 400px;
   }
   
-  .details .col-lg-7 .card-img-top,
-  .details .col-lg-5 .card-img-top {
+  .event-details .col-lg-7 .card-img-top,
+  .event-details .col-lg-5 .card-img-top {
     height: 100%;
     object-fit: cover;
   }
-  .details .col-lg-5{
+  .event-details .col-lg-5{
     flex-direction: column;
   }
-.details .row .card .box {
-    width: 4.2rem;
-    height: 4.2rem;
-}
+
 /* Events design */
+/* Gallery design */
+.show{
+    display: none !important;
+}
+.gallery .right-col{
+    padding: 0 1rem !important;
+    overflow-x: hidden;
+}
+
+.gallery .right-col img, .gallery .left-col img{
+  object-fit: cover;    
+}
+/* Gallery design */
 /* Testimonials design */
 .testimonials{
     background: url(../images/rectangle.png) no-repeat;
@@ -315,6 +331,9 @@ header {
     .small-title{
         font-size: 1.4rem;
     }
+    .browse{
+        margin: 3rem 0 5rem 0;
+    }
 }
 @media (max-width:767px) {
     .overlay img.rotate{
@@ -330,6 +349,28 @@ header {
     }
     .video, .bg-img{
         height: 95vh;
+    }
+    .mid-col.d-flex{
+        display: block !important;
+    }
+    .right-col{
+        padding: 0 1.5rem !important;
+    }
+    .show{
+        display: flex !important;
+    }
+    .browse{
+        margin: 5rem 0 3rem 0;
+    }
+   
+    .gallery .left-col{
+        padding: 0 1rem !important;
+    }
+    .gallery .show{
+        padding: 0 0.8rem !important;
+    }
+    .side-img.d-flex, .end-row.d-flex{
+        display: none !important;
     }
     
 }
@@ -378,12 +419,12 @@ header {
         width: 60px;
         height: 60px;
     }
-    .details, .blogs-details, .gallery-details {
+    .event-details, .blogs-details, .gallery-details {
         margin-top: 2rem;
     }
-    .details .row .card .box {
+    .event-details .row .card .box {
         width: 3.3rem;
-        height: 3.2rem;
+        height: 3.3rem;
     }
     .events{
         padding-top: 3rem;
@@ -413,7 +454,7 @@ header {
     }
     .medium-bold{
         font-size: 0.9rem;
-        line-height: 1rem;
+        line-height: 1.1rem;
     }
     .mid-title{
         font-size: 1.3rem;
@@ -435,13 +476,19 @@ header {
     .overlay .center{
         top:0;
     }
+    .browse{
+        margin-top: 4rem;
+    }
+    .browse a{
+        padding: 1rem 2rem;
+    }
     .events{
         padding-top: 2rem;
     }
 
-    .details .row .card .box {
+    .event-details .row .card .box {
         width: 3rem;
-        height: 3rem;
+        height: 3.1rem;
     }
     .testimonials{
         height: 30vh;
@@ -455,28 +502,6 @@ header {
 
   
 
-.right-col{
-    padding: 0 1rem !important;
-    overflow-x: hidden;
-}
 
-.right-col img, .left-col img{
-  object-fit: cover;    
-}
-.show{
-    display: none;
-}
-@media (max-width:767px) {
-    .mid-col.d-flex{
-        display: block !important;
-    }
-    .right-col{
-        padding: 0 1.5rem !important;
-    }
-    .show{
-        display: block;
-    }
-    .side-img.d-flex, .end-row.d-flex{
-        display: none !important;
-    }
-}
+
+
