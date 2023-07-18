@@ -320,14 +320,6 @@ header {
     .club-description .container{
         max-width: 90%;
     }
-    .overlay img.rotate{
-        width: 150px;
-        height: 150px;
-    }
-    .overlay img.hashtext{
-        width: 60px;
-        height: 60px;
-    }
     .small-title{
         font-size: 1.4rem;
     }
@@ -475,6 +467,9 @@ header {
     }
     .overlay .center{
         top:0;
+    }
+    .overlay img.hashtext{
+        bottom:15%
     }
     .browse{
         margin-top: 4rem;
