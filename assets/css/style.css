@@ -10,9 +10,6 @@ body {
     overflow-x: hidden;
 }
 
-:root {
-    --text-color: #FCD406;
-}
 
 /* Custom classes */
 .dark {
@@ -67,7 +64,7 @@ body {
 }
 
 .medium-text {
-    font-size: 1.4rem;
+    font-size: 1.2rem;
 }
 
 .small-text {
@@ -97,8 +94,9 @@ body {
 }
 .paragraph{
     font-size: 1rem;
-    line-height: 1.5rem;
+    line-height: 1.6rem;
 }
+
 .stroke {
     color: inherit;
     -webkit-text-fill-color: transparent;
@@ -145,15 +143,14 @@ header {
 
 .bar,
 .ticket {
-    transition: .3s ease;
-    border-radius: 0.3rem;
+    transition: .3s ease-in;
 }
 
-.bar svg,
-.ticket svg{
-    height: 40px;
-    width: 40px;
+.bar svg,.ticket svg{
+    height: 35px;
+    width: 35px;
 }
+
 .bar svg path,
 .ticket svg {
     stroke: #fff;
@@ -168,7 +165,7 @@ header {
 
 .bar:hover,
 .ticket:hover {
-    background: var(--text-color);
+    background: #FCD406;
 }
 
 .logo img{
@@ -238,23 +235,23 @@ header {
     left: 0;
     right: 0;
     margin: auto;
-   
+
 }
-  
+
 .club-description .container{
     max-width: 60%;
 }
 
 /* Body design */
 /* Events design */
-.browse{
-    margin: 5rem 0;
+.browse, .testimonial-details{
+    margin: 5rem 0 8rem 0;
 }
 .browse a{
     padding: 1.2rem 3rem;
 }
 
-.event-details, .blogs-details, .gallery-details {
+.event-details, .blogs-details, .gallery-details, .service-details{
     margin-top: 4rem;
     padding-bottom: 3rem;
 }
@@ -273,12 +270,11 @@ header {
   .event-details .col-lg-5, .gallery-details .col-lg-6 {
     display: flex;
   }
-  
+
   .event-details .col-lg-5 .card {
     flex: 1;
-    height: 400px;
   }
-  
+
   .event-details .col-lg-7 .card-img-top,
   .event-details .col-lg-5 .card-img-top {
     height: 100%;
@@ -299,23 +295,76 @@ header {
 }
 
 .gallery .right-col img, .gallery .left-col img{
-  object-fit: cover;    
+  object-fit: cover;
 }
 /* Gallery design */
 /* Testimonials design */
-.testimonials{
-    background: url(../images/rectangle.png) no-repeat;
-    background-size: cover;
-    height: 100vh;
+.testimonial-details{
+    padding-bottom: 3rem;
+}
+.testimonial-left .card, .service-details .card{
+    background: #0F0F0F;
+    scale: 1;
+    padding: 3rem;
+}
+.testimonial-left .card .card-header svg{
+    width: 60px;
+    height: 80px;
+}
+.testimonial-details .paragraph{
+    line-height: 1.7rem;
+}
+.next svg{
+    width: 50px;
+    height: 50px;
+    color: #FCD406;
+}
+.next button{
+    background: inherit;
+    border: 2px solid #FCD406;
+    outline: none;
+    transition: .3s ease-in;
+}
+.next button:hover{
+    background: #FCD406;
+}
+.next button:hover svg{
+    color: #000;
+}
+.testimonial-img{
+    height: 750px;
+    object-fit: cover;
+}
+.gradient-wrapper {
+    position: relative;
+    overflow: hidden;
+}
+
+.gradient-wrapper::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 70%;
+    height: 100%;
+    background: linear-gradient(to left, rgba(255, 255, 255, 0) 20%, rgba(0,0,0,1));
 }
 
 /* Testimonials design */
-@media (max-width:1200px) {
-    .testimonials{
-        height: 70vh;
-    }
-    
+/* service design */
+.service-details .card-header svg{
+    width: 70px;
+    height: 70px;
 }
+
+.service-details .paragraph{
+    padding-right: 2rem;
+}
+.service-details .card:hover{
+    scale:1.02;
+}
+/* service design */
+
 @media (max-width:900px) {
     .club-description .container{
         max-width: 90%;
@@ -326,18 +375,21 @@ header {
     .browse{
         margin: 3rem 0 5rem 0;
     }
+    .testimonial-img{
+        height: 600px;
+    }
 }
 @media (max-width:767px) {
     .overlay img.rotate{
         height: 180px;
         width: 180px;
     }
-    .testimonials{
-        height: 50vh;
-    }
     .large-title{
         font-size: 3.5rem;
         font-weight: 800;
+    }
+    .main-title{
+        line-height: 4rem;
     }
     .video, .bg-img{
         height: 95vh;
@@ -352,9 +404,9 @@ header {
         display: flex !important;
     }
     .browse{
-        margin: 5rem 0 3rem 0;
+        margin: 5rem 0;
     }
-   
+
     .gallery .left-col{
         padding: 0 1rem !important;
     }
@@ -364,7 +416,10 @@ header {
     .side-img.d-flex, .end-row.d-flex{
         display: none !important;
     }
-    
+    .testimonial-details{
+        padding-bottom: 0;
+    }
+
 }
 
 @media (max-width:600px) {
@@ -379,6 +434,14 @@ header {
     }
     .main-title{
         font-size: 2.4rem;
+        line-height: 3rem;
+    }
+    .low-title {
+        font-size: 1.3rem;
+        line-height: 1.7rem;
+    }
+    .medium-text{
+        font-size: 1.1rem;
     }
     .medium-bold{
         font-size: 1rem;
@@ -391,10 +454,6 @@ header {
     .small-bold{
         font-size: 0.9rem;
         line-height: 1rem;
-    }
-    .paragraph{
-        font-size: 0.8rem;
-        line-height: 1.3rem;
     }
     .bar svg,
     .ticket svg{
@@ -411,7 +470,7 @@ header {
         width: 60px;
         height: 60px;
     }
-    .event-details, .blogs-details, .gallery-details {
+    .event-details, .blogs-details, .gallery-details,.testimonial-details, .service-details {
         margin-top: 2rem;
     }
     .event-details .row .card .box {
@@ -424,8 +483,26 @@ header {
     .card:hover{
         scale:1;
     }
-    .testimonials{
-        height: 40vh;
+    .service-details .card-header svg{
+        width: 50px;
+        height: 50px;
+    }
+    .testimonial-left .card, .service-details .card{
+        padding: 2rem;
+    }
+    .testimonial-img{
+        height: 400px;
+    }
+    .testimonial-left .card .card-header svg{
+        width: 40px;
+        height: 60px;
+    }
+    .testimonial-details .low-title{
+        padding-right: 1rem;
+    }
+    .next svg{
+        width: 40px;
+        height: 40px;
     }
 }
 @media (max-width:480px) {
@@ -436,7 +513,7 @@ header {
         font-size: 1.3rem;
     }
     .extra-sm-title{
-        font-size: 0.8rem;
+        font-size: 1rem;
     }
     .extra-sm-bold{
         font-size: 0.6rem;
@@ -460,7 +537,7 @@ header {
     }
     .paragraph{
         font-size: 0.9rem;
-        line-height: 1.15rem;
+        line-height: 1.35rem;
     }
     .overlay{
         height:25%;
@@ -485,17 +562,32 @@ header {
         width: 3rem;
         height: 3.1rem;
     }
-    .testimonials{
-        height: 30vh;
-    }
     .card-body a{
         font-size: 0.9rem;
+    }
+    .service-details .paragraph, .testimonial-details .paragraph{
+        padding-right: 0;
+        line-height: 1.45rem;
+    }
+    .testimonial-left .card, .service-details .card{
+        padding: 1.5rem;
+    }
+    .testimonial-left .card .card-header svg{
+        width: 30px;
+        height: 50px;
+    }
+    .testimonial-details{
+        margin-bottom: 7rem;
+    }
+    .next svg{
+        width: 30px;
+        height: 30px;
     }
 }
 
 
 
-  
+
 
 
 

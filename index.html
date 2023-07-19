@@ -2,290 +2,656 @@
 <html lang="en">
 
 <head>
-  <title>Catwalk-NightClub</title>
-  <!-- Required meta tags -->
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-  <!-- External css -->
-  <link rel="stylesheet" href="assets/css/style.css" />
-  <!-- Excon font -->
-  <link href="https://api.fontshare.com/v2/css?f[]=excon@400,900,700,500,300&display=swap" rel="stylesheet" />
-  <!-- Bootstrap CSS v5.2.1 -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
-    integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous" />
+    <title>Catwalk-NightClub</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <!-- External css -->
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <!-- Excon font -->
+    <link href="https://api.fontshare.com/v2/css?f[]=excon@400,900,700,500,300&display=swap" rel="stylesheet" />
+    <!-- Bootstrap CSS v5.2.1 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous" />
 
 </head>
 
 <body>
-  <header>
-    <div
-      class="navbar position-absolute w-100 d-flex justify-content-between align-items-center px-4 px-lg-5 px-xl-5 py-2">
-      <div class=" pointer bar">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-          <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-            d="M5 17h8m-8-5h14m-8-5h8" />
-        </svg>
-      </div>
-      <div class="logo">
-        <img src="assets/images/logo.png" />
-      </div>
-      <a href="#" class="pointer ticket">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256">
-          <path fill="currentColor"
-            d="M226.79 102.52A14 14 0 0 0 238 88.81V64a14 14 0 0 0-14-14H32a14 14 0 0 0-14 14v24.81a14 14 0 0 0 11.21 13.71a26 26 0 0 1 0 51A14 14 0 0 0 18 167.19V192a14 14 0 0 0 14 14h192a14 14 0 0 0 14-14v-24.81a14 14 0 0 0-11.21-13.71a26 26 0 0 1 0-51ZM30 192v-24.81a2 2 0 0 1 1.59-1.95a38 38 0 0 0 0-74.48a2 2 0 0 1-1.59-2V64a2 2 0 0 1 2-2h58v132H32a2 2 0 0 1-2-2Zm194.41-26.76a2 2 0 0 1 1.59 1.95V192a2 2 0 0 1-2 2H102V62h122a2 2 0 0 1 2 2v24.81a2 2 0 0 1-1.59 2a38 38 0 0 0 0 74.48Z" />
-        </svg>
-      </a>
-    </div>
-    <div class="slide-down w-100 dark"></div>
-  </header>
-  <main class="dark">
-    <!-- body section -->
-    <div class="video position-relative d-inline-block">
-      <!-- <video autoplay muted loop class="w-100 bg-img">
+    <header>
+        <div
+            class="navbar position-absolute w-100 d-flex justify-content-between align-items-center px-4 px-lg-5 px-xl-5 py-2">
+            <div class="pointer bar">
+                <svg viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                        d="M28.8333 32.6667V36.3333H8.66667V32.6667H28.8333ZM38 19.8333V23.5H5V19.8333H38ZM34.3333 7V10.6667H14.1667V7H34.3333Z"
+                        fill="currentColor" stroke="currentColor" stroke-width="0.5" />
+                </svg>
+            </div>
+            <div class="logo">
+                <img src="assets/images/logo.png" />
+            </div>
+            <a href="#" class="pointer ticket">
+                <svg viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                        d="M37.4 8.66653L37.3999 8.26667H37H7.66667H7.26667V8.66667V14.108V14.351L7.48234 14.463L7.7646 14.6096C8.94623 15.2554 9.94188 16.1944 10.6558 17.3362C11.3697 18.4779 11.7778 19.7841 11.8411 21.1291L11.85 21.5065C11.8494 22.9148 11.4698 24.2971 10.7511 25.5083C10.0323 26.7196 9.0007 27.7151 7.76463 28.3904L7.48234 28.537L7.26667 28.649V28.892V34.3333V34.7333H7.66667H37H37.4V34.3333V28.8902V28.6458L37.1825 28.5342L36.9011 28.3899C35.7198 27.7445 34.7242 26.8061 34.0102 25.6648C33.2964 24.5239 32.8879 23.2187 32.8239 21.8745L32.8185 21.4972C32.8195 18.5274 34.4693 15.9424 36.9048 14.6109C36.9057 14.6104 36.9067 14.6099 36.9076 14.6094L37.1879 14.4621L37.4019 14.3496L37.4018 14.1079L37.4 8.66653ZM38.8333 5.4C39.2135 5.4 39.5781 5.55101 39.8469 5.81981C40.1157 6.08861 40.2667 6.45319 40.2667 6.83333V16.5327C39.0914 16.6273 37.9827 17.1364 37.1429 17.9763C36.2084 18.9108 35.6833 20.1783 35.6833 21.5C35.6833 22.8217 36.2084 24.0892 37.1429 25.0237C37.9827 25.8636 39.0914 26.3727 40.2667 26.4673V36.1667C40.2667 36.5468 40.1157 36.9114 39.8469 37.1802C39.5781 37.449 39.2135 37.6 38.8333 37.6H5.83333C5.45319 37.6 5.08861 37.449 4.81981 37.1802C4.55101 36.9114 4.4 36.5468 4.4 36.1667V26.4673C5.57524 26.3727 6.68394 25.8636 7.52375 25.0237C8.45831 24.0892 8.98333 22.8217 8.98333 21.5C8.98333 20.1783 8.45831 18.9108 7.52375 17.9763C6.68394 17.1364 5.57524 16.6273 4.4 16.5327V6.83333C4.4 6.45319 4.55101 6.08862 4.81981 5.81981C5.08862 5.55101 5.45319 5.4 5.83333 5.4H38.8333Z"
+                        fill="currentColor" stroke="currentColor" stroke-width="0.5" />
+                </svg>
+            </a>
+        </div>
+        <div class="slide-down w-100 dark"></div>
+    </header>
+    <main class="dark">
+        <!-- body section -->
+        <div class="video position-relative d-inline-block">
+            <!-- <video autoplay muted loop class="w-100 bg-img">
         <source src="assets/images/video.mp4" type="video/mp4">
       </video> -->
-      <img src="assets/images/bg.png" class="w-100 bg-img" />
-      <div class="overlay text-center">
-        <div class="center">
-          <img src="assets/images/hashtag.svg" class="rotate" />
-          <img src="assets/images/tagtext.svg" class="hashtext" />
+            <img src="assets/images/bg.png" class="w-100 bg-img" />
+            <div class="overlay text-center">
+                <div class="center">
+                    <img src="assets/images/hashtag.svg" class="rotate" />
+                    <img src="assets/images/tagtext.svg" class="hashtext" />
+                </div>
+            </div>
         </div>
-      </div>
-    </div>
-    <div class="club-description py-3 py-lg-5 py-xl-5">
-      <div class="container text-center my-4 my-lg-5 my-xl-5">
-        <p class="paragraph thin-grey">
-          The perfect place for a fantastic nightlife experience at Lakeside,
-          Pokhara! We take great satisfaction in planning an outstanding event
-          to satisfy all of your entertainment needs. Enter a world of
-          excitement filled with fantastic cocktails and exciting social
-          events.
-        </p>
-      </div>
-    </div>
-    <!-- Events section -->
-    <div class="events">
-      <div class="title text-uppercase text-white text-center">
-        <h5 class="yellow extra-sm-title">Our Events</h5>
-        <h2 class="main-title">
-          Upcoming <span class="stroke">Events</span>
-        </h2>
-      </div>
-      <div class="event-details px-4 px-lg-5 px-xl-5">
-        <div class="row px-0 px-lg-2 px-xl-2">
-          <div class="col-12 col-lg-7 col-xl-7 mb-5 mb-lg-0">
-            <div class="card rounded-0 pointer">
-              <img class="card-img-top rounded-0" src="assets/images/event1.jpg" alt="Title" />
-              <div class="card-body d-flex gap-3 pl-3 py-3 py-lg-4 py-xl-4">
-                <div class="box bg-yellow py-0 text-center">
-                  <p class="date medium-bold mb-0">
-                    15 <span class="d-block"></span>
-                  </p>
-                  <p class="month small-bold mb-0 text-uppercase">Jul</p>
-                  <p class="time extra-sm-bold mb-0">22:00</p>
-                </div>
-                <div class="event-detail d-flex flex-column text-white">
-                  <div class="upper-row">
-                    <h5 class="extra-sm-title yellow text-uppercase">
-                      July 15, 2023
-                    </h5>
-                  </div>
-                  <div class="bottom-row">
-                    <h2 class="mid-title text-white text-uppercase">
-                      DJ Shivam Costa
-                    </h2>
-                  </div>
-                </div>
-              </div>
+        <div class="club-description py-3 py-lg-5 py-xl-5">
+            <div class="container text-center my-4 my-lg-5 my-xl-5">
+                <p class="paragraph thin-grey">
+                    The perfect place for a fantastic nightlife experience at Lakeside,
+                    Pokhara! We take great satisfaction in planning an outstanding event
+                    to satisfy all of your entertainment needs. Enter a world of
+                    excitement filled with fantastic cocktails and exciting social
+                    events.
+                </p>
             </div>
-          </div>
-          <div class="col-12 col-lg-5 col-xl-5">
-            <div class="card rounded-0 pointer mb-5">
-              <img class="card-img-top rounded-0" src="assets/images/event2.jpg" alt="Title" />
-              <div class="card-body d-flex gap-3 pl-3 py-3 py-lg-4 py-xl-4">
-                <div class="box bg-yellow py-0 text-center">
-                  <p class="date medium-bold mb-0">
-                    15 <span class="d-block"></span>
-                  </p>
-                  <p class="month small-bold mb-0 text-uppercase">Jul</p>
-                  <p class="time extra-sm-bold mb-0">22:00</p>
-                </div>
-                <div class="event-detail d-flex flex-column text-white">
-                  <div class="upper-row">
-                    <h5 class="extra-sm-title yellow text-uppercase">
-                      July 15, 2023
-                    </h5>
-                  </div>
-                  <div class="bottom-row">
-                    <h2 class="mid-title text-white text-uppercase">
-                      DJ Shivam Costa
-                    </h2>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="card rounded-0 pointer">
-              <img class="card-img-top rounded-0" src="assets/images/event4.jpg" alt="Title" />
-              <div class="card-body d-flex gap-3 pl-3 py-3 py-lg-4 py-xl-4">
-                <div class="box bg-yellow py-0 text-center">
-                  <p class="date medium-bold mb-0">
-                    15 <span class="d-block"></span>
-                  </p>
-                  <p class="month small-bold mb-0 text-uppercase">Jul</p>
-                  <p class="time extra-sm-bold mb-0">22:00</p>
-                </div>
-                <div class="event-detail d-flex flex-column text-white">
-                  <div class="upper-row">
-                    <h5 class="extra-sm-title yellow text-uppercase">
-                      July 15, 2023
-                    </h5>
-                  </div>
-                  <div class="bottom-row">
-                    <h2 class="mid-title text-white text-uppercase">
-                      DJ Shivam Costa
-                    </h2>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
         </div>
-        <div class="browse text-center">
-          <a href="#" class="yellow-border small-text text-decoration-none text-uppercase">Browse
-            All Events</a>
-        </div>
-      </div>
-    </div>
-    <!-- Events section -->
-    <!-- Blogs section -->
-    <div class="blogs">
-      <div class="title text-uppercase text-white text-center">
-        <h5 class="yellow extra-sm-title">Blogs & News</h5>
-        <h2 class="main-title">Discover <span class="stroke">News</span></h2>
-      </div>
-      <div class="blogs-details px-4 px-lg-5 px-xl-5">
-        <div class="d-flex flex-column flex-md-row flex-lg-row flex-xl-row gap-4 px-0 px-lg-2 px-xl-2">
-          <div class="card rounded-0 pointer mb-4 mb-md-0 mb-lg-0 mb-xl-0">
-            <img class="card-img-top rounded-0" src="assets/images/news1.png" alt="Title" />
-            <div class="card-body d-flex flex-column px-3 py-3 px-lg-4 px-xl-4 py-lg-4 py-xl-4">
-              <h5 class="card-title text-uppercase text-white small-title">
-                Explore CATWALK FESTIVE SEASON
-              </h5>
-              <p class="card-text thin-grey paragraph mt-2 mt-md-3 mt-lg-3 mt-xl-3 mb-3 mb-md-4 mb-lg-4 mb-xl-4">
-                Lorem ipsum dolor sit amet consectetur. Id elementum ac ac in
-                ultrices dictumst a. Urna vel tristique diam sapien eu ...
-              </p>
-              <a href="#" class="yellow text-uppercase">Read More</a>
+        <!-- Events section -->
+        <div class="events">
+            <div class="title text-uppercase text-white text-center">
+                <h5 class="yellow extra-sm-title">Our Events</h5>
+                <h2 class="main-title">
+                    Upcoming <span class="stroke">Events</span>
+                </h2>
             </div>
-          </div>
-          <div class="card rounded-0 pointer mb-4 mb-md-0 mb-lg-0 mb-xl-0">
-            <img class="card-img-top rounded-0" src="assets/images/news2.png" alt="Title" />
-            <div class="card-body d-flex flex-column px-3 py-3 px-lg-4 px-xl-4 py-lg-4 py-xl-4">
-              <h5 class="card-title text-uppercase text-white small-title">
-                Explore CATWALK FESTIVE SEASON
-              </h5>
-              <p class="card-text thin-grey paragraph mt-2 mt-md-3 mt-lg-3 mt-xl-3 mb-3 mb-md-4 mb-lg-4 mb-xl-4">
-                Lorem ipsum dolor sit amet consectetur. Id elementum ac ac in
-                ultrices dictumst a. Urna vel tristique diam sapien eu ...
-              </p>
-              <a href="#" class="yellow text-uppercase">Read More</a>
-            </div>
-          </div>
-          <div class="card rounded-0 pointer">
-            <img class="card-img-top rounded-0" src="assets/images/news3.png" alt="Title" />
-            <div class="card-body d-flex flex-column px-3 py-3 px-lg-4 px-xl-4 py-lg-4 py-xl-4">
-              <h5 class="card-title text-uppercase text-white small-title">
-                Explore CATWALK FESTIVE SEASON
-              </h5>
-              <p class="card-text thin-grey paragraph mt-2 mt-md-3 mt-lg-3 mt-xl-3 mb-3 mb-md-4 mb-lg-4 mb-xl-4">
-                Lorem ipsum dolor sit amet consectetur. Id elementum ac ac in
-                ultrices dictumst a. Urna vel tristique diam sapien eu ...
-              </p>
-              <a href="#" class="yellow text-uppercase">Read More</a>
-            </div>
-          </div>
-        </div>
-        <div class="browse text-center">
-          <a href="#" class="yellow-border small-text text-decoration-none text-uppercase">
-            All News & Blogs</a>
-        </div>
-      </div>
-    </div>
-    <!-- Blogs section -->
-    <!-- Gallery Section -->
-    <div class="gallery">
-      <div class="title text-uppercase text-white text-center">
-        <h5 class="yellow extra-sm-title">Images</h5>
-        <h2 class="main-title">
-          Explore <span class="stroke">Gallery</span>
-        </h2>
-      </div>
-      <div class="gallery-details px-4 px-lg-5 px-xl-5 pb-3">
-        <!-- Gallery -->
-        <div class="row">
-          <div class="col-12 col-lg-6 col-xl-6 px-4 px-md-3 mb-3 mb-lg-0 mb-xl-0 p-xl-0 px-xl-0 left-col">
-            <img src="assets/images/gallery1.png" class="w-100 pointer">
-          </div>
-          <div class="col-12 col-lg-6 col-xl-6 right-col d-flex flex-column gap-3">
-            <div class="mid-col d-flex gap-3">
-              <div class="mid-large mb-3 mb-lg-0 mb-xl-0">
-                <img src="assets/images/gallery2.png" class="w-100 pointer">
-              </div>
-              <div class="side-img d-flex flex-column gap-3 p-0">
-                <img src="assets/images/gallery3.png" class="w-100 pointer">
-                <img src="assets/images/gallery4.png" class="w-100 pointer">
-              </div>
-              <div class="show row gap-3 mb-1 mb-lg-0 mb-xl-0">
-                <div class="col p-0">
-                  <img src="assets/images/gallery3.png" class="w-100 pointer">
+            <div class="event-details px-4 px-lg-5 px-xl-5">
+                <div class="row px-0 px-lg-2 px-xl-2">
+                    <div class="col-12 col-lg-7 col-xl-7 mb-5 mb-lg-0">
+                        <div class="card rounded-0 pointer">
+                            <img class="card-img-top rounded-0" src="assets/images/event1.jpg" alt="Title" />
+                            <div class="card-body d-flex gap-3 pl-3 py-3 py-lg-4 py-xl-4">
+                                <div class="box bg-yellow py-0 text-center">
+                                    <p class="date medium-bold mb-0">
+                                        15 <span class="d-block"></span>
+                                    </p>
+                                    <p class="month small-bold mb-0 text-uppercase">Jul</p>
+                                    <p class="time extra-sm-bold mb-0">22:00</p>
+                                </div>
+                                <div class="event-detail d-flex flex-column text-white">
+                                    <div class="upper-row">
+                                        <h5 class="extra-sm-title yellow text-uppercase">
+                                            July 15, 2023
+                                        </h5>
+                                    </div>
+                                    <div class="bottom-row">
+                                        <h2 class="mid-title text-white text-uppercase">
+                                            DJ Shivam Costa
+                                        </h2>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-lg-5 col-xl-5">
+                        <div class="card rounded-0 pointer mb-5">
+                            <img class="card-img-top rounded-0" src="assets/images/event2.jpg" alt="Title" />
+                            <div class="card-body d-flex gap-3 pl-3 py-3 py-lg-4 py-xl-4">
+                                <div class="box bg-yellow py-0 text-center">
+                                    <p class="date medium-bold mb-0">
+                                        15 <span class="d-block"></span>
+                                    </p>
+                                    <p class="month small-bold mb-0 text-uppercase">Jul</p>
+                                    <p class="time extra-sm-bold mb-0">22:00</p>
+                                </div>
+                                <div class="event-detail d-flex flex-column text-white">
+                                    <div class="upper-row">
+                                        <h5 class="extra-sm-title yellow text-uppercase">
+                                            July 15, 2023
+                                        </h5>
+                                    </div>
+                                    <div class="bottom-row">
+                                        <h2 class="mid-title text-white text-uppercase">
+                                            DJ Shivam Costa
+                                        </h2>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card rounded-0 pointer">
+                            <img class="card-img-top rounded-0" src="assets/images/event4.jpg" alt="Title" />
+                            <div class="card-body d-flex gap-3 pl-3 py-3 py-lg-4 py-xl-4">
+                                <div class="box bg-yellow py-0 text-center">
+                                    <p class="date medium-bold mb-0">
+                                        15 <span class="d-block"></span>
+                                    </p>
+                                    <p class="month small-bold mb-0 text-uppercase">Jul</p>
+                                    <p class="time extra-sm-bold mb-0">22:00</p>
+                                </div>
+                                <div class="event-detail d-flex flex-column text-white">
+                                    <div class="upper-row">
+                                        <h5 class="extra-sm-title yellow text-uppercase">
+                                            July 15, 2023
+                                        </h5>
+                                    </div>
+                                    <div class="bottom-row">
+                                        <h2 class="mid-title text-white text-uppercase">
+                                            DJ Shivam Costa
+                                        </h2>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <div class="col p-0">
-                  <img src="assets/images/gallery4.png" class="w-100 pointer">
+                <div class="browse text-center">
+                    <a href="#" class="yellow-border small-text text-decoration-none text-uppercase">Browse
+                        All Events</a>
                 </div>
-              </div>
             </div>
-            <div class="end-row d-flex flex-row gap-3 p-0 mb-5 mb-lg-0 mb-xl-0">
-              <img src="assets/images/gallery6.png" class="w-100 pointer">
-              <img src="assets/images/gallery7.png" class="w-100 pointer">
-            </div>
-            <div class="show row gap-3">
-              <div class="col p-0">
-                <img src="assets/images/gallery6.png" class="w-100 pointer">
-              </div>
-              <div class="col p-0">
-                <img src="assets/images/gallery7.png" class="w-100 pointer">
-              </div>
-            </div>
-          </div>
         </div>
-        <!-- Gallery -->
-        <div class="browse text-center">
-          <a href="#" class="yellow-border small-text text-decoration-none text-uppercase">
-            Browse All</a>
+        <!-- Events section -->
+        <!-- Blogs section -->
+        <div class="blogs">
+            <div class="title text-uppercase text-white text-center">
+                <h5 class="yellow extra-sm-title">Blogs & News</h5>
+                <h2 class="main-title">Discover <span class="stroke">News</span></h2>
+            </div>
+            <div class="blogs-details px-4 px-lg-5 px-xl-5">
+                <div class="d-flex flex-column flex-lg-row flex-xl-row gap-4 px-0 px-lg-2 px-xl-2">
+                    <div class="card rounded-0 pointer mb-4 mb-md-0 mb-lg-0 mb-xl-0">
+                        <img class="card-img-top rounded-0" src="assets/images/news1.png" alt="Title" />
+                        <div class="card-body d-flex flex-column px-3 py-3 px-lg-4 px-xl-4 py-lg-4 py-xl-4">
+                            <h5 class="card-title text-uppercase text-white small-title">
+                                Explore CATWALK FESTIVE SEASON
+                            </h5>
+                            <p
+                                class="card-text thin-grey paragraph mt-2 mt-md-3 mt-lg-3 mt-xl-3 mb-3 mb-md-4 mb-lg-4 mb-xl-4">
+                                Lorem ipsum dolor sit amet consectetur. Id elementum ac ac in
+                                ultrices dictumst a. Urna vel tristique diam sapien eu ...
+                            </p>
+                            <a href="#" class="yellow text-uppercase">Read More</a>
+                        </div>
+                    </div>
+                    <div class="card rounded-0 pointer mb-4 mb-md-0 mb-lg-0 mb-xl-0">
+                        <img class="card-img-top rounded-0" src="assets/images/news2.png" alt="Title" />
+                        <div class="card-body d-flex flex-column px-3 py-3 px-lg-4 px-xl-4 py-lg-4 py-xl-4">
+                            <h5 class="card-title text-uppercase text-white small-title">
+                                Explore CATWALK FESTIVE SEASON
+                            </h5>
+                            <p
+                                class="card-text thin-grey paragraph mt-2 mt-md-3 mt-lg-3 mt-xl-3 mb-3 mb-md-4 mb-lg-4 mb-xl-4">
+                                Lorem ipsum dolor sit amet consectetur. Id elementum ac ac in
+                                ultrices dictumst a. Urna vel tristique diam sapien eu ...
+                            </p>
+                            <a href="#" class="yellow text-uppercase">Read More</a>
+                        </div>
+                    </div>
+                    <div class="card rounded-0 pointer">
+                        <img class="card-img-top rounded-0" src="assets/images/news3.png" alt="Title" />
+                        <div class="card-body d-flex flex-column px-3 py-3 px-lg-4 px-xl-4 py-lg-4 py-xl-4">
+                            <h5 class="card-title text-uppercase text-white small-title">
+                                Explore CATWALK FESTIVE SEASON
+                            </h5>
+                            <p
+                                class="card-text thin-grey paragraph mt-2 mt-md-3 mt-lg-3 mt-xl-3 mb-3 mb-md-4 mb-lg-4 mb-xl-4">
+                                Lorem ipsum dolor sit amet consectetur. Id elementum ac ac in
+                                ultrices dictumst a. Urna vel tristique diam sapien eu ...
+                            </p>
+                            <a href="#" class="yellow text-uppercase">Read More</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="browse text-center">
+                    <a href="#" class="yellow-border small-text text-decoration-none text-uppercase">
+                        All News & Blogs</a>
+                </div>
+            </div>
         </div>
-      </div>
-    </div>
-    <!-- Gallery Section -->
-    <div class="testimonials d-flex justify-content-center align-items-center">
-      <h2 class="large-title text-dark text-uppercase">testimonials</h2>
-    </div>
-  </main>
-  <footer>
-    <!-- place footer here -->
-  </footer>
-  <script src="assets/js/slide.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js"
-    integrity="sha512-3gJwYpMe3QewGELv8k/BX9vcqhryRdzRMxVfq6ngyWXwo03GFEzjsUm8Q7RZcHPHksttq7/GFoxjCVUjkjvPdw=="
-    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-  <!-- Bootstrap JavaScript Libraries -->
-  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
-    integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3"
-    crossorigin="anonymous"></script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.min.js" integrity="sha384-7VPbUDkoPSGFnVtYi0QogXtr74QeVeeIs
-    99Qfg5YCF+TidwNdjvaKZX19NZ/e6oz" crossorigin="anonymous"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/iconify/2.0.0/iconify.min.js"
-    integrity="sha512-lYMiwcB608+RcqJmP93CMe7b4i9G9QK1RbixsNu4PzMRJMsqr/bUrkXUuFzCNsRUo3IXNUr5hz98lINURv5CNA=="
-    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+        <!-- Blogs section -->
+        <!-- Gallery Section -->
+        <div class="gallery">
+            <div class="title text-uppercase text-white text-center">
+                <h5 class="yellow extra-sm-title">Images</h5>
+                <h2 class="main-title">
+                    Explore <span class="stroke">Gallery</span>
+                </h2>
+            </div>
+            <div class="gallery-details px-4 px-lg-5 px-xl-5">
+                <!-- Gallery -->
+                <div class="row">
+                    <div class="col-12 col-lg-6 col-xl-6 px-4 px-md-3 mb-3 mb-lg-0 mb-xl-0 p-xl-0 px-xl-0 left-col">
+                        <img src="assets/images/gallery1.png" class="w-100 pointer">
+                    </div>
+                    <div class="col-12 col-lg-6 col-xl-6 right-col d-flex flex-column gap-3">
+                        <div class="mid-col d-flex gap-3">
+                            <div class="mid-large mb-3 mb-lg-0 mb-xl-0">
+                                <img src="assets/images/gallery2.png" class="w-100 pointer">
+                            </div>
+                            <div class="side-img d-flex flex-column gap-3 p-0">
+                                <img src="assets/images/gallery3.png" class="w-100 pointer">
+                                <img src="assets/images/gallery4.png" class="w-100 pointer">
+                            </div>
+                            <div class="show row gap-3 mb-1 mb-lg-0 mb-xl-0">
+                                <div class="col p-0">
+                                    <img src="assets/images/gallery3.png" class="w-100 pointer">
+                                </div>
+                                <div class="col p-0">
+                                    <img src="assets/images/gallery4.png" class="w-100 pointer">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="end-row d-flex flex-row gap-3 p-0 mb-4 mb-lg-0 mb-xl-0">
+                            <img src="assets/images/gallery6.png" class="w-100 pointer">
+                            <img src="assets/images/gallery7.png" class="w-100 pointer">
+                        </div>
+                        <div class="show row gap-3">
+                            <div class="col p-0">
+                                <img src="assets/images/gallery6.png" class="w-100 pointer">
+                            </div>
+                            <div class="col p-0">
+                                <img src="assets/images/gallery7.png" class="w-100 pointer">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Gallery -->
+                <div class="browse text-center">
+                    <a href="#" class="yellow-border small-text text-decoration-none text-uppercase">
+                        Browse All</a>
+                </div>
+            </div>
+        </div>
+        <!-- Gallery Section -->
+        <!-- Testimonial Section -->
+        <div class="testimonial">
+            <div class="title text-uppercase text-white text-center px-4 px-md-0 px-lg-0 px-xl-0">
+                <h5 class="yellow extra-sm-title mb-1 mb-md-2 mb-lg-3 mb-xl-3">Testimonials</h5>
+                <h2 class="main-title">
+                    Discover their <span class="stroke">experiences</span>
+                </h2>
+            </div>
+            <div class="testimonial-details px-4 px-lg-5 px-xl-5">
+                <div id="carouselId" class="carousel slide" data-bs-ride="carousel">
+                    <div class="carousel-inner" role="listbox">
+                        <div class="carousel-item active">
+                            <div class="row px-3 ">
+                                <div class="col-lg-6 p-0 testimonial-left d-flex align-items-center">
+                                    <div class="card rounded-0 d-flex flex-column gap-4 pointer">
+                                        <div class="card-header p-0">
+                                            <svg viewBox="0 0 71 65" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path
+                                                    d="M10.7125 1.46924H32L21.9506 22.0835L21.6 22.8026H22.4H31.5V64.4692H0.5V22.418L10.7125 1.46924ZM4.88419 23.3095L4.83333 23.4135V23.5292V59.6359V60.1359H5.33333H26.6667H27.1667V59.6359V27.6359V27.1359H26.6667H14.6667L24.7161 6.52167L25.0667 5.80257H24.2667H13.76H13.448L13.3109 6.08287L4.88419 23.3095ZM48.0458 1.46924H69.3333L59.2839 22.0835L58.9333 22.8026H59.7333H68.8333V64.4692H37.8333V22.418L48.0458 1.46924ZM42.2175 23.3095L42.1667 23.4135V23.5292V59.6359V60.1359H42.6667H64H64.5V59.6359V27.6359V27.1359H64H52L62.0494 6.52167L62.4 5.80257H61.6H51.0933H50.7813L50.6442 6.08287L42.2175 23.3095Z"
+                                                    fill="#FCD406" stroke="#070707" />
+                                            </svg>
+                                        </div>
+                                        <div class="card-body d-flex flex-column gap-4 p-0">
+                                            <p class="paragraph thin-grey">The perfect place for a fantastic nightlife
+                                                experience at
+                                                Lakeside,
+                                                Pokhara! We take great
+                                                satisfaction in planning an outstanding event to satisfy all of your
+                                                entertainment
+                                                needs. Enter a
+                                                world of excitement filled with fantastic cocktails and exciting social
+                                                events. The
+                                                perfect place for
+                                                a fantastic nightlife experience at Lakeside, Pokhara! We take great
+                                                satisfaction in
+                                                planning an
+                                                outstanding event to satisfy all of your entertainment needs. Enter a
+                                                world
+                                                of
+                                                excitement filled with
+                                                fantastic cocktails and exciting social events.
+                                            </p>
+                                            <div class="base d-flex justify-content-between align-items-start">
+                                                <div class="name">
+                                                    <h5 class="yellow text-uppercase low-title">Aashish rana (Laure)
+                                                    </h5>
+                                                    <p class="medium-text thin-grey text-capitalize p-0 mb-0">Rapper,
+                                                        Actor
+                                                        &
+                                                        producer</p>
+                                                </div>
+                                                <div class="next d-flex gap-3">
+                                                    <button data-bs-target="#carouselId" data-bs-slide="prev">
+                                                        <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true"
+                                                            viewBox="0 0 24 24">
+                                                            <path fill="currentColor"
+                                                                d="m11.828 12l2.829 2.829l-1.414 1.414L9 12.001l4.243-4.243l1.414 1.414l-2.829 2.829Z" />
+                                                        </svg>
+                                                    </button>
+                                                    <button data-bs-target="#carouselId" data-bs-slide="next"><svg
+                                                            xmlns="http://www.w3.org/2000/svg" aria-hidden="true"
+                                                            viewBox="0 0 24 24">
+                                                            <path fill="currentColor"
+                                                                d="M12.172 12L9.343 9.173l1.415-1.414L15 12l-4.242 4.242l-1.415-1.414L12.172 12Z" />
+                                                        </svg>
+                                                    </button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-6 p-0 pointer">
+                                    <div class="gradient-wrapper">
+                                        <img src="assets/images/testimonial.png" class="w-100 testimonial-img">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <div class="row px-3 ">
+                                <div class="col-lg-6 p-0 testimonial-left d-flex align-items-center">
+                                    <div class="card rounded-0 d-flex flex-column gap-4 pointer">
+                                        <div class="card-header p-0">
+                                            <svg viewBox="0 0 71 65" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path
+                                                    d="M10.7125 1.46924H32L21.9506 22.0835L21.6 22.8026H22.4H31.5V64.4692H0.5V22.418L10.7125 1.46924ZM4.88419 23.3095L4.83333 23.4135V23.5292V59.6359V60.1359H5.33333H26.6667H27.1667V59.6359V27.6359V27.1359H26.6667H14.6667L24.7161 6.52167L25.0667 5.80257H24.2667H13.76H13.448L13.3109 6.08287L4.88419 23.3095ZM48.0458 1.46924H69.3333L59.2839 22.0835L58.9333 22.8026H59.7333H68.8333V64.4692H37.8333V22.418L48.0458 1.46924ZM42.2175 23.3095L42.1667 23.4135V23.5292V59.6359V60.1359H42.6667H64H64.5V59.6359V27.6359V27.1359H64H52L62.0494 6.52167L62.4 5.80257H61.6H51.0933H50.7813L50.6442 6.08287L42.2175 23.3095Z"
+                                                    fill="#FCD406" stroke="#070707" />
+                                            </svg>
+                                        </div>
+                                        <div class="card-body d-flex flex-column gap-4 p-0">
+                                            <p class="paragraph thin-grey">The perfect place for a fantastic nightlife
+                                                experience at
+                                                Lakeside,
+                                                Pokhara! We take great
+                                                satisfaction in planning an outstanding event to satisfy all of your
+                                                entertainment
+                                                needs. Enter a
+                                                world of excitement filled with fantastic cocktails and exciting social
+                                                events. The
+                                                perfect place for
+                                                a fantastic nightlife experience at Lakeside, Pokhara! We take great
+                                                satisfaction in
+                                                planning an
+                                                outstanding event to satisfy all of your entertainment needs. Enter a
+                                                world
+                                                of
+                                                excitement filled with
+                                                fantastic cocktails and exciting social events.
+                                            </p>
+                                            <div class="base d-flex justify-content-between align-items-start">
+                                                <div class="name">
+                                                    <h5 class="yellow text-uppercase low-title">Aashish rana (Laure)
+                                                    </h5>
+                                                    <p class="medium-text thin-grey text-capitalize p-0 mb-0">Rapper,
+                                                        Actor
+                                                        &
+                                                        producer</p>
+                                                </div>
+                                                <div class="next d-flex gap-3">
+                                                    <button data-bs-target="#carouselId" data-bs-slide="prev">
+                                                        <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true"
+                                                            viewBox="0 0 24 24">
+                                                            <path fill="currentColor"
+                                                                d="m11.828 12l2.829 2.829l-1.414 1.414L9 12.001l4.243-4.243l1.414 1.414l-2.829 2.829Z" />
+                                                        </svg>
+                                                    </button>
+                                                    <button data-bs-target="#carouselId" data-bs-slide="next"><svg
+                                                            xmlns="http://www.w3.org/2000/svg" aria-hidden="true"
+                                                            viewBox="0 0 24 24">
+                                                            <path fill="currentColor"
+                                                                d="M12.172 12L9.343 9.173l1.415-1.414L15 12l-4.242 4.242l-1.415-1.414L12.172 12Z" />
+                                                        </svg>
+                                                    </button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-6 p-0 pointer">
+                                    <div class="gradient-wrapper">
+                                        <img src="assets/images/event.png" class="w-100 testimonial-img">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Testimonial Section -->
+        <!-- service section -->
+        <div class="services">
+            <div class="title text-uppercase text-white text-center">
+                <h5 class="yellow extra-sm-title mb-1 mb-md-2 mb-lg-3 mb-xl-3">Services</h5>
+                <h2 class="main-title">
+                    <span class="stroke">What we</span> Offer
+                </h2>
+            </div>
+            <div class="service-details px-4 px-lg-5 px-xl-5">
+                <div class="row gy-4">
+                    <div class="col-12 col-lg-6 col-xl-6 mb-3 mb-md-2 mb-lg-0 mb-xl-0">
+                        <div class="card rounded-0 d-flex flex-column gap-3 gap-md-4 gap-lg-4 gap-xl-4 pointer">
+                            <div class="card-header p-0">
+                                <svg viewBox="0 0 93 97" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <g opacity="0.81">
+                                        <path
+                                            d="M40.7294 87.8269C58.0387 87.8269 72.0706 73.795 72.0706 56.4857C72.0706 39.1765 58.0387 25.1445 40.7294 25.1445C23.4202 25.1445 9.38824 39.1765 9.38824 56.4857C9.38824 73.795 23.4202 87.8269 40.7294 87.8269Z"
+                                            stroke="#FCD406" stroke-width="3" stroke-linecap="round"
+                                            stroke-linejoin="round" />
+                                        <path
+                                            d="M42.0283 87.782C50.473 82.6317 56.4 70.5584 56.4 56.4861C56.4 42.414 50.4591 30.3093 41.9969 25.1729"
+                                            stroke="#FCD406" stroke-width="3" stroke-linecap="round"
+                                            stroke-linejoin="round" />
+                                        <path
+                                            d="M39.0353 25.1445C39.0353 26.0801 39.7938 26.8386 40.7294 26.8386C41.665 26.8386 42.4235 26.0801 42.4235 25.1445H39.0353ZM42.4235 9.4739V7.77979H39.0353V9.4739H42.4235ZM42.4235 25.1445V9.4739H39.0353V25.1445H42.4235Z"
+                                            fill="#FCD406" />
+                                        <path
+                                            d="M39.4305 87.7816C30.9857 82.6312 25.0588 70.5579 25.0588 56.4857C25.0588 42.4135 31.0031 30.3019 39.4688 25.1689"
+                                            stroke="#FCD406" stroke-width="3" stroke-linecap="round"
+                                            stroke-linejoin="round" />
+                                        <path
+                                            d="M40.7294 66.9327C58.0387 66.9327 72.0706 62.2553 72.0706 56.4856C72.0706 50.7158 58.0387 46.0386 40.7294 46.0386C23.4202 46.0386 9.38824 50.7158 9.38824 56.4856C9.38824 62.2553 23.4202 66.9327 40.7294 66.9327Z"
+                                            stroke="#FCD406" stroke-width="3" stroke-linecap="round"
+                                            stroke-linejoin="round" />
+                                    </g>
+                                    <path
+                                        d="M40.7294 87.8269C58.0387 87.8269 72.0706 73.795 72.0706 56.4857C72.0706 39.1765 58.0387 25.1445 40.7294 25.1445C23.4202 25.1445 9.38824 39.1765 9.38824 56.4857C9.38824 73.795 23.4202 87.8269 40.7294 87.8269Z"
+                                        stroke="#FCD406" stroke-width="3" stroke-linecap="round"
+                                        stroke-linejoin="round" />
+                                    <path
+                                        d="M42.0283 87.782C50.473 82.6317 56.4 70.5584 56.4 56.4861C56.4 42.414 50.4591 30.3093 41.9969 25.1729"
+                                        stroke="#FCD406" stroke-width="3" stroke-linecap="round"
+                                        stroke-linejoin="round" />
+                                    <path
+                                        d="M39.0353 25.1445C39.0353 26.0801 39.7938 26.8386 40.7294 26.8386C41.665 26.8386 42.4235 26.0801 42.4235 25.1445H39.0353ZM42.4235 9.4739V7.77979H39.0353V9.4739H42.4235ZM42.4235 25.1445V9.4739H39.0353V25.1445H42.4235Z"
+                                        fill="#FCD406" />
+                                    <path
+                                        d="M39.4305 87.7816C30.9857 82.6312 25.0588 70.5579 25.0588 56.4857C25.0588 42.4135 31.0031 30.3019 39.4688 25.1689"
+                                        stroke="#FCD406" stroke-width="3" stroke-linecap="round"
+                                        stroke-linejoin="round" />
+                                    <path
+                                        d="M40.7294 66.9327C58.0387 66.9327 72.0706 62.2553 72.0706 56.4856C72.0706 50.7158 58.0387 46.0386 40.7294 46.0386C23.4202 46.0386 9.38824 50.7158 9.38824 56.4856C9.38824 62.2553 23.4202 66.9327 40.7294 66.9327Z"
+                                        stroke="#FCD406" stroke-width="3" stroke-linecap="round"
+                                        stroke-linejoin="round" />
+                                    <g opacity="0.8">
+                                        <path d="M66.8471 9.47412V19.9212" stroke="#9D00FF" stroke-width="3"
+                                            stroke-linecap="square" stroke-linejoin="round" />
+                                        <path d="M61.6235 14.6978H72.0706" stroke="#9D00FF" stroke-width="3"
+                                            stroke-linecap="square" stroke-linejoin="round" />
+                                        <path d="M82.5177 25.1445V35.5916" stroke="#9D00FF" stroke-width="3"
+                                            stroke-linecap="square" stroke-linejoin="round" />
+                                        <path d="M77.2941 30.3682H87.7412" stroke="#9D00FF" stroke-width="3"
+                                            stroke-linecap="square" stroke-linejoin="round" />
+                                    </g>
+                                    <path d="M66.8471 9.47412V19.9212" stroke="#9D00FF" stroke-width="3"
+                                        stroke-linecap="square" stroke-linejoin="round" />
+                                    <path d="M61.6235 14.6975H72.0706" stroke="#9D00FF" stroke-width="3"
+                                        stroke-linecap="square" stroke-linejoin="round" />
+                                    <path d="M82.5176 25.1445V35.5916" stroke="#9D00FF" stroke-width="3"
+                                        stroke-linecap="square" stroke-linejoin="round" />
+                                    <path d="M77.2941 30.3682H87.7412" stroke="#9D00FF" stroke-width="3"
+                                        stroke-linecap="square" stroke-linejoin="round" />
+                                </svg>
+                            </div>
+                            <div class="card-body d-flex flex-column gap-2 p-0">
+                                <h5 class="low-title text-white text-uppercase">Dance floor</h5>
+                                <p class="paragraph thin-grey">Enter a world of excitement filled with fantastic
+                                    cocktails and exciting social events. The perfect place for a fantastic nightlife
+                                    experience at Lakeside, Pokhara!
+                                </p>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-lg-6 col-xl-6 mb-3 mb-md-2 mb-lg-0 mb-xl-0">
+                        <div class="card rounded-0 d-flex flex-column gap-3 gap-md-4 gap-lg-4 gap-xl-4 pointer">
+                            <div class="card-header p-0">
+                                <svg viewBox="0 0 98 97" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <g opacity="0.8">
+                                        <path
+                                            d="M9.38821 19.9212V18.2271H7.69409V19.9212H9.38821ZM87.7411 19.9212H89.4353V18.2271H87.7411V19.9212ZM87.7411 87.827V89.5212H89.4353V87.827H87.7411ZM9.38821 87.827H7.69409V89.5212H9.38821V87.827ZM9.38821 21.6153H87.7411V18.2271H9.38821V21.6153ZM86.047 19.9212V87.827H89.4353V19.9212H86.047ZM87.7411 86.1329H9.38821V89.5212H87.7411V86.1329ZM11.0823 87.827V19.9212H7.69409V87.827H11.0823Z"
+                                            fill="#FCD406" />
+                                        <path d="M9.38818 40.8154H87.7411" stroke="#FCD406" stroke-width="3"
+                                            stroke-linecap="round" stroke-linejoin="round" />
+                                        <path d="M30.2823 27.7565V9.47412" stroke="#FCD406" stroke-width="3"
+                                            stroke-linecap="square" stroke-linejoin="round" />
+                                        <path d="M66.847 27.7565V9.47412" stroke="#FCD406" stroke-width="3"
+                                            stroke-linecap="square" stroke-linejoin="round" />
+                                    </g>
+                                    <path
+                                        d="M9.38821 19.9212V18.2271H7.69409V19.9212H9.38821ZM87.7411 19.9212H89.4353V18.2271H87.7411V19.9212ZM87.7411 87.827V89.5212H89.4353V87.827H87.7411ZM9.38821 87.827H7.69409V89.5212H9.38821V87.827ZM9.38821 21.6153H87.7411V18.2271H9.38821V21.6153ZM86.047 19.9212V87.827H89.4353V19.9212H86.047ZM87.7411 86.1329H9.38821V89.5212H87.7411V86.1329ZM11.0823 87.827V19.9212H7.69409V87.827H11.0823Z"
+                                        fill="#FCD406" />
+                                    <path d="M9.38824 40.8154H87.7412" stroke="#FCD406" stroke-width="3"
+                                        stroke-linecap="round" stroke-linejoin="round" />
+                                    <path d="M30.2823 27.7565V9.47412" stroke="#FCD406" stroke-width="3"
+                                        stroke-linecap="square" stroke-linejoin="round" />
+                                    <path d="M66.847 27.7565V9.47412" stroke="#FCD406" stroke-width="3"
+                                        stroke-linecap="square" stroke-linejoin="round" />
+                                    <g opacity="0.46">
+                                        <path d="M29.3647 51.6162H22.5883V58.3927H29.3647V51.6162Z" fill="#9D00FF" />
+                                        <path d="M29.3647 69.687H22.5883V76.4635H29.3647V69.687Z" fill="#9D00FF" />
+                                        <path d="M51.953 51.6162H45.1765V58.3927H51.953V51.6162Z" fill="#9D00FF" />
+                                        <path d="M51.953 69.687H45.1765V76.4635H51.953V69.687Z" fill="#9D00FF" />
+                                        <path d="M74.5412 51.6162H67.7648V58.3927H74.5412V51.6162Z" fill="#9D00FF" />
+                                        <path d="M74.5412 69.687H67.7648V76.4635H74.5412V69.687Z" fill="#9D00FF" />
+                                    </g>
+                                    <path d="M29.3647 51.6162H22.5883V58.3927H29.3647V51.6162Z" fill="#9D00FF" />
+                                    <path d="M29.3647 69.687H22.5883V76.4635H29.3647V69.687Z" fill="#9D00FF" />
+                                    <path d="M51.953 51.6162H45.1765V58.3927H51.953V51.6162Z" fill="#9D00FF" />
+                                    <path d="M51.953 69.687H45.1765V76.4635H51.953V69.687Z" fill="#9D00FF" />
+                                    <path d="M74.5411 51.6162H67.7646V58.3927H74.5411V51.6162Z" fill="#9D00FF" />
+                                    <path d="M74.5411 69.687H67.7646V76.4635H74.5411V69.687Z" fill="#9D00FF" />
+                                </svg>
+                            </div>
+                            <div class="card-body d-flex flex-column mt-3 gap-2 p-0">
+                                <h5 class="low-title text-white text-uppercase">Special events</h5>
+                                <p class="paragraph thin-grey">Enter a world of excitement filled with fantastic
+                                    cocktails and exciting social events. The perfect place for a fantastic nightlife
+                                    experience at Lakeside, Pokhara!
+                                </p>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-lg-6 col-xl-6 mb-3 mb-md-2 mb-lg-0 mb-xl-0">
+                        <div class="card rounded-0 d-flex flex-column gap-3 gap-md-4 gap-lg-4 gap-xl-4 pointer">
+                            <div class="card-header p-0">
+                                <svg viewBox="0 0 81 82" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <g opacity="0.6">
+                                        <path
+                                            d="M53.9394 17.8085C53.7678 16.9576 53.6813 16.0917 53.6813 15.2237C53.6842 12.4007 54.6133 9.65662 56.326 7.41256C58.0387 5.1685 60.4404 3.54837 63.1627 2.80079C65.8848 2.05319 68.7771 2.21944 71.3957 3.27402C74.0144 4.32861 76.2145 6.21323 77.6589 8.63879C79.1031 11.0644 79.7117 13.8968 79.3911 16.7015C79.0705 19.5062 77.8386 22.1282 75.8842 24.1653C73.9299 26.2024 71.3612 27.542 68.5721 27.9786C65.783 28.415 62.9278 27.9244 60.4445 26.5819"
+                                            stroke="#9D00FF" stroke-width="3" stroke-linecap="round"
+                                            stroke-linejoin="round" />
+                                    </g>
+                                    <path
+                                        d="M53.9394 17.8085C53.7678 16.9576 53.6813 16.0917 53.6813 15.2237C53.6842 12.4007 54.6133 9.65662 56.326 7.41256C58.0387 5.1685 60.4404 3.54837 63.1627 2.80079C65.8848 2.05319 68.7771 2.21944 71.3957 3.27402C74.0144 4.32861 76.2145 6.21323 77.6589 8.63879C79.1031 11.0644 79.7117 13.8968 79.3911 16.7015C79.0705 19.5062 77.8386 22.1282 75.8842 24.1653C73.9299 26.2024 71.3612 27.542 68.5721 27.9786C65.783 28.415 62.9278 27.9244 60.4445 26.5819"
+                                        stroke="#9D00FF" stroke-width="3" stroke-linecap="round"
+                                        stroke-linejoin="round" />
+                                    <g opacity="0.81">
+                                        <path d="M27.8674 79.7588H48.5185" stroke="#FCD406" stroke-width="3"
+                                            stroke-linecap="round" stroke-linejoin="round" />
+                                        <path d="M38.193 79.7585V48.7817" stroke="#FCD406" stroke-width="3"
+                                            stroke-linecap="round" stroke-linejoin="round" />
+                                        <path
+                                            d="M2.157 0.645605L0.485787 0.541992L0.278572 3.88442L1.94979 3.98802L2.157 0.645605ZM14.4812 3.08729L15.9359 2.25827L15.488 1.47206L14.5848 1.41607L14.4812 3.08729ZM22.0103 19.6818C22.4682 20.4852 23.4907 20.7654 24.2942 20.3076C25.0976 19.8497 25.3778 18.8272 24.92 18.0238L22.0103 19.6818ZM1.94979 3.98802L14.3776 4.75852L14.5848 1.41607L2.157 0.645605L1.94979 3.98802ZM13.0263 3.91629L22.0103 19.6818L24.92 18.0238L15.9359 2.25827L13.0263 3.91629Z"
+                                            fill="#FCD406" />
+                                        <path
+                                            d="M65.3192 19.399L66.5496 20.5348L69.1439 17.7246H65.3192V19.399ZM11.0633 19.399V17.7246H7.23821L9.833 20.5348L11.0633 19.399ZM38.193 48.7818L36.9627 49.9178C37.2797 50.2611 37.7257 50.4564 38.193 50.4563C38.6602 50.4563 39.1063 50.261 39.4232 49.9176L38.193 48.7818ZM9.833 20.5348L36.9627 49.9178L39.4231 47.646L12.2934 18.2631L9.833 20.5348ZM65.3192 17.7246H11.0633V21.0734H65.3192V17.7246ZM64.089 18.2632L36.9626 47.6461L39.4232 49.9176L66.5496 20.5348L64.089 18.2632Z"
+                                            fill="#FCD406" />
+                                    </g>
+                                    <path d="M27.8674 79.7588H48.5185" stroke="#FCD406" stroke-width="3"
+                                        stroke-linecap="round" stroke-linejoin="round" />
+                                    <path d="M38.193 79.7585V48.7817" stroke="#FCD406" stroke-width="3"
+                                        stroke-linecap="round" stroke-linejoin="round" />
+                                    <path
+                                        d="M2.157 0.645605L0.485787 0.541992L0.278572 3.88442L1.94979 3.98802L2.157 0.645605ZM14.4812 3.08729L15.9359 2.25827L15.488 1.47206L14.5848 1.41607L14.4812 3.08729ZM22.0103 19.6818C22.4682 20.4852 23.4907 20.7654 24.2942 20.3076C25.0976 19.8497 25.3778 18.8272 24.92 18.0238L22.0103 19.6818ZM1.94979 3.98802L14.3776 4.75852L14.5848 1.41607L2.157 0.645605L1.94979 3.98802ZM13.0263 3.91629L22.0103 19.6818L24.92 18.0238L15.9359 2.25827L13.0263 3.91629Z"
+                                        fill="#FCD406" />
+                                    <path
+                                        d="M65.3192 19.399L66.5496 20.5348L69.1439 17.7246H65.3192V19.399ZM11.0633 19.399V17.7246H7.23821L9.833 20.5348L11.0633 19.399ZM38.193 48.7818L36.9627 49.9178C37.2797 50.2611 37.7257 50.4564 38.193 50.4563C38.6602 50.4563 39.1063 50.261 39.4232 49.9176L38.193 48.7818ZM9.833 20.5348L36.9627 49.9178L39.4231 47.646L12.2934 18.2631L9.833 20.5348ZM65.3192 17.7246H11.0633V21.0734H65.3192V17.7246ZM64.089 18.2632L36.9626 47.6461L39.4232 49.9176L66.5496 20.5348L64.089 18.2632Z"
+                                        fill="#FCD406" />
+                                </svg>
+                            </div>
+                            <div class="card-body d-flex flex-column mt-3 gap-2 p-0">
+                                <h5 class="low-title text-white text-uppercase">Lounge Bar</h5>
+                                <p class="paragraph thin-grey">Enter a world of excitement filled with fantastic
+                                    cocktails and exciting social events. The perfect place for a fantastic nightlife
+                                    experience at Lakeside, Pokhara!
+                                </p>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-lg-6 col-xl-6 mb-3 mb-md-2 mb-lg-0 mb-xl-0">
+                        <div class="card rounded-0 d-flex flex-column gap-3 gap-md-4 gap-lg-4 gap-xl-4 pointer">
+                            <div class="card-header p-0">
+                                <svg viewBox="0 0 78 97" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <g opacity="0.4">
+                                        <path
+                                            d="M39.2696 25.3066L40.6875 24.4899L39.2691 22.0269L37.8513 24.4903L39.2696 25.3066ZM44.4284 34.2641L43.0104 35.0808L43.398 35.7539L44.1646 35.8791L44.4284 34.2641ZM53.4545 35.7389L54.6709 36.8337L56.6747 34.607L53.7184 34.1241L53.4545 35.7389ZM46.5046 43.4615L45.2883 42.3669L44.731 42.9861L44.9039 43.801L46.5046 43.4615ZM48.6465 53.561L48.0082 55.0678L50.8983 56.2921L50.2472 53.2215L48.6465 53.561ZM39.2696 49.5888L39.9078 48.082L39.2696 47.8117L38.6313 48.082L39.2696 49.5888ZM29.9041 53.556L28.3033 53.2165L27.6521 56.287L30.5424 55.0627L29.9041 53.556ZM32.0459 43.4563L33.6467 43.7958L33.8196 42.9806L33.2618 42.3613L32.0459 43.4563ZM25.0909 35.7339L24.827 34.1189L21.8694 34.6022L23.875 36.829L25.0909 35.7339ZM34.1171 34.2591L34.3809 35.8741L35.1477 35.7487L35.5353 35.0753L34.1171 34.2591ZM37.6332 25.3078C37.6332 26.2115 38.3658 26.9441 39.2696 26.9441C40.1733 26.9441 40.9059 26.2115 40.9059 25.3078H37.6332ZM37.8516 26.1232L43.0104 35.0808L45.8464 33.4475L40.6875 24.4899L37.8516 26.1232ZM40.9059 25.3078V25.3066H37.6332V25.3078H40.9059ZM37.8513 24.4903L32.6988 33.4429L35.5353 35.0753L40.6878 26.1228L37.8513 24.4903ZM23.875 36.829L30.83 44.5515L33.2618 42.3613L26.3068 34.6389L23.875 36.829ZM25.3548 37.3489L34.3809 35.8741L33.8532 32.6441L24.827 34.1189L25.3548 37.3489ZM30.5424 55.0627L39.9078 51.0955L38.6313 48.082L29.2658 52.0492L30.5424 55.0627ZM30.4452 43.117L28.3033 53.2165L31.5049 53.8955L33.6467 43.7958L30.4452 43.117ZM49.2848 52.0542L39.9078 48.082L38.6313 51.0955L48.0082 55.0678L49.2848 52.0542ZM50.2472 53.2215L48.1054 43.122L44.9039 43.801L47.0457 53.9005L50.2472 53.2215ZM52.2382 34.6443L45.2883 42.3669L47.7209 44.5561L54.6709 36.8337L52.2382 34.6443ZM53.7184 34.1241L44.6922 32.6493L44.1646 35.8791L53.1906 37.3539L53.7184 34.1241Z"
+                                            fill="#9D00FF" />
+                                    </g>
+                                    <g opacity="0.81">
+                                        <path
+                                            d="M32.5217 71.4164L34.1559 70.7879C33.9414 70.2302 33.4572 69.8203 32.8718 69.7008L32.5217 71.4164ZM39 88.2601L37.3659 88.8887L39 93.1377L40.6342 88.8887L39 88.2601ZM45.4784 71.4164L45.1282 69.7008C44.5429 69.8203 44.0587 70.2302 43.8442 70.7879L45.4784 71.4164ZM73.1429 39.672C73.1416 33.212 71.3075 26.8849 67.8539 21.4256L64.8945 23.2976C67.994 28.1971 69.6399 33.8753 69.641 39.6726L73.1429 39.672ZM67.8539 21.4256C64.4002 15.9662 59.4687 11.5987 53.6318 8.83029L52.1312 11.9942C57.3693 14.4788 61.7951 18.3984 64.8945 23.2976L67.8539 21.4256ZM53.6318 8.83029C47.7951 6.06185 41.2927 5.00611 34.8799 5.78565L35.3025 9.26186C41.0576 8.5623 46.893 9.50979 52.1312 11.9942L53.6318 8.83029ZM34.8799 5.78565C28.4671 6.56521 22.407 9.14807 17.4036 13.2342L19.6186 15.9465C24.1089 12.2795 29.5474 9.96152 35.3025 9.26186L34.8799 5.78565ZM17.4036 13.2342C12.4001 17.3205 8.65846 22.7423 6.61335 28.87L9.935 29.9787C11.7704 24.4794 15.1282 19.6136 19.6186 15.9465L17.4036 13.2342ZM6.61335 28.87C4.56823 34.9978 4.30352 41.58 5.84995 47.8522L9.24993 47.0139C7.86213 41.385 8.0997 35.4779 9.935 29.9787L6.61335 28.87ZM5.84995 47.8522C7.39638 54.1245 10.6905 59.8292 15.3496 64.304L17.7754 61.7784C13.5941 57.7625 10.6378 52.6428 9.24993 47.0139L5.84995 47.8522ZM15.3496 64.304C20.0089 68.7788 25.8419 71.84 32.1715 73.1319L32.8718 69.7008C27.1915 68.5414 21.9567 65.7942 17.7754 61.7784L15.3496 64.304ZM30.8875 72.0449L37.3659 88.8887L40.6342 87.6317L34.1559 70.7879L30.8875 72.0449ZM40.6342 88.8887L47.1126 72.0449L43.8442 70.7879L37.3659 87.6317L40.6342 88.8887ZM45.8286 73.1319C53.5406 71.5577 60.4717 67.3674 65.4491 61.27L62.7365 59.0556C58.2695 64.5276 52.0493 68.2882 45.1282 69.7008L45.8286 73.1319ZM65.4491 61.27C70.4266 55.1728 73.1445 47.543 73.1429 39.672L69.641 39.6726C69.6424 46.7364 67.2033 53.5837 62.7365 59.0556L65.4491 61.27Z"
+                                            fill="#FCD406" />
+                                    </g>
+                                    <path
+                                        d="M39.2696 25.3066L40.6875 24.4899L39.2691 22.0269L37.8513 24.4903L39.2696 25.3066ZM44.4284 34.2641L43.0104 35.0808L43.398 35.7539L44.1646 35.8791L44.4284 34.2641ZM53.4545 35.7389L54.6709 36.8337L56.6747 34.607L53.7184 34.1241L53.4545 35.7389ZM46.5046 43.4615L45.2883 42.3669L44.731 42.9861L44.9039 43.801L46.5046 43.4615ZM48.6465 53.561L48.0082 55.0678L50.8983 56.2921L50.2472 53.2215L48.6465 53.561ZM39.2696 49.5888L39.9078 48.082L39.2696 47.8117L38.6313 48.082L39.2696 49.5888ZM29.9041 53.556L28.3033 53.2165L27.6521 56.287L30.5424 55.0627L29.9041 53.556ZM32.0459 43.4563L33.6467 43.7958L33.8196 42.9806L33.2618 42.3613L32.0459 43.4563ZM25.0909 35.7339L24.827 34.1189L21.8694 34.6022L23.875 36.829L25.0909 35.7339ZM34.1171 34.2591L34.3809 35.8741L35.1477 35.7487L35.5353 35.0753L34.1171 34.2591ZM37.6332 25.3078C37.6332 26.2115 38.3658 26.9441 39.2696 26.9441C40.1733 26.9441 40.9059 26.2115 40.9059 25.3078H37.6332ZM37.8516 26.1232L43.0104 35.0808L45.8464 33.4475L40.6875 24.4899L37.8516 26.1232ZM40.9059 25.3078V25.3066H37.6332V25.3078H40.9059ZM37.8513 24.4903L32.6988 33.4429L35.5353 35.0753L40.6878 26.1228L37.8513 24.4903ZM23.875 36.829L30.83 44.5515L33.2618 42.3613L26.3068 34.6389L23.875 36.829ZM25.3548 37.3489L34.3809 35.8741L33.8532 32.6441L24.827 34.1189L25.3548 37.3489ZM30.5424 55.0627L39.9078 51.0955L38.6313 48.082L29.2658 52.0492L30.5424 55.0627ZM30.4452 43.1169L28.3033 53.2165L31.5049 53.8955L33.6467 43.7958L30.4452 43.1169ZM49.2848 52.0542L39.9078 48.082L38.6313 51.0955L48.0082 55.0678L49.2848 52.0542ZM50.2472 53.2215L48.1054 43.122L44.9039 43.801L47.0457 53.9005L50.2472 53.2215ZM52.2382 34.6443L45.2883 42.3669L47.7209 44.5561L54.6709 36.8337L52.2382 34.6443ZM53.7184 34.1241L44.6922 32.6493L44.1646 35.8791L53.1906 37.3539L53.7184 34.1241Z"
+                                        fill="#9D00FF" />
+                                </svg>
+                            </div>
+                            <div class="card-body d-flex flex-column mt-3 gap-2 p-0">
+                                <h5 class="low-title text-white text-uppercase">Vip Zone</h5>
+                                <p class="paragraph thin-grey">Enter a world of excitement filled with fantastic
+                                    cocktails and exciting social events. The perfect place for a fantastic nightlife
+                                    experience at Lakeside, Pokhara!
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <!-- service section -->
+    </main>
+    <footer>
+        <!-- place footer here -->
+    </footer>
+    <script src="assets/js/slide.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js"
+        integrity="sha512-3gJwYpMe3QewGELv8k/BX9vcqhryRdzRMxVfq6ngyWXwo03GFEzjsUm8Q7RZcHPHksttq7/GFoxjCVUjkjvPdw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <!-- Bootstrap JavaScript Libraries -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
+        integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous">
+        </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.min.js"
+        integrity="sha384-7VPbUDkoPSGFnVtYi0QogXtr74QeVeeIs99Qfg5YCF+TidwNdjvaKZX19NZ/e6oz" crossorigin="anonymous">
+        </script>
 </body>
 
 </html>
