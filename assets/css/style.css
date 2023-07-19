@@ -15,7 +15,9 @@ body {
 .dark {
     background: #070707;
 }
-
+.text-black{
+    color: #000;
+}
 .yellow {
     color: #FCD406;
 }
@@ -106,6 +108,16 @@ body {
     text-fill-color: transparent;
     /* Set the text color to transparent for other browsers */
     text-stroke: 1px #fff;/
+}
+.black-stroke {
+    color: inherit;
+    -webkit-text-fill-color: transparent;
+    /* Set the text color to transparent for WebKit browsers */
+    -webkit-text-stroke: 2px #000000;
+    /* Stroke width and color for WebKit browsers */
+    text-fill-color: transparent;
+    /* Set the text color to transparent for other browsers */
+    text-stroke: 2px #000000;/
 }
 
 .yellow-border {
@@ -349,25 +361,56 @@ header {
     height: 100%;
     background: linear-gradient(to left, rgba(255, 255, 255, 0) 20%, rgba(0,0,0,1));
 }
-
 /* Testimonials design */
+
 /* service design */
+.service-details{
+    margin-bottom: 8rem;
+}
 .service-details .card-header svg{
     width: 70px;
     height: 70px;
-}
-
-.service-details .paragraph{
-    padding-right: 2rem;
 }
 .service-details .card:hover{
     scale:1.02;
 }
 /* service design */
 
+/* newsletter design */
+
+.newsletter-contents{
+    height:135vh;
+    background: url(../images/rectangle.png)  no-repeat;
+    background-size: cover;
+}
+.newsletter .title{
+    top:30%;
+    left: 0;
+    right: 0;
+    margin: auto;
+}
+.newsletter .paragraph{
+    width: 60%;
+    margin: auto;
+    font-weight: 500;
+}
+/* newsletter design */
+
+/* Media queries */
+@media (max-width:1200px) {
+    .service-details .row .col-lg-4{
+        width: 50% !important;
+    }
+    .newsletter-contents{
+        height: 100vh;
+    }
+}
 @media (max-width:900px) {
     .club-description .container{
         max-width: 90%;
+    }
+    .large-title{
+        font-size: 3rem;
     }
     .small-title{
         font-size: 1.4rem;
@@ -378,15 +421,20 @@ header {
     .testimonial-img{
         height: 600px;
     }
+    .service-details{
+        margin-bottom: 5rem;
+    }
+    .newsletter-contents{
+        height: 80vh;
+    }
+    .newsletter .paragraph{
+        width: 70%;
+    }
 }
 @media (max-width:767px) {
     .overlay img.rotate{
         height: 180px;
         width: 180px;
-    }
-    .large-title{
-        font-size: 3.5rem;
-        font-weight: 800;
     }
     .main-title{
         line-height: 4rem;
@@ -418,6 +466,15 @@ header {
     }
     .testimonial-details{
         padding-bottom: 0;
+    }
+    .service-details .row .col-12{
+        width: 100% !important;
+    }
+    .newsletter-contents{
+        height: 70vh;
+    }
+    .newsletter .paragraph{
+        width: 90%;
     }
 
 }
@@ -480,8 +537,9 @@ header {
     .events{
         padding-top: 3rem;
     }
-    .card:hover{
-        scale:1;
+    .black-stroke {
+        -webkit-text-stroke: 1px #000000;
+        text-stroke: 1px #000000;
     }
     .service-details .card-header svg{
         width: 50px;
@@ -500,9 +558,21 @@ header {
     .testimonial-details .low-title{
         padding-right: 1rem;
     }
+    .large-title{
+        font-size: 2.3rem;
+    }
+    .service-details{
+        margin-bottom: 3rem;
+    }
     .next svg{
         width: 40px;
         height: 40px;
+    }
+    .newsletter-contents{
+        height: 70vh;
+    }
+    .newsletter .paragraph{
+        line-height: 1.8rem;
     }
 }
 @media (max-width:480px) {
@@ -566,7 +636,6 @@ header {
         font-size: 0.9rem;
     }
     .service-details .paragraph, .testimonial-details .paragraph{
-        padding-right: 0;
         line-height: 1.45rem;
     }
     .testimonial-left .card, .service-details .card{
@@ -582,6 +651,13 @@ header {
     .next svg{
         width: 30px;
         height: 30px;
+    }
+    .newsletter-contents{
+        height: 60vh;
+    }
+    .newsletter .paragraph{
+        width: 95%;
+        line-height: 1.6rem;
     }
 }
 
