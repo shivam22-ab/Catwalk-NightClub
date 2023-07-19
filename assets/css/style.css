@@ -347,19 +347,14 @@ header {
     height: 750px;
     object-fit: cover;
 }
-.gradient-wrapper {
-    position: relative;
-    overflow: hidden;
-}
 
-.gradient-wrapper::before {
-    content: "";
+.testimonial-details .overlay {
     position: absolute;
-    top: 0;
+    
     left: 0;
-    width: 70%;
+    width: 35%;
     height: 100%;
-    background: linear-gradient(to left, rgba(255, 255, 255, 0) 20%, rgba(0,0,0,1));
+    background-image: linear-gradient(to right, rgba(7, 7, 7, 1) 15%, rgba(255, 255, 255, 0) 100%);
 }
 /* Testimonials design */
 
@@ -498,7 +493,7 @@ header {
         line-height: 1.7rem;
     }
     .medium-text{
-        font-size: 1.1rem;
+        font-size: 1rem;
     }
     .medium-bold{
         font-size: 1rem;
@@ -598,6 +593,7 @@ header {
     .mid-title{
         font-size: 1.3rem;
     }
+
     .small-bold{
         font-size: 0.8rem;
         font-weight: 800;
@@ -649,8 +645,8 @@ header {
         margin-bottom: 7rem;
     }
     .next svg{
-        width: 30px;
-        height: 30px;
+        width: 25px;
+        height: 25px;
     }
     .newsletter-contents{
         height: 60vh;
