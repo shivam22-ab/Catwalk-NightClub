@@ -400,6 +400,18 @@ header {
         height: 100vh;
     }
 }
+@media (max-width:992px)
+{
+    .testimonial-details .row{
+        display: flex;
+        width: 100%;
+        flex-direction: column-reverse;
+        gap: 1.5rem;
+    }
+    .testimonial-details .row .col-lg-6{
+        width: 100% !important;
+    }
+}
 @media (max-width:900px) {
     .club-description .container{
         max-width: 90%;
