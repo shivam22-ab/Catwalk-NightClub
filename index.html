@@ -46,7 +46,7 @@
             <!-- <video autoplay muted loop class="w-100 bg-img">
         <source src="assets/images/video.mp4" type="video/mp4">
       </video> -->
-            <img src="assets/images/bg.png" class="w-100 bg-img" />
+            <img src="assets/images/heroimage.png" class="w-100 bg-img" />
             <div class="overlay text-center">
                 <div class="center">
                     <img src="assets/images/hashtag.svg" class="rotate" />
@@ -275,7 +275,7 @@
         <!-- Testimonial Section -->
         <div class="testimonial">
             <div class="title text-uppercase text-white text-center px-4 px-md-0 px-lg-0 px-xl-0">
-                <h5 class="yellow extra-sm-title mb-1 mb-md-2 mb-lg-3 mb-xl-3">Testimonials</h5>
+                <h5 class="yellow extra-sm-title mb-1 mb-md-3 mb-lg-3 mb-xl-3">Testimonials</h5>
                 <h2 class="main-title">
                     Discover their <span class="stroke">experiences</span>
                 </h2>
@@ -351,7 +351,7 @@
                             </div>
                         </div>
                         <div class="carousel-item">
-                            <div class="row px-3 d-flex gap-4">
+                            <div class="row px-3 gap-4 gap-lg-0 gap-xl-0">
                                 <div class="col-lg-6 p-0 testimonial-left d-flex align-items-center">
                                     <div class="card rounded-0 d-flex flex-column gap-4 pointer">
                                         <div class="card-header p-0">
@@ -423,7 +423,7 @@
         <!-- service section -->
         <div class="services">
             <div class="title text-uppercase text-white text-center">
-                <h5 class="yellow extra-sm-title mb-1 mb-md-2 mb-lg-3 mb-xl-3">Services</h5>
+                <h5 class="yellow extra-sm-title mb-1 mb-md-3 mb-lg-3 mb-xl-3">Services</h5>
                 <h2 class="main-title">
                     <span class="stroke">What we</span> Offer
                 </h2>
@@ -657,14 +657,15 @@
         </div>
         <!-- service section -->
         <!-- newsletter section -->
-        <div class="newsletter">
-            <div class="newsletter-contents position-relative">
-                <div class="title text-center position-absolute">
-                    <h5 class="text-uppercase extra-sm-title">Subscribe</h5>
-                    <h2 class="large-title text-uppercase px-4 px-md-0 px-lg-0 px-xl-0 mb-1 mb-md-2 mb-lg-3 mb-xl-3">
-                        <span class="black-stroke">catwalk</span> newsletter
+        <div class="newsletter position-relative">
+            <img src="assets/images/newsletter.png" class="w-100 " alt="">
+            <div class="newsletter-contents position-absolute d-flex flex-column">
+                <div class="title text-center text-white">
+                    <h5 class="yellow text-uppercase extra-sm-title mb-1 mb-md-3 mb-lg-3 mb-xl-3">Subscribe</h5>
+                    <h2 class="large-title text-uppercase px-3 px-md-0 px-lg-0 px-xl-0 mb-1 mb-md-2 mb-lg-3 mb-xl-3">
+                        <span class="stroke">catwalk</span> newsletter
                     </h2>
-                    <p class="paragraph mt-3 mt-md-4 mt-lg-5 mt-xl-5">
+                    <p class="paragraph thin-grey px-3 px-md-0 px-lg-0 px-xl-0 mt-4 mt-md-5 mt-lg-5 mt-xl-5">
                         With our newsletter you will always be up to date and be the first to know about upcoming
                         events,
                         the latest plans and what else is important at Club Catwalk. We promise: You will not be spammed
@@ -672,8 +673,24 @@
                         us, we are much too busy to get the best artists behind our DJ booth.
                     </p>
                 </div>
+                <div class="newsletter-form px-4 px-lg-5 px-xl-5">
+                    <form action="#">
+                        <div class="form-group d-flex flex-column flex-lg-row flex-xl-row gap-5 gap-lg-4 gap-xl-4">
+                            <input type="text" name="" id="" placeholder="Your name">
+                            <input type="text" name="" id="" placeholder="Your email address">
+                        </div>
+                        <div class="form-group p-0 d-flex flex-column flex-lg-row flex-xl-row gap-3 mt-5 mb-3">
+                            <input class="check" type="checkbox" value="" id="checkbox">
+                            <span class="paragraph thin-grey p-0" for="defaultCheck1">
+                                Yes, I would like to receive the Catwalk Newsletter. Information on revocation and
+                                processing of data can be found in the privacy policy. The consent can be revoked at
+                                any time in the newsletter.
+                            </span>
+                        </div>
+                        <button type="submit" class="subscribe yellow yellow-border mt-4 text-uppercase small-text">Subscribe</button>
+                    </form>
+                </div>
             </div>
-
         </div>
         <!-- newsletter section -->
     </main>
