@@ -384,7 +384,7 @@ header {
 }
 .newsletter-form .form-group input:not(#checkbox){
     width: 30rem;
-    height: 4rem;
+    height: 4.5rem;
     background: #070707;
     padding: 0 2rem;
     outline: none;
@@ -536,8 +536,11 @@ header {
     .service-details .row .col-12{
         width: 100% !important;
     }
-    .newsletter-contents .title .paragraph, .newsletter-form form{
+    .newsletter-contents .title .paragraph{
         width: 90%;
+    }
+    .newsletter-form form{
+        width: 80%;
     }
     .newsletter .newsletter-contents{
         top:15%;
@@ -653,6 +656,9 @@ header {
         width: 2.5rem;
         height: 2.5rem;
     }
+    .newsletter-form form{
+        width: 90%;
+    }
     .newsletter img{
         height: 110vh;
     }
@@ -709,7 +715,7 @@ header {
     .browse{
         margin-top: 4rem;
     }
-    .browse a, .subscribe{
+    .browse a{
         padding: 1rem 2rem;
     }
     .events{
@@ -744,11 +750,11 @@ header {
         gap:4rem
     }
     .newsletter-contents .title .paragraph{
-        width: 90%;
+        width: 100%;
         line-height: 1.6rem;
     }
     .newsletter-form .form-group input:not(#checkbox){
-        width: 22rem;
+        width: 100%;
         height: 3.5rem;
         font-size: 0.8rem;
     }
@@ -772,12 +778,12 @@ header {
     .newsletter-form form{
         width: 100%;
     }
-    .newsletter-form.px-4{
-        padding-left: 1.5rem !important;
-        padding-right: 1rem !important;
-    }
+
     .newsletter img{
         height: 100vh;
+    }
+    .subscribe{
+        padding: 0.7rem 2rem;
     }
     
 }
@@ -794,10 +800,6 @@ header {
     }
     .newsletter img{
         height: 110vh;
-    }
-    .newsletter-form .form-group input:not(#checkbox){
-        width: 20rem;
-        height: 3rem;
     }
 }
 @media screen and (min-width: 360px) and (max-width: 380px)  {
