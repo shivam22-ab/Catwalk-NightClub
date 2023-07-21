@@ -366,7 +366,7 @@ header {
 .newsletter img{
     height: 130vh;
     object-fit: cover;
-    margin-bottom: 6rem;
+    margin-bottom: 1rem;
 }
 .newsletter .newsletter-contents{
     position: absolute;
@@ -398,7 +398,10 @@ header {
     font-size: 1.2rem;
     color: #fff;
 }
-
+.newsletter-form form{
+    width: 65%;
+    margin: auto;
+}
 /* Custom checkbox style */
 .check {
     appearance: none;
@@ -426,10 +429,12 @@ header {
     font-size: 2.5rem;
     color: transparent;
 }
-
 .check:checked:before {
     color: #FCD406;
 }
+
+/* newsletter design */
+/* Footer design */
 footer{
     background: #000;
     height: 60vh;
@@ -440,27 +445,47 @@ footer::before{
     display: block;
     width: 100%;
     height: 0.5px;
-    margin: 2rem 0;
     background: #484848;
     z-index: 1;
+    margin-bottom: 4rem;
 }
-.newsletter-form form{
-    width: 65%;
-    margin: auto;
+.footer-logo{
+    width: 150px;
 }
-.left-svg{
-    top:-3%;
+.yellow-torch{
+    top:0;
     left: -2%;
+    z-index: 1;
+    
+}
+.yellow-torch .torch>svg, .blue-torch .torch>svg{
+    width: 200px;
+    height: 120px;
+}
+.yellow-torch .light{
+    top:40%;
+    left:55%;
+}
+.blue-torch{
+    top:0;
+    right:-3%;
+    z-index: 1;
+}
+.blue-torch .light{
+    top:55%;
+    right:50%;
+}
+footer .end-content{
+    margin-top: 4rem;
+    z-index: 2;
 }
 
-
-  /* Animation for moving the torch left and right */
-@keyframes moveTorch {
+/* @keyframes moveTorch {
     0%, 100% {
         transform: translateY(0) translateX(0) rotate(0deg);
     }
     20% {
-        transform: translateY(10px) translateX(10px) rotate(-20deg);
+        transform: translateY(10px) translateX(10px) rotate(-30deg);
     }
     40% {
         transform: translateY(-10px) translateX(20px) rotate(-10deg);
@@ -469,26 +494,67 @@ footer::before{
         transform: translateY(10px) translateX(10px) rotate(0deg);
     }
     80% {
-        transform: translateY(30px) translateX(-20px) rotate(20deg);
+        transform: translateY(20px) translateX(-20px) rotate(30deg);
+    }
+} */
+
+
+/* Apply the animation to the Yellow torch */
+.yellow-torch {
+    animation: moveYellow 20s infinite linear;
+}
+@keyframes moveYellow {
+    0%, 100% {
+        transform: translateY(0) rotate(0deg);
+    }
+    20% {
+        transform: translateY(0) rotate(-20deg);
+    }
+    40% {
+        transform: translateY(-1px) rotate(-10deg);
+    }
+    60% {
+        transform: translateY(5px) rotate(0deg);
+    }
+    80% {
+        transform: translateY(10px) rotate(10deg);
     }
 }
-
-
-/* Apply the animation to the torch */
-.left-svg {
-    animation: moveTorch 12s infinite linear;
+/* Apply the animation to the Blue torch */
+.blue-torch{
+    animation: moveBlue 20s infinite linear;
 }
-  footer .torch-light{
-    width: 10rem;
-  }
-  .light{
-    top: 10%;
-    left: 30%;
-  }
-  .light svg{
-    height:1400px;
-  }
-/* newsletter design */
+@keyframes moveBlue {
+
+    0%,100%{
+        transform: translateY(0) rotate(0deg);
+    }
+    20% {
+        transform: translateY(0) rotate(-20deg);
+    }
+    40% {
+        transform: translateY(-5px) rotate(10deg);
+    }
+    60% {
+        transform: translateY(-10px) rotate(40deg);
+    }
+    80% {
+        transform: translateY(-15px) rotate(20deg);
+    }
+}
+footer .social-icons svg{
+    width: 3rem;
+    height: 3rem;
+    transition: .5s ease-in-out;
+}
+footer .social-icons svg:hover path{
+    fill: #000;
+}
+footer .social-icons svg:hover rect{
+    fill: #FCD406;
+}
+
+/* Footer design */
 /* Validation color */
 #name.error::placeholder, #email.error::placeholder{
     color: #ca0d00;
@@ -604,6 +670,13 @@ footer::before{
     .newsletter img{
         height: 120vh;
     }
+    footer{
+        height: 50vh;
+    }
+    .yellow-torch .torch>svg, .blue-torch .torch>svg{
+        width: 150px;
+        height: 80px;
+    }
 }
 
 @media (max-width:600px) {
@@ -718,7 +791,53 @@ footer::before{
     .newsletter img{
         height: 110vh;
     }
-   
+    footer::before{
+        margin-bottom: 2rem;
+    }
+    .yellow-torch{
+        left: -3%;
+    }
+    .yellow-torch .torch>svg, .blue-torch .torch>svg{
+        width: 200px;
+        height: 120px;
+    }
+    .yellow-torch .light{
+        top:15%;
+        left:40%;
+    }
+    @keyframes moveYellow {
+        80% {
+            transform: translateY(15px) translateX(-10px) rotate(40deg);
+        }
+    }
+    .blue-torch{
+        right:-3.5%;
+    }
+    .blue-torch .light{
+        top:20%;
+        right:30%;
+    }
+    @keyframes moveBlue {
+        0%,100%{
+            transform: translateY(0) rotate(0deg);
+        }
+        20% {
+            transform: translateY(0) rotate(-30deg);
+        }
+        40% {
+            transform: translateY(-5px) rotate(10deg);
+        }
+        60% {
+            transform: translateY(-10px) rotate(30deg);
+        }
+        80% {
+            transform: translateY(-15px) rotate(15deg);
+        }
+    }
+    .yellow-torch .torch>svg, .blue-torch .torch>svg{
+        width: 140px;
+        height: 70px;
+    }
 }
 @media (max-width:480px) {
     .large-title{
@@ -834,12 +953,22 @@ footer::before{
     .newsletter-form form{
         width: 100%;
     }
-
     .newsletter img{
         height: 100vh;
     }
     .subscribe{
         padding: 0.7rem 2rem;
+    }
+    .yellow-torch .torch>svg, .blue-torch .torch>svg{
+        width: 120px;
+        height: 60px;
+    }
+    .yellow-torch{
+        left: -4%;
+    }
+    .blue-torch{
+        top:1%;
+        right:-4.5%;
     }
     
 }
