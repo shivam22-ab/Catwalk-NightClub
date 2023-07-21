@@ -674,10 +674,10 @@
                     </p>
                 </div>
                 <div class="newsletter-form px-4 px-lg-5 px-xl-5">
-                    <form action="#">
+                    <form action="#" id="subscribeForm">
                         <div class="form-group d-flex flex-column flex-lg-row flex-xl-row gap-5 gap-lg-4 gap-xl-4">
-                            <input type="text" name="" id="" placeholder="Your name">
-                            <input type="text" name="" id="" placeholder="Your email address">
+                            <input type="text" name="" id="name" placeholder="Your name">
+                            <input type="text" name="" id="email" placeholder="Your email address">
                         </div>
                         <div class="form-group p-0 d-flex flex-column flex-lg-row flex-xl-row gap-3 mt-5 mb-3">
                             <input class="check" type="checkbox" value="" id="checkbox">
@@ -687,20 +687,53 @@
                                 any time in the newsletter.
                             </span>
                         </div>
-                        <button type="submit" class="subscribe yellow yellow-border mt-4 text-uppercase small-text">Subscribe</button>
+                        <button type="submit"
+                            class="subscribe yellow yellow-border mt-4 text-uppercase small-text">Subscribe</button>
                     </form>
                 </div>
             </div>
         </div>
         <!-- newsletter section -->
     </main>
-    <footer>
-        <!-- place footer here -->
+    <footer class="dark position-relative">
+        <div class="footer-contents d-flex align-items-center flex-column gap-3 ">
+            <img src="assets/images/logo.png" width="150" />
+            <div class="left-svg position-absolute">
+                <div class="torch position-relative">
+                    <img src="assets/images/torch.png" class="torch-light">
+                </div>
+                <div class="light position-absolute">
+                    <svg viewBox="0 0 1400 1068" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <g style="mix-blend-mode:hard-light" filter="url(#filter0_f_149_125)">
+                            <path
+                                d="M65.1396 53.4126C68.0801 46.8373 76.11 44.3158 82.2815 48.0297L1353.04 812.746L1209.5 1021.09L50.921 107.408C46.6053 104.004 45.1535 98.104 47.3973 93.0865L65.1396 53.4126Z"
+                                fill="url(#paint0_linear_149_125)" fill-opacity="0.8" />
+                        </g>
+                        <defs>
+                            <filter id="filter0_f_149_125" x="0.351074" y="0.307617" width="1398.69" height="1066.78"
+                                filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+                                <feFlood flood-opacity="0" result="BackgroundImageFix" />
+                                <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape" />
+                                <feGaussianBlur stdDeviation="23" result="effect1_foregroundBlur_149_125" />
+                            </filter>
+                            <linearGradient id="paint0_linear_149_125" x1="675.722" y1="482.71" x2="584.946"
+                                y2="614.467" gradientUnits="userSpaceOnUse">
+                                <stop stop-color="#FCD406" />
+                                <stop offset="1" stop-color="#D9D9D9" stop-opacity="0" />
+                            </linearGradient>
+                        </defs>
+                    </svg>
+                </div>
+            </div>
+        </div>
     </footer>
-    <script src="assets/js/slide.js"></script>
+    <!-- jquery -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js"
         integrity="sha512-3gJwYpMe3QewGELv8k/BX9vcqhryRdzRMxVfq6ngyWXwo03GFEzjsUm8Q7RZcHPHksttq7/GFoxjCVUjkjvPdw=="
         crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="assets/js/slide.js"></script>
+    <script src="assets/js/subscribeValidation.js"></script>
+
     <!-- Bootstrap JavaScript Libraries -->
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
         integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous">
