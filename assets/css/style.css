@@ -811,18 +811,16 @@ footer .social-icons svg:hover rect{
         }
     }
     .blue-torch{
-        right:-3.5%;
+        top:2%;
+        right:-3%;
     }
     .blue-torch .light{
         top:20%;
         right:30%;
     }
     @keyframes moveBlue {
-        0%,100%{
-            transform: translateY(0) rotate(0deg);
-        }
         20% {
-            transform: translateY(0) rotate(-30deg);
+            transform: translateY(0) translateX(20px) rotate(-30deg);
         }
         40% {
             transform: translateY(-5px) rotate(10deg);
@@ -958,6 +956,9 @@ footer .social-icons svg:hover rect{
     }
     .subscribe{
         padding: 0.7rem 2rem;
+    }
+    footer{
+        height: 40vh;
     }
     .yellow-torch .torch>svg, .blue-torch .torch>svg{
         width: 120px;
