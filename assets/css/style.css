@@ -129,6 +129,9 @@ body {
 .card:hover{
     scale:1.02;
 }
+.gap2{
+    gap: 2rem !important;
+}
 /* Custom classes */
 
 /* Navbar design */
@@ -576,6 +579,15 @@ footer .social-icons svg:hover rect{
 }
 @media (max-width:992px)
 {
+    .testimonial-details .overlay{
+        width: 100%;
+        height: 30%;
+        left: 0;
+        right: 0;
+        margin: auto;
+        bottom: 0;
+        background-image: linear-gradient(to top, rgba(7, 7, 7, 1) 30%, rgba(255, 255, 255, 0) 100%);
+    }
     .testimonial-details .row{
         display: flex;
         width: 100%;
@@ -597,6 +609,7 @@ footer .social-icons svg:hover rect{
     .newsletter img{
         height: 140vh;
     }
+
 }
 @media (max-width:900px) {
     .club-description .container{
@@ -611,6 +624,7 @@ footer .social-icons svg:hover rect{
     .browse{
         margin: 3rem 0 5rem 0;
     }
+    
     .testimonial-img{
         height: 600px;
     }
@@ -729,7 +743,7 @@ footer .social-icons svg:hover rect{
         width: 60px;
         height: 60px;
     }
-    .event-details, .blogs-details, .gallery-details,.testimonial-details, .service-details {
+    .event-details, .blogs-details, .gallery-details,.testimonial-details, .service-details{
         margin-top: 2rem;
     }
     .event-details .row .card .box {
@@ -791,7 +805,7 @@ footer .social-icons svg:hover rect{
         width: 90%;
     }
     .newsletter img{
-        height: 110vh;
+        height: 120vh;
     }
     footer::before{
         margin-bottom: 2rem;
@@ -989,9 +1003,7 @@ footer .social-icons svg:hover rect{
     .large-title{
         font-size: 1.8rem;
     }
-    .newsletter img{
-        height: 110vh;
-    }
+   
 }
 @media screen and (min-width: 360px) and (max-width: 380px)  {
     .newsletter img{
