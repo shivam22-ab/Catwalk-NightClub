@@ -17,7 +17,7 @@ $(document).ready(function(){
        var email = $('#email').val().trim();
        if (email === '') {
            $('#email').addClass('error');
-           $('#email').attr('placeholder', 'Your Email Addess*');
+           $('#email').attr('placeholder', 'Your Email Address*');
            isValid = false;
        } else if (!isValidEmail(email)) {
            $('#email').addClass('error');

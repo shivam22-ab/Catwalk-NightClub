@@ -24,6 +24,7 @@ body {
 
 .bg-yellow {
     background: #FCD406;
+    border: 2px solid #FCD406;
 }
 .thin-grey{
     color: #c2c2c2;
@@ -45,7 +46,7 @@ body {
 
 .mid-title {
     font-size: 2rem;
-    font-weight: 800;
+    font-weight: 700;
     line-height: 2.5rem;
 }
 
@@ -95,7 +96,7 @@ body {
     font-weight: 600;
 }
 .paragraph{
-    font-size: 1rem;
+    font-size: 1.2rem;
     line-height: 1.6rem;
 }
 
@@ -114,7 +115,7 @@ body {
 .yellow-border {
     color: #FCD406;
     background: #070707;
-    border: 1px solid #FCD406;
+    border: 2px solid #FCD406;
     transition: .3s ease-in;
 }
 
@@ -466,6 +467,7 @@ footer::before{
     top:40%;
     left:55%;
 }
+
 .blue-torch{
     top:0;
     right:-3%;
