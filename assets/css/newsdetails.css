@@ -3,76 +3,7 @@
     padding: 0;
     box-sizing: border-box;
 }
-.event-info{
-    gap: 5rem;
-}
-.general-info{
-    height: 100vh;
-    position: relative;
-}
-.general-info img{
-    height: 100vh;
-    object-fit: cover;
-}
-
-.general-details{
-   width: 60%; 
-    position: absolute;
-    top:0;
-    right: 0;
-    bottom: 0;
-    left: 0;
+.news-details{
+    width: 90vw;
     margin: auto;
-    gap: 4rem;
-}
-.general-details .box{
-    width: 10rem;
-    height: 10rem;
-    border:1px solid #ffff;
-}
-.general-details .buttons a{
-    padding: 1.3rem 3rem;
-    font-weight: 600;
-    font-size: 1.5rem;
-}
-
-.general-details .paragraph, .main-contents .card .paragraph{
-    line-height: 2rem; 
-}
-.general-info .overlay {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    height: 30%;
-    background-image: linear-gradient(to top, rgba(7, 7, 7, 1) 30%, rgba(255, 255, 255, 0) 100%);
-}
-.general-info .top-overlay{
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.7); 
-}
-.date{
-    font-size: 3.5rem;
-    line-height: 4rem;
-    font-weight: 700;
-}
-.month{
-    font-size: 2.5rem;
-    line-height: 3.5rem;
-    font-weight: 700;
-}
-.time{
-    font-size: 1.5rem;
-    line-height: 2rem;
-    font-weight: 700;
-}
-.detail-info{
-    gap: 4rem;
-}
-.main-contents .card{
-    background:#070707;
 }

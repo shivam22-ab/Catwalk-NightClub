@@ -13,9 +13,7 @@ body {
 .list{
     padding-top: 13rem;
 }
-/* .list .event-details{
-    padding-bottom: 3rem;
-} */
+
 
 /* Pagination design */
 .list .pagination .links a{

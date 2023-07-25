@@ -36,7 +36,7 @@ body {
 .large-title{
     font-size: 4.5rem;
     font-weight: 800;
-    line-height: 3rem;
+    line-height: 4rem;
 }
 .main-title {
     font-size: 3.5rem;
@@ -60,7 +60,10 @@ body {
     font-weight: 600;
     line-height: 2rem;
 }
-
+.author-title{
+    font-size: 1.5rem;
+    font-weight: 700;
+}
 .extra-sm-title {
     font-size: 1.2rem;
     font-weight: 600;
@@ -96,8 +99,8 @@ body {
     font-weight: 600;
 }
 .paragraph{
-    font-size: 1.2rem;
-    line-height: 1.6rem;
+    font-size: 1rem;
+    line-height: 2rem;
 }
 
 .stroke {
@@ -130,7 +133,13 @@ body {
     scale:1.02;
 }
 .gap2{
-    gap: 2rem !important;
+    gap: 2rem;
+}
+.gap3{
+    gap: 3rem;
+}
+.gap4{
+    gap: 4rem;
 }
 /* Custom classes */
 
@@ -155,8 +164,8 @@ header {
 }
 
 .bar svg,.ticket svg{
-    height: 35px;
-    width: 35px;
+    height: 40px;
+    width: 40px;
 }
 
 .bar svg path,
@@ -177,7 +186,7 @@ header {
 }
 
 .logo img{
-    width: 170px;
+    width: 200px;
 }
 /* Navbar design */
 /* Slide down design */
@@ -215,8 +224,8 @@ header {
 }
 
 .overlay img.rotate {
-    width:200px;
-    height:200px;
+    width:250px;
+    height:250px;
     animation: rotate 15s linear infinite;
 }
 .overlay .center{
@@ -235,8 +244,8 @@ header {
     }
   }
   .overlay img.hashtext {
-    width:80px;
-    height:80px;
+    width:100px;
+    height:100px;
     position: absolute;
     top:0;
     bottom: 0;
@@ -367,19 +376,13 @@ header {
 /* service design */
 
 /* newsletter design */
-.newsletter img{
-    height: 130vh;
-    object-fit: cover;
-    margin-bottom: 1rem;
+.newsletter{
+    background: url(../images/newsletter.png) no-repeat;
+    background-position: center;
+    background-size: cover;
+    padding: 15rem 0;
 }
-.newsletter .newsletter-contents{
-    position: absolute;
-    z-index: 1;
-    top:20%;
-    left: 0;
-    right: 0;
-    margin: auto;
-}
+
 .newsletter-contents .title .paragraph{
     width: 65%;
     margin: auto;
@@ -586,7 +589,7 @@ footer .social-icons svg:hover rect{
         right: 0;
         margin: auto;
         bottom: 0;
-        background-image: linear-gradient(to top, rgba(7, 7, 7, 1) 30%, rgba(255, 255, 255, 0) 100%);
+        background-image: linear-gradient(to top, rgba(7, 7, 7, 1) 10%, rgba(255, 255, 255, 0) 100%);
     }
     .testimonial-details .row{
         display: flex;
@@ -605,9 +608,6 @@ footer .social-icons svg:hover rect{
     }
     .newsletter-form form{
         width: 60%;
-    }
-    .newsletter img{
-        height: 140vh;
     }
 
 }
@@ -631,15 +631,14 @@ footer .social-icons svg:hover rect{
     .service-details{
         margin-bottom: 5rem;
     }
+    .newsletter{
+        padding: 10rem 0;
+    }
     .newsletter-contents .title .paragraph{
         width: 70%;
     }
 }
 @media (max-width:767px) {
-    .overlay img.rotate{
-        height: 180px;
-        width: 180px;
-    }
     .main-title{
         line-height: 4rem;
     }
@@ -683,9 +682,6 @@ footer .social-icons svg:hover rect{
     .newsletter .newsletter-contents{
         top:15%;
     }
-    .newsletter img{
-        height: 120vh;
-    }
     footer{
         height: 50vh;
     }
@@ -699,6 +695,7 @@ footer .social-icons svg:hover rect{
     .logo img{
         width: 100px;
     }
+    
     .extra-sm-title{
         font-size: 1rem;
     }
@@ -739,9 +736,13 @@ footer .social-icons svg:hover rect{
     .overlay{
         background-image: linear-gradient(to top, rgba(7, 7, 7, 1) 10%, rgba(255, 255, 255, 0) 100%);
     }
+    .overlay img.rotate{
+        height: 200px;
+        width: 200px;
+    }
     .overlay img.hashtext{
-        width: 60px;
-        height: 60px;
+        width: 70px;
+        height: 70px;
     }
     .event-details, .blogs-details, .gallery-details,.testimonial-details, .service-details{
         margin-top: 2rem;
@@ -784,7 +785,7 @@ footer .social-icons svg:hover rect{
         line-height: 1.8rem;
     }
     .newsletter-form .form-group input:not(#checkbox){
-        width: 25rem;
+        width: 100%;
     }
     .newsletter-form .form-group input::placeholder{
         font-size: 1rem;
@@ -803,9 +804,6 @@ footer .social-icons svg:hover rect{
     }
     .newsletter-form form{
         width: 90%;
-    }
-    .newsletter img{
-        height: 120vh;
     }
     footer::before{
         margin-bottom: 2rem;
@@ -900,6 +898,7 @@ footer .social-icons svg:hover rect{
     }
     .overlay .center{
         top:0;
+        bottom: auto;
     }
     .overlay img.hashtext{
         bottom:15%
@@ -938,6 +937,9 @@ footer .social-icons svg:hover rect{
         width: 25px;
         height: 25px;
     }
+    .newsletter{
+        padding: 5rem 0;
+    }
     .newsletter-contents{
         gap:4rem
     }
@@ -946,7 +948,6 @@ footer .social-icons svg:hover rect{
         line-height: 1.6rem;
     }
     .newsletter-form .form-group input:not(#checkbox){
-        width: 100%;
         height: 3.5rem;
         font-size: 0.8rem;
     }
@@ -993,23 +994,21 @@ footer .social-icons svg:hover rect{
     
 }
 @media (max-width:400px) {
-
+    .video{
+        height: 100vh;
+    }
     .overlay{
-        bottom: 3%;
+        bottom: 5%;   
     }
     .overlay img.hashtext{
-        bottom: 0;
+        bottom: 10%;
     }
     .large-title{
         font-size: 1.8rem;
     }
    
 }
-@media screen and (min-width: 360px) and (max-width: 380px)  {
-    .newsletter img{
-        height: 145vh;
-    }
-}
+
 
 
 

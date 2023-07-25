@@ -9,6 +9,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
     <!-- External css -->
     <link rel="stylesheet" href="assets/css/style.css" />
+    <link rel="stylesheet" href="assets/css/grid.css" />
     <!-- Excon font -->
     <link href="https://api.fontshare.com/v2/css?f[]=excon@400,900,700,500,300&display=swap" rel="stylesheet" />
     <!-- Bootstrap CSS v5.2.1 -->
@@ -67,7 +68,7 @@
         <div class="events">
             <div class="title text-uppercase text-white text-center">
                 <h5 class="yellow extra-sm-title">Our Events</h5>
-                <h2 class="main-title">
+                <h2 class="large-title">
                     Upcoming <span class="stroke">Events</span>
                 </h2>
             </div>
@@ -161,7 +162,7 @@
         <div class="blogs">
             <div class="title text-uppercase text-white text-center">
                 <h5 class="yellow extra-sm-title">Blogs & News</h5>
-                <h2 class="main-title">Discover <span class="stroke">News</span></h2>
+                <h2 class="large-title">Discover <span class="stroke">News</span></h2>
             </div>
             <div class="blogs-details px-4 px-lg-5 px-xl-5">
                 <div
@@ -220,49 +221,20 @@
         <div class="gallery">
             <div class="title text-uppercase text-white text-center">
                 <h5 class="yellow extra-sm-title">Images</h5>
-                <h2 class="main-title">
+                <h2 class="large-title">
                     Explore <span class="stroke">Gallery</span>
                 </h2>
             </div>
             <div class="gallery-details px-4 px-lg-5 px-xl-5">
-                <!-- Gallery -->
-                <div class="row">
-                    <div class="col-12 col-lg-6 col-xl-6 px-4 px-md-3 mb-3 mb-lg-0 mb-xl-0 p-xl-0 px-xl-0 left-col">
-                        <img src="assets/images/gallery1.png" class="w-100 pointer">
-                    </div>
-                    <div class="col-12 col-lg-6 col-xl-6 right-col d-flex flex-column gap-3 gap-md-0 gap-lg-3 gap-xl-3">
-                        <div class="mid-col d-flex gap-3">
-                            <div class="mid-large mb-3 mb-lg-0 mb-xl-0">
-                                <img src="assets/images/gallery2.png" class="w-100 pointer">
-                            </div>
-                            <div class="side-img d-flex flex-column gap-3 p-0">
-                                <img src="assets/images/gallery3.png" class="w-100 pointer">
-                                <img src="assets/images/gallery4.png" class="w-100 pointer">
-                            </div>
-                            <div class="show row gap-3 mb-1 mb-lg-0 mb-xl-0">
-                                <div class="col p-0">
-                                    <img src="assets/images/gallery3.png" class="w-100 pointer">
-                                </div>
-                                <div class="col p-0">
-                                    <img src="assets/images/gallery4.png" class="w-100 pointer">
-                                </div>
-                            </div>
-                        </div>
-                        <div class="end-row d-flex flex-row gap-3 p-0 mb-4 mb-lg-0 mb-xl-0">
-                            <img src="assets/images/gallery6.png" class="w-100 pointer">
-                            <img src="assets/images/gallery7.png" class="w-100 pointer">
-                        </div>
-                        <div class="show row gap-3">
-                            <div class="col p-0">
-                                <img src="assets/images/gallery6.png" class="w-100 pointer">
-                            </div>
-                            <div class="col p-0">
-                                <img src="assets/images/gallery7.png" class="w-100 pointer">
-                            </div>
-                        </div>
-                    </div>
+                <div class="gallery-grid">
+                    <div class="grid-item one"></div>
+                    <div class="grid-item two"></div>
+                    <div class="grid-item three"></div>
+                    <div class="grid-item four"></div>
+                    <div class="grid-item five"></div>
+                    <div class="grid-item six"></div>
+                    <div class="grid-item seven"></div>
                 </div>
-                <!-- Gallery -->
                 <div class="browse text-center">
                     <a href="galleries.html" class="yellow-border small-text text-decoration-none text-uppercase">
                         Browse All</a>
@@ -274,7 +246,7 @@
         <div class="testimonial">
             <div class="title text-uppercase text-white text-center px-4 px-md-0 px-lg-0 px-xl-0">
                 <h5 class="yellow extra-sm-title mb-1 mb-md-3 mb-lg-3 mb-xl-3">Testimonials</h5>
-                <h2 class="main-title">
+                <h2 class="large-title">
                     Discover their <span class="stroke">experiences</span>
                 </h2>
             </div>
@@ -655,9 +627,8 @@
         </div>
         <!-- service section -->
         <!-- newsletter section -->
-        <div class="newsletter position-relative">
-            <img src="assets/images/newsletter.png" class="w-100 " alt="">
-            <div class="newsletter-contents position-absolute d-flex flex-column">
+        <div class="newsletter ">
+            <div class="newsletter-contents d-flex flex-column">
                 <div class="title text-center text-white">
                     <h5 class="yellow text-uppercase extra-sm-title mb-1 mb-md-3 mb-lg-3 mb-xl-3">Subscribe</h5>
                     <h2 class="large-title text-uppercase px-3 px-md-0 px-lg-0 px-xl-0 mb-1 mb-md-2 mb-lg-3 mb-xl-3">
