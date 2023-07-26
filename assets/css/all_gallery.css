@@ -116,12 +116,12 @@
     }
   }
   @media (max-width:600px) {
-    .grid-item {
+    .all_gallery .grid-item {
       height: 500px;
     }
   }
   @media (max-width:480px) {
-    .grid-item {
+    .all_gallery .grid-item {
       height: 350px;
     }
   }

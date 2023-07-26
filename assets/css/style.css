@@ -802,8 +802,9 @@ footer .social-icons svg:hover rect{
         width: 2.5rem;
         height: 2.5rem;
     }
-    .newsletter-form form{
-        width: 90%;
+    .newsletter-contents .title .paragraph{
+        width: 100%;
+        line-height: 1.6rem;
     }
     footer::before{
         margin-bottom: 2rem;
@@ -900,9 +901,7 @@ footer .social-icons svg:hover rect{
         top:0;
         bottom: auto;
     }
-    .overlay img.hashtext{
-        bottom:15%
-    }
+
     .browse{
         margin-top: 4rem;
     }
@@ -942,10 +941,6 @@ footer .social-icons svg:hover rect{
     }
     .newsletter-contents{
         gap:4rem
-    }
-    .newsletter-contents .title .paragraph{
-        width: 100%;
-        line-height: 1.6rem;
     }
     .newsletter-form .form-group input:not(#checkbox){
         height: 3.5rem;
