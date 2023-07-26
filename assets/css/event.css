@@ -31,9 +31,14 @@ body {
     background: #FCD406;
 }
 /* Pagination design */
-@media (max-width:480px) {
+@media (max-width:600px) {
     .list{
         padding-top: 10rem;
+    }
+}
+@media (max-width:480px) {
+    .list{
+        padding-top: 8rem;
     }
     .links{
         width: 3rem;

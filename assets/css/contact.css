@@ -1,0 +1,16 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.contact-us .general-details
+{
+    top:0;
+    bottom: 0%;
+}
+.contact-section{
+    background: radial-gradient(36.39% 28.55% at 51.01% 67.86%, rgba(7, 7, 7, 0.00) 0%, #070707 100%), url(../images/contact.png), lightgray 50% / cover no-repeat;
+    background-position: center;
+    background-size: cover;
+    padding: 15rem 0;
+}

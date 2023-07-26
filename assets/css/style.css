@@ -99,7 +99,7 @@ body {
     font-weight: 600;
 }
 .paragraph{
-    font-size: 1rem;
+    font-size: 1.2rem;
     line-height: 2rem;
 }
 
@@ -126,12 +126,7 @@ body {
     background: #FCD406;
     color: #000000;
 }
-.card{
-    transition: .3s ease-in;
-}
-.card:hover{
-    scale:1.02;
-}
+
 .gap2{
     gap: 2rem;
 }
@@ -377,7 +372,7 @@ header {
 
 /* newsletter design */
 .newsletter{
-    background: url(../images/newsletter.png) no-repeat;
+    background: radial-gradient(36.39% 28.55% at 51.01% 67.86%, rgba(7, 7, 7, 0.00) 0%, #070707 100%), url(../images/contact.png), lightgray 50% / cover no-repeat;
     background-position: center;
     background-size: cover;
     padding: 15rem 0;
@@ -695,7 +690,9 @@ footer .social-icons svg:hover rect{
     .logo img{
         width: 100px;
     }
-    
+    .author-title{
+        font-size: 1.2rem;
+    }
     .extra-sm-title{
         font-size: 1rem;
     }
@@ -856,6 +853,9 @@ footer .social-icons svg:hover rect{
     }
 }
 @media (max-width:480px) {
+    .author-title{
+        font-size: 1rem;
+    }
     .large-title{
         font-size: 2rem;
     }
@@ -891,8 +891,8 @@ footer .social-icons svg:hover rect{
         font-size: 1rem;
     }
     .paragraph{
-        font-size: 0.9rem;
-        line-height: 1.35rem;
+        font-size: 1rem;
+        line-height: 1.6rem;
     }
     .overlay{
         height:25%;
