@@ -96,6 +96,11 @@
         width: 80vw;
     }
 }
+@media (max-width:979px) {
+    .main-contents .row .col-lg-5{
+        padding: 1.5rem;
+    }
+}
 @media (max-width:767px) {
 
     .general-details{
@@ -177,6 +182,10 @@
     }
     .main-contents .row.gap2{
         gap: 0;
+    }
+    .general-details .buttons a {
+        padding: 0.7rem 1.5rem;
+        font-size: 0.9rem;
     }
    
 }

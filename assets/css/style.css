@@ -192,7 +192,7 @@ header {
     z-index: 4;
     height: 100vh;
     overflow: auto;
-    transition: 0.4s ease;
+    transition: 0.3s ease-in;
     transition-property: top;
 }
 .active{
@@ -259,7 +259,7 @@ header {
 .browse, .testimonial-details{
     margin: 5rem 0 10rem 0;
 }
-.browse a, .subscribe{
+.browse a, .submit{
     padding: 1.2rem 3rem;
 }
 
@@ -358,84 +358,96 @@ header {
 /* Testimonials design */
 
 /* service design */
-.service-details{
-    margin-bottom: 8rem;
-}
 .service-details .card-header svg{
     width: 70px;
     height: 70px;
+}
+.service-details .card{
+    transition: .3s ease-in;
 }
 .service-details .card:hover{
     scale:1.02;
 }
 /* service design */
 
-/* newsletter design */
-.newsletter{
+/* contact design */
+.contact{
     background: radial-gradient(36.39% 28.55% at 51.01% 67.86%, rgba(7, 7, 7, 0.00) 0%, #070707 100%), url(../images/contact.png), lightgray 50% / cover no-repeat;
     background-position: center;
     background-size: cover;
     padding: 15rem 0;
 }
 
-.newsletter-contents .title .paragraph{
-    width: 65%;
+.contact-contents .title .paragraph{
+    /* width: 50%; */
+    width: 59.375rem;
     margin: auto;
 }
-.newsletter-contents{
+.contact-contents{
     gap:6rem
 }
-.newsletter-form .form-group input:not(#checkbox){
-    width: 30rem;
+.contact-form .form-group input:not(#checkbox){
     height: 4.5rem;
-    background: #070707;
+    background: inherit;
     padding: 0 2rem;
     outline: none;
-    border: 1.5px solid #FCD406;
-    color: #fff;
+    border: 2px solid #BCBCBC;
+    color: #BCBCBC;
     font-size: 1.2rem;
 }
-.newsletter-form .form-group input::placeholder{
-    text-transform: uppercase;
+.contact-form .form-group input::placeholder, .contact-form .form-group textarea::placeholder{
     font-size: 1.2rem;
-    color: #fff;
+    color: #BCBCBC;
 }
-.newsletter-form form{
-    width: 65%;
-    margin: auto;
+.form-group textarea{
+    padding: 2rem;
+}
+.contact-form .form-group textarea{
+    background: inherit;
+    outline: none;
+    border: 2px solid #BCBCBC;
 }
 /* Custom checkbox style */
 .check {
     appearance: none;
     -webkit-appearance: none;
     -moz-appearance: none;
-    width: 5rem;
-    height: 3rem;
+    width: 4rem;
+    height: 4rem;
     outline: none;
     cursor: pointer;
-    border: 1.5px solid #FCD406; 
+    border: 2px solid #BCBCBC; 
     background-color: #070707;
 }
 
 .check:checked {
     background: #070707;
-    color: #FCD406;
+    color: #BCBCBC;
 }
 .check:before {
     content: '\2713'; /* Checkmark symbol */
     display: block;
-    width: 3rem;
-    height: 3rem;
+    width: 4rem;
+    height: 4rem;
     text-align: center;
-    line-height: 2.5rem;
-    font-size: 2.5rem;
+    line-height: 3.5rem;
+    font-size: 3.5rem;
     color: transparent;
 }
-.check:checked:before {
-    color: #FCD406;
+.check:checked:before, .submit, .contact-form form label {
+    color: #BCBCBC;
 }
 
-/* newsletter design */
+.submit {
+    background: inherit;
+    border: 2px solid #BCBCBC; 
+    transition: .3s ease-in;
+}
+.submit:hover{
+    background: #BCBCBC;
+    color: #000;
+}
+/* contact design */
 /* Footer design */
 footer{
     background: #000;
@@ -548,7 +560,7 @@ footer .end-content{
 footer .social-icons svg{
     width: 3rem;
     height: 3rem;
-    transition: .5s ease-in-out;
+    transition: .4s ease-in;
 }
 footer .social-icons svg:hover path{
     fill: #000;
@@ -567,12 +579,6 @@ footer .social-icons svg:hover rect{
 @media (max-width:1200px) {
     .service-details .row .col-lg-4{
         width: 50% !important;
-    }
-    .newsletter-form .form-group input:not(#checkbox){
-        width: 25rem;
-    }
-    .newsletter-form form{
-        width: 80%;
     }
 }
 @media (max-width:992px)
@@ -594,15 +600,6 @@ footer .social-icons svg:hover rect{
     }
     .testimonial-details .row .col-lg-6{
         width: 100% !important;
-    }
-    .newsletter-form .form-group input:not(#checkbox){
-        width: 30rem;
-    }
-    .check{
-        width: 3rem;
-    }
-    .newsletter-form form{
-        width: 60%;
     }
 
 }
@@ -626,10 +623,10 @@ footer .social-icons svg:hover rect{
     .service-details{
         margin-bottom: 5rem;
     }
-    .newsletter{
+    .contact{
         padding: 10rem 0;
     }
-    .newsletter-contents .title .paragraph{
+    .contact-contents .title .paragraph{
         width: 70%;
     }
 }
@@ -668,13 +665,10 @@ footer .social-icons svg:hover rect{
     .service-details .row .col-12{
         width: 100% !important;
     }
-    .newsletter-contents .title .paragraph{
+    .contact-contents .title .paragraph{
         width: 90%;
     }
-    .newsletter-form form{
-        width: 80%;
-    }
-    .newsletter .newsletter-contents{
+    .contact .contact-contents{
         top:15%;
     }
     footer{
@@ -778,16 +772,13 @@ footer .social-icons svg:hover rect{
         width: 40px;
         height: 40px;
     }
-    .newsletter .title .paragraph{
+    .contact .title .paragraph{
         line-height: 1.8rem;
     }
-    .newsletter-form .form-group input:not(#checkbox){
-        width: 100%;
-    }
-    .newsletter-form .form-group input::placeholder{
+    .contact-form .form-group input::placeholder, .form-group textarea::placeholder{
         font-size: 1rem;
      }
-    .newsletter .newsletter-contents{
+    .contact .contact-contents{
         top:10%;
     }
     .check:before {
@@ -799,7 +790,7 @@ footer .social-icons svg:hover rect{
         width: 2.5rem;
         height: 2.5rem;
     }
-    .newsletter-contents .title .paragraph{
+    .contact-contents .title .paragraph{
         width: 100%;
         line-height: 1.6rem;
     }
@@ -854,7 +845,7 @@ footer .social-icons svg:hover rect{
 }
 @media (max-width:480px) {
     .author-title{
-        font-size: 1rem;
+        font-size: 0.9rem;
     }
     .large-title{
         font-size: 2rem;
@@ -936,18 +927,18 @@ footer .social-icons svg:hover rect{
         width: 25px;
         height: 25px;
     }
-    .newsletter{
+    .contact{
         padding: 5rem 0;
     }
-    .newsletter-contents{
+    .contact-contents{
         gap:4rem
     }
-    .newsletter-form .form-group input:not(#checkbox){
+    .contact-form .form-group input:not(#checkbox){
         height: 3.5rem;
         font-size: 0.8rem;
     }
-    .newsletter-form .form-group input::placeholder{
-       font-size: 0.8rem;
+    .contact-form .form-group input::placeholder, .contact-form .form-group textarea::placeholder{
+       font-size: 0.9rem;
     }
     .check:before {
         width: 2rem;
@@ -959,17 +950,17 @@ footer .social-icons svg:hover rect{
         width: 2rem;
         height: 2rem;
     }
-    .subscribe.px-4{
+    .submit.px-4{
         padding:1rem 2rem !important;
         font-size: 1rem;
     }
-    .newsletter-form form{
+    .contact-form form{
         width: 100%;
     }
-    .newsletter img{
+    .contact img{
         height: 100vh;
     }
-    .subscribe{
+    .submit{
         padding: 0.7rem 2rem;
     }
     footer{

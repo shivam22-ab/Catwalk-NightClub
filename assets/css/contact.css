@@ -8,9 +8,45 @@
     top:0;
     bottom: 0%;
 }
-.contact-section{
-    background: radial-gradient(36.39% 28.55% at 51.01% 67.86%, rgba(7, 7, 7, 0.00) 0%, #070707 100%), url(../images/contact.png), lightgray 50% / cover no-repeat;
-    background-position: center;
-    background-size: cover;
-    padding: 15rem 0;
+
+.contact-contents{
+    gap: 5rem;
+}
+.contact-form{
+    background: #0F0F0F;
+    width: 74rem;
+    padding: 4rem;
+    margin: auto;
+}
+.contact-form form{
+    gap: 3.5rem;
+}
+@media (max-width:1200px) {
+    .contact-form{
+        width: 90%;
+    }
+}
+@media (max-width:992px) {
+    .contact-form form .row .col.form-group{
+        width: 100% !important;
+    }
+    .contact-form form{
+        gap: 3.5rem;
+    }
+    .contact-form form .gap2{
+        gap: 3.5rem;
+    }
+}
+@media (max-width:600px) {
+    .contact-form{
+        padding: 2.5rem;
+    }
+}
+@media (max-width:480px) {
+    .contact-form{
+        padding: 2rem;
+    }
+    .contact-form form .gap2, .contact-form form{
+        gap: 2rem;
+    }
 }

@@ -10,6 +10,7 @@
     <!-- External css -->
     <link rel="stylesheet" href="assets/css/style.css" />
     <link rel="stylesheet" href="assets/css/event.css" />
+    <link rel="stylesheet" href="assets/css/contact.css" />
     <link rel="stylesheet" href="assets/css/all_gallery.css" />
     <!-- Excon font -->
     <link href="https://api.fontshare.com/v2/css?f[]=excon@400,900,700,500,300&display=swap" rel="stylesheet" />
@@ -96,29 +97,51 @@
                 </div>
             </div>
         </div>
-        <!-- newsletter section -->
-        <div class="newsletter ">
-            <div class="newsletter-contents d-flex flex-column">
+        <!-- contact section -->
+        <div class="contact">
+            <div class="contact-contents d-flex flex-column">
                 <div class="title text-center text-white">
-                    <h5 class="yellow text-uppercase extra-sm-title mb-1 mb-md-3 mb-lg-3 mb-xl-3">Subscribe</h5>
+                    <h5 class="yellow text-uppercase extra-sm-title mb-1 mb-md-3 mb-lg-3 mb-xl-3">Feel free to</h5>
                     <h2 class="large-title text-uppercase px-3 px-md-0 px-lg-0 px-xl-0 mb-1 mb-md-2 mb-lg-3 mb-xl-3">
-                        <span class="stroke">catwalk</span> newsletter
+                        <span class="stroke">Contact</span> us
                     </h2>
                     <p class="paragraph thin-grey px-4 px-md-0 px-lg-0 px-xl-0 mt-4 mt-md-5 mt-lg-5 mt-xl-5">
                         With our newsletter you will always be up to date and be the first to know about upcoming
-                        events,
-                        the latest plans and what else is important at Club Catwalk. We promise: You will not be spammed
-                        by
-                        us, we are much too busy to get the best artists behind our DJ booth.
+                        events, the latest plans and what else is important at Club Catwalk. We promise:
                     </p>
                 </div>
-                <div class="newsletter-form px-4 px-lg-5 px-xl-5">
-                    <form action="#" id="subscribeForm">
-                        <div class="form-group d-flex flex-column flex-lg-row flex-xl-row gap-5 gap-lg-4 gap-xl-4">
-                            <input type="text" name="" id="name" placeholder="Your name">
-                            <input type="text" name="" id="email" placeholder="Your email address">
+                <div class="contact-form">
+                    <form action="#" class="d-flex flex-column" id="subscribeForm">
+                        <div class="row d-flex flex-column flex-lg-row flex-xl-row gap2">
+                            <div class="col form-group">
+                                <label for="name" class="form-label author-title text-uppercase">Name</label>
+                                <input type="text" class="form-control rounded-0" name="name" id="name"
+                                    placeholder="Your name">
+                            </div>
+                            <div class="col form-group">
+                                <label for="email" class="form-label author-title text-uppercase">Email</label>
+                                <input type="text" class="form-control rounded-0" name="email" id="email"
+                                    placeholder="someone@example.com">
+                            </div>
                         </div>
-                        <div class="form-group p-0 d-flex flex-column flex-lg-row flex-xl-row gap-3 mt-5 mb-3">
+                        <div class="row d-flex flex-column flex-lg-row flex-xl-row gap2">
+                            <div class="col form-group">
+                                <label for="phone" class="form-label author-title text-uppercase">Phone</label>
+                                <input type="text" class="form-control rounded-0" name="phone" id="phone"
+                                    placeholder="+977 98">
+                            </div>
+                            <div class="col form-group">
+                                <label for="subject" class="form-label author-title text-uppercase">Subject</label>
+                                <input type="text" class="form-control rounded-0" name="subject" id="subject"
+                                    placeholder="ex. New Year Event">
+                            </div>
+                        </div>
+                        <div class="form-group text-area w-100">
+                            <label for="message" class="form-label author-title text-uppercase">Message</label>
+                            <textarea class="w-100" id="message" rows="5"
+                                placeholder="Please type your message here"></textarea>
+                        </div>
+                        <div class="form-group p-0 d-flex flex-column flex-lg-row flex-xl-row gap-3">
                             <input class="check" type="checkbox" value="" id="checkbox">
                             <span class="paragraph thin-grey p-0" for="defaultCheck1">
                                 Yes, I would like to receive the Catwalk Newsletter. Information on revocation and
@@ -126,13 +149,12 @@
                                 any time in the newsletter.
                             </span>
                         </div>
-                        <button type="submit"
-                            class="subscribe yellow yellow-border mt-4 text-uppercase small-text">Subscribe</button>
+                        <button type="submit" class="submit w-100 text-uppercase small-text">Send message</button>
                     </form>
                 </div>
             </div>
         </div>
-        <!-- newsletter section -->
+        <!-- contact section -->
     </main>
     <footer class="dark position-relative">
         <div class="footer-contents d-flex align-items-center flex-column gap-5">
