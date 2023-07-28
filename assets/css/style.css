@@ -9,7 +9,11 @@ html,
 body {
     overflow-x: hidden;
 }
-
+main{
+    display: flex;
+    flex-direction: column;
+    gap: 16rem;
+}
 
 /* Custom classes */
 .dark {
@@ -74,9 +78,8 @@ body {
 }
 
 .small-text {
-    font-size: 1.2rem;
-    font-weight: 600;
-    line-height: 2rem;
+    font-size: 1.25rem;
+    font-weight: 700;
 }
 
 .extra-small {
@@ -136,6 +139,12 @@ body {
 .gap4{
     gap: 4rem;
 }
+.card{
+    transition: .3s ease-in;
+}
+.card:hover{
+    scale: 1.02;
+}
 /* Custom classes */
 
 /* Navbar design */
@@ -174,9 +183,14 @@ header {
     stroke: #000;
     color: #000;
 }
-
+.close svg{
+    transition: .3s ease-in;
+}
+.close svg:hover path{
+    fill: #000;
+}
 .bar:hover,
-.ticket:hover {
+.ticket:hover, .close svg:hover {
     background: #FCD406;
 }
 
@@ -187,16 +201,45 @@ header {
 /* Slide down design */
 .slide-down{
     position: fixed !important;
-    left: 0;
-    top: -150%;
-    z-index: 4;
+    left: -150%;
+    top: 0;
+    z-index: 1;
     height: 100vh;
     overflow: auto;
-    transition: 0.3s ease-in;
-    transition-property: top;
+    transition: 1.5s ease-in-out;
+    transition-property: left;
+}
+.ham-contents{
+    width: 100%;
+    height: 100%;
+}
+.ham-contents .overlay{
+    position: absolute;
+    top:0;
+    bottom:0;
+    right:0;
+    left:0;
+    margin: auto;
+    transform: translateY(70%);
+}
+.ham-contents .overlay img{
+    scale: 2.5;
+    opacity: .1;
+    z-index: 1;
+}
+.ham-contents .nav-links a, .ham-contents .end-content .social-icons{
+    z-index: 2 !important;
+}
+.ham-contents .end-content{
+    margin-top: 10rem;
+    padding-bottom: 10rem;
 }
 .active{
-    top: 0% !important;
+    left: 0% !important;
+}
+.close-svg{
+    width: 3rem;
+    height: 3rem;
 }
 /* Slide down design */
 /* Body design */
@@ -221,7 +264,7 @@ header {
 .overlay img.rotate {
     width:250px;
     height:250px;
-    animation: rotate 15s linear infinite;
+    animation: rotate 20s linear infinite;
 }
 .overlay .center{
     position: absolute;
@@ -256,21 +299,21 @@ header {
 
 /* Body design */
 /* Events design */
-.browse, .testimonial-details{
-    margin: 5rem 0 10rem 0;
-}
-.browse a, .submit{
-    padding: 1.2rem 3rem;
-}
 
-.event-details, .blogs-details, .gallery-details, .service-details{
+.browse{
+    margin-top: 5rem;
+}
+.browse a{
+    padding: 1.5rem 4rem;
+}
+.event-details, .blogs-details, .gallery-details, .service-details,.testimonial-details{
     margin-top: 4rem;
     padding-bottom: 3rem;
 }
 .event-details .card, .blogs-details .card {
     background: #181818;
 }
-.event-details .row .card .box {
+.event-details .card .box {
     width: 4.2rem;
     height: 4.2rem;
 }
@@ -375,11 +418,30 @@ header {
     background: radial-gradient(36.39% 28.55% at 51.01% 67.86%, rgba(7, 7, 7, 0.00) 0%, #070707 100%), url(../images/contact.png), lightgray 50% / cover no-repeat;
     background-position: center;
     background-size: cover;
-    padding: 15rem 0;
+    padding-bottom: 10rem;
+}
+.contact-us .general-details
+{
+    top:0;
+    bottom: 0%;
 }
 
+.contact-contents{
+    gap: 5rem;
+}
+.contact-form{
+    background: #0F0F0F;
+    width: 74rem;
+    padding: 4rem;
+    margin: auto;
+}
+.contact-form form{
+    gap: 3.5rem;
+}
+.submit{
+    padding: 1.2rem 3rem;
+}
 .contact-contents .title .paragraph{
-    /* width: 50%; */
     width: 59.375rem;
     margin: auto;
 }
@@ -557,18 +619,23 @@ footer .end-content{
         transform: translateY(-15px) rotate(20deg);
     }
 }
-footer .social-icons svg{
+footer .social-icons svg, .close svg{
     width: 3rem;
     height: 3rem;
-    transition: .4s ease-in;
 }
-footer .social-icons svg:hover path{
+.social-icons svg{
+    width: 4rem;
+    height: 4rem;
+}
+.social-icons svg, .social-icons svg path{
+    transition: .3s ease-in;
+}
+.social-icons svg:hover path{
     fill: #000;
 }
-footer .social-icons svg:hover rect{
+.social-icons svg:hover rect{
     fill: #FCD406;
 }
-
 /* Footer design */
 /* Validation color */
 #name.error::placeholder, #email.error::placeholder{
@@ -579,6 +646,9 @@ footer .social-icons svg:hover rect{
 @media (max-width:1200px) {
     .service-details .row .col-lg-4{
         width: 50% !important;
+    }
+    .contact-form{
+        width: 90%;
     }
 }
 @media (max-width:992px)
@@ -601,9 +671,21 @@ footer .social-icons svg:hover rect{
     .testimonial-details .row .col-lg-6{
         width: 100% !important;
     }
+    .contact-form form .row .col.form-group{
+        width: 100% !important;
+    }
+    .contact-form form{
+        gap: 3.5rem;
+    }
+    .contact-form form .gap2{
+        gap: 3.5rem;
+    }
 
 }
 @media (max-width:900px) {
+    main{
+        gap: 10rem;
+    }
     .club-description .container{
         max-width: 90%;
     }
@@ -614,7 +696,7 @@ footer .social-icons svg:hover rect{
         font-size: 1.4rem;
     }
     .browse{
-        margin: 3rem 0 5rem 0;
+        margin-top: 5rem;
     }
     
     .testimonial-img{
@@ -631,6 +713,9 @@ footer .social-icons svg:hover rect{
     }
 }
 @media (max-width:767px) {
+    main{
+        gap: 7rem;
+    }
     .main-title{
         line-height: 4rem;
     }
@@ -678,9 +763,15 @@ footer .social-icons svg:hover rect{
         width: 150px;
         height: 80px;
     }
+    .gap2{
+        gap:1.5rem
+    }
 }
 
 @media (max-width:600px) {
+    main{
+        gap: 5rem;
+    }
     .logo img{
         width: 100px;
     }
@@ -772,12 +863,12 @@ footer .social-icons svg:hover rect{
         width: 40px;
         height: 40px;
     }
-    .contact .title .paragraph{
-        line-height: 1.8rem;
-    }
     .contact-form .form-group input::placeholder, .form-group textarea::placeholder{
         font-size: 1rem;
      }
+     .contact-form{
+        padding: 2.5rem;
+    }
     .contact .contact-contents{
         top:10%;
     }
@@ -792,7 +883,7 @@ footer .social-icons svg:hover rect{
     }
     .contact-contents .title .paragraph{
         width: 100%;
-        line-height: 1.6rem;
+        line-height: 1.8rem;
     }
     footer::before{
         margin-bottom: 2rem;
@@ -842,13 +933,28 @@ footer .social-icons svg:hover rect{
         width: 140px;
         height: 70px;
     }
+    .social-icons svg{
+        width: 3rem;
+        height: 3rem;
+    }
+    .close svg{
+        width: 2rem;
+        height: 2rem;
+    }
+    .slide-down{
+        transition: 1s ease-in-out;
+    }
 }
 @media (max-width:480px) {
+    main{
+        gap: 3rem;
+    }
     .author-title{
         font-size: 0.9rem;
     }
     .large-title{
         font-size: 2rem;
+        line-height: 3rem;
     }
     .low-title
     {
@@ -933,9 +1039,23 @@ footer .social-icons svg:hover rect{
     .contact-contents{
         gap:4rem
     }
-    .contact-form .form-group input:not(#checkbox){
+    .contact-form .form-group input:not(#checkbox) {
         height: 3.5rem;
         font-size: 0.8rem;
+        padding: 1rem;
+    }
+    .contact-form{
+        padding: 2rem;
+    }
+    .contact-form form .gap2, .contact-form form{
+        gap: 2rem;
+    }
+    .submit{
+        padding: 1rem 2rem;
+    }
+    .contact-form .form-group textarea{
+        padding: 1rem;
+        height: 8rem;
     }
     .contact-form .form-group input::placeholder, .contact-form .form-group textarea::placeholder{
        font-size: 0.9rem;
@@ -949,10 +1069,6 @@ footer .social-icons svg:hover rect{
     .check{
         width: 2rem;
         height: 2rem;
-    }
-    .submit.px-4{
-        padding:1rem 2rem !important;
-        font-size: 1rem;
     }
     .contact-form form{
         width: 100%;
@@ -977,9 +1093,25 @@ footer .social-icons svg:hover rect{
         top:1%;
         right:-4.5%;
     }
-    
+    .ham-contents .overlay img{
+        scale: 2;
+    }
+    .ham-contents .overlay{
+        transform: translateY(0);
+    }
+    .social-icons svg{
+        width: 2.5rem;
+        height: 2.5rem;
+    }
 }
 @media (max-width:400px) {
+    .ham-contents .end-content{
+        margin-top: 8rem;
+        padding-bottom: 8rem;
+    }
+    .nav-links.gap3{
+        gap: 2.5rem;
+    }
     .video{
         height: 100vh;
     }
@@ -992,7 +1124,6 @@ footer .social-icons svg:hover rect{
     .large-title{
         font-size: 1.8rem;
     }
-   
 }
 
 
