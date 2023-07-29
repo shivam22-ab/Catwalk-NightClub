@@ -4,7 +4,7 @@
     box-sizing: border-box;
 }
 .event-info{
-    gap: 5rem;
+    gap: 10rem;
 }
 .general-info{
     height: 100vh;
@@ -16,10 +16,10 @@
 }
 
 .general-details{
-   width: 60vw; 
+    width: 60vw; 
     position: absolute;
     right: 0;
-    bottom: 5%;
+    bottom: 10%;
     left: 0;
     margin: auto;
     gap: 4rem;
@@ -28,11 +28,6 @@
     width: 10rem;
     height: 10rem;
     border:1px solid #ffff;
-}
-.general-details .buttons a{
-    padding: 1.3rem 3rem;
-    font-weight: 600;
-    font-size: 1.5rem;
 }
 
 .general-details .paragraph, .main-contents .card .paragraph{
@@ -55,12 +50,12 @@
     height: 100%;
     background-color: rgba(0, 0, 0, 0.7); 
 }
-.date{
+.general-details .date{
     font-size: 3.5rem;
     line-height: 4rem;
     font-weight: 700;
 }
-.month{
+.general-details .month{
     font-size: 2.5rem;
     line-height: 3.5rem;
     font-weight: 700;
@@ -119,11 +114,11 @@
         width:8rem;
         height:8rem;
     }
-    .date{
+    .general-details .date{
         font-size:2.5rem;
         line-height: 3rem;
     }
-    .month{
+    .general-details .month{
         font-size: 1.5rem;
         line-height: 2.5rem;
     }
@@ -143,28 +138,20 @@
     .general-details{
         gap:3rem;
     }
-    .general-details .buttons a{
-        font-size: 1.2rem;
-        padding: 0.8rem 1.8rem;
-    }
    
 }
 @media (max-width:480px) {
     .general-details{
         gap:2rem;
     }
-    .general-details .buttons a{
-        font-size: 1rem;
-        padding: 0.6rem 1.6rem;
-    }
     .general-details .paragraph, .main-contents .card .paragraph{
         font-size: 1rem;
     }
-    .date{
+    .general-details .date{
         font-size:2.5rem;
         line-height: 3rem;
     }
-    .month{
+    .general-details .month{
         font-size: 1.5rem;
         line-height: 2.5rem;
     }
@@ -187,7 +174,9 @@
         padding: 0.7rem 1.5rem;
         font-size: 0.9rem;
     }
-   
+    .security .main-title{
+        padding: 0 2rem;
+    }
 }
 @media (max-width:400px) {
     .general-info{
@@ -201,22 +190,25 @@
         width:6rem;
         height:6rem;
     }
-    .date{
+    .general-details .date{
         font-size:2rem;
         line-height: 2.5rem;
     }
-    .month{
+    .general-details .month{
         font-size: 1rem;
         line-height: 1.5rem;
     }
     .time{
         font-size: 1rem;
     }
-    .general-details .buttons a {
+    .contact-us .general-details{
+        transform: translateY(15%);
+    }
+    .general-details .browse a {
         padding: 0.5rem 1.2rem;
         font-size: 0.8rem;
     }
-    .buttons.gap-3{
+    .browse.gap-3{
         gap: 1rem !important;
     }
 }
