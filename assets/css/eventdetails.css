@@ -8,7 +8,6 @@
 }
 .general-info{
     height: 100vh;
-    position: relative;
 }
 .general-info img{
     height: 100vh;
@@ -17,7 +16,6 @@
 
 .general-details{
     width: 60vw; 
-    position: absolute;
     right: 0;
     bottom: 10%;
     left: 0;
@@ -60,7 +58,7 @@
     line-height: 3.5rem;
     font-weight: 700;
 }
-.time{
+.general-details .time{
     font-size: 1.5rem;
     line-height: 2rem;
     font-weight: 700;
@@ -122,7 +120,7 @@
         font-size: 1.5rem;
         line-height: 2.5rem;
     }
-    .time{
+    .general-details .time{
         font-size: 1.2rem;
     }
     .main-contents .row .col-lg-5, .main-contents .row .col-lg-7{
@@ -155,7 +153,7 @@
         font-size: 1.5rem;
         line-height: 2.5rem;
     }
-    .time{
+    .general-details .time{
         font-size: 1.2rem;
     }
     .event-info{
@@ -198,7 +196,7 @@
         font-size: 1rem;
         line-height: 1.5rem;
     }
-    .time{
+    .general-details .time{
         font-size: 1rem;
     }
     .contact-us .general-details{

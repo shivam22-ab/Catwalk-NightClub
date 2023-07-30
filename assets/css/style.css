@@ -96,7 +96,7 @@ main{
 
 .small-bold {
     font-size: 1rem;
-    font-weight: 600;
+    font-weight: 700;
 }
 
 .extra-sm-bold {
@@ -141,7 +141,7 @@ main{
 .gap4{
     gap: 4rem;
 }
-.card{
+.card, a.card{
     transition: .3s ease-in;
 }
 .card:hover{
@@ -186,7 +186,10 @@ header {
     color: #000;
 }
 .close svg{
+    width: 3rem;
+    height: 3rem;
     transition: .3s ease-in;
+    margin-top: 2rem;
 }
 .close svg:hover path{
     fill: #000;
@@ -202,6 +205,7 @@ header {
 /* Navbar design */
 /* Slide down design */
 .slide-down{
+    width: 100vw;
     position: fixed !important;
     left: -150%;
     top: 0;
@@ -214,6 +218,22 @@ header {
 .ham-contents{
     width: 100%;
     height: 100%;
+}
+.ham-contents .nav-links a::after{
+    content: '';
+    display: block;
+    height:0.2rem;
+    width: 100%;
+    background-color: #FCD406;
+    transform: scaleX(0);
+    transition: .3s ease-in-out;
+    transform-origin: left;
+}
+.ham-contents .nav-links a:hover{
+    color: #FCD406 !important;
+}
+.ham-contents .nav-links a:hover::after{
+    transform: scaleX(1);
 }
 .ham-contents .overlay{
     position: absolute;
@@ -230,8 +250,9 @@ header {
     z-index: 1;
 }
 .ham-contents .nav-links a, .ham-contents .end-content .social-icons{
-    z-index: 2 !important;
+    z-index: 2;
 }
+
 .ham-contents .end-content{
     margin-top: 10rem;
     padding-bottom: 10rem;
@@ -358,9 +379,6 @@ header {
     width: 60px;
     height: 80px;
 }
-.testimonial-details .paragraph{
-    line-height: 1.7rem;
-}
 .next svg{
     width: 50px;
     height: 50px;
@@ -449,6 +467,8 @@ header {
     background: inherit;
     outline: none;
     border: 2px solid #BCBCBC;
+    color: #BCBCBC;
+    font-size: 1.2rem;
 }
 /* Custom checkbox style */
 .check {
@@ -459,7 +479,7 @@ header {
     height: 4rem;
     outline: none;
     cursor: pointer;
-    border: 2px solid #BCBCBC; 
+    border: 2px solid #BCBCBC;
     background-color: #070707;
 }
 
@@ -483,7 +503,7 @@ header {
 
 .submit {
     background: inherit;
-    border: 2px solid #BCBCBC; 
+    border: 2px solid #BCBCBC;
     transition: .3s ease-in;
 }
 .submit:hover{
@@ -494,7 +514,7 @@ header {
 /* Footer design */
 footer{
     background: #000;
-    height: 60vh;
+    width: 100vw;
     overflow: hidden;
 }
 footer::before{
@@ -507,13 +527,13 @@ footer::before{
     margin-bottom: 4rem;
 }
 .footer-logo{
-    width: 150px;
+    width: 200px;
 }
 .yellow-torch{
     top:0;
     left: -2%;
     z-index: 1;
-    
+
 }
 .yellow-torch .torch>svg, .blue-torch .torch>svg{
     width: 200px;
@@ -534,7 +554,6 @@ footer::before{
     right:40%;
 }
 footer .end-content{
-    margin-top: 4rem;
     z-index: 2;
 }
 
@@ -581,9 +600,9 @@ footer .end-content{
         transform: translateY(-15px) rotate(20deg);
     }
 }
-footer .social-icons svg, .close svg{
-    width: 3rem;
-    height: 3rem;
+footer .social-icons svg{
+    width: 4rem;
+    height: 4rem;
 }
 .social-icons svg{
     width: 4rem;
@@ -598,9 +617,57 @@ footer .social-icons svg, .close svg{
 .social-icons svg:hover rect{
     fill: #FCD406;
 }
+.footer-card{
+    background: rgba(15, 15, 15, 0.50);
+    backdrop-filter: blur(40px);
+    z-index: 2;
+    padding: 4rem;
+    width: 100%;
+}
+.footer-card .card-contents{
+    display: flex;
+    align-items: flex-start;
+    gap: 8rem;
+}
+.footer-card .card-contents .col{
+    flex: 0.25;
+}
+.footer-contents{
+    width: 80vw;
+    margin: auto;
+}
+.footer-card .card-contents .events .event-links .links{
+    border-bottom: 1px solid rgba(188, 188, 188, 0.32);
+}
+.footer-card .card-contents .events .event-links, .footer-card .card-contents .nav-links .links, .footer-card .card-contents .contact-info .info{
+    gap:2.5rem;
+}
+.footer-card .card-contents .event-title{
+    font-size: 1.25rem;
+    font-weight:700;
+}
+.footer-card .card-contents .paragraph{
+    font-size: 1.25rem;
+}
+.footer-card .card-contents .paragraph span.event-link{
+    font-weight:400 !important;
+}
+.footer-card .card-contents .images img{
+    width: 8.5625rem;
+    height: 8.5rem;
+    flex-shrink: 0;
+    object-fit: cover;
+}
+.footer-card .card-contents a.paragraph:hover{
+    color: #FCD406;
+}
+footer .end-content svg{
+    height: 4rem;
+    width: 4rem;
+}
 /* Footer design */
 /* Validation color */
-#name.error::placeholder, #email.error::placeholder{
+#name.error::placeholder, #email.error::placeholder, #phone.error::placeholder,#subject.error::placeholder,#message.error::placeholder{
     color: #ca0d00;
 }
 /* Validation color */
@@ -645,7 +712,9 @@ footer .social-icons svg, .close svg{
     .contact-contents>.paragraph{
         width: 90%;
     }
-
+    .footer-card .card-contents{
+        gap: 5rem;
+    }
 }
 @media (max-width:900px) {
     main{
@@ -660,11 +729,11 @@ footer .social-icons svg, .close svg{
     .small-title{
         font-size: 1.4rem;
     }
-    
+
     .testimonial-img{
         height: 600px;
     }
-   
+
 }
 @media (max-width:767px) {
     .main-title{
@@ -700,9 +769,6 @@ footer .social-icons svg, .close svg{
     }
     .contact-contents>.paragraph{
         width: 90%;
-    }
-    footer{
-        height: 50vh;
     }
     .yellow-torch .torch>svg, .blue-torch .torch>svg{
         width: 150px;
@@ -773,15 +839,15 @@ footer .social-icons svg, .close svg{
         width: 3.3rem;
         height: 3.3rem;
     }
-    .events{
-        padding-top: 3rem;
-    }
     .service-details .card-header svg{
         width: 50px;
         height: 50px;
     }
     .testimonial-left .card, .service-details .card{
         padding: 2rem;
+    }
+    .testimonial-details.px-4{
+        padding: auto 1.2rem !important;
     }
     .testimonial-img{
         height: 400px;
@@ -799,6 +865,7 @@ footer .social-icons svg, .close svg{
     }
     .large-title{
         font-size: 2.3rem;
+        line-height: 3rem;
     }
     .next svg{
         width: 40px;
@@ -807,7 +874,7 @@ footer .social-icons svg, .close svg{
     .contact-form .form-group input::placeholder, .form-group textarea::placeholder{
         font-size: 1rem;
      }
-    .contact-form{
+    .contact-form, .footer-card{
         padding: 2.5rem;
     }
     .check:before {
@@ -825,6 +892,9 @@ footer .social-icons svg, .close svg{
     }
     footer::before{
         margin-bottom: 2rem;
+    }
+    .footer-logo{
+        width: 150px;
     }
     .yellow-torch{
         left: -3%;
@@ -885,8 +955,32 @@ footer .social-icons svg, .close svg{
     .gap4{
         gap: 3rem;
     }
+    .footer-contents{
+        width: 100vw;
+    }
+    .footer-card{
+        width: 90vw;
+    }
+    .footer-card .footer-contents .row .col-sm-4{
+        width: 42% !important;
+    }
+    .footer-card .row .col-12{
+        width: 42% !important;
+    }
+    .end-content{
+        padding-left: 1.5rem;
+        padding-right: 1.5rem;
+    }
+    footer .end-content svg{
+        height: 3rem;
+        width: 3rem;
+        gap: 2rem !important;
+    }
 }
 @media (max-width:480px) {
+    .gap4{
+        gap:3rem;
+    }
     .author-title{
         font-size: 0.9rem;
     }
@@ -944,9 +1038,6 @@ footer .social-icons svg, .close svg{
         font-size: 0.9rem;
         padding: 0.6rem 1.6rem;
     }
-    .events{
-        padding-top: 2rem;
-    }
 
     .event-details .row .card .box {
         width: 3rem;
@@ -954,9 +1045,6 @@ footer .social-icons svg, .close svg{
     }
     .card-body a{
         font-size: 0.9rem;
-    }
-    .service-details .paragraph, .testimonial-details .paragraph{
-        line-height: 1.45rem;
     }
     .testimonial-left .card, .service-details .card{
         padding: 1.5rem;
@@ -977,7 +1065,7 @@ footer .social-icons svg, .close svg{
         font-size: 0.8rem;
         padding: 1rem;
     }
-    .contact-form{
+    .contact-form, .contact-form, .footer-card{
         padding: 2rem;
     }
     .contact-form form .gap2, .contact-form form{
@@ -1012,9 +1100,6 @@ footer .social-icons svg, .close svg{
     .submit{
         padding: 0.7rem 2rem;
     }
-    footer{
-        height: 40vh;
-    }
     .yellow-torch .torch>svg, .blue-torch .torch>svg{
         width: 120px;
         height: 60px;
@@ -1026,6 +1111,34 @@ footer .social-icons svg, .close svg{
         top:1%;
         right:-4.5%;
     }
+    @keyframes moveYellow {
+        20% {
+            transform: translateY(-10px) rotate(-25deg);
+        }
+        80% {
+            transform: translateY(18px) translateX(-15px) rotate(45deg);
+        }
+    }
+ @keyframes moveBlue {
+        20% {
+            transform: translateY(0) translateX(20px) rotate(-40deg);
+        }
+        40% {
+            transform: translateY(-5px) rotate(10deg);
+        }
+        60% {
+            transform: translateY(-10px) rotate(40deg);
+        }
+        80% {
+            transform: translateY(-15px) rotate(25deg);
+        }
+    }
+    .yellow-torch {
+        animation: moveYellow 15s infinite linear;
+    }
+    .blue-torch {
+        animation: moveBlue 15s infinite linear;
+    }
     .ham-contents .overlay img{
         scale: 2;
     }
@@ -1035,6 +1148,21 @@ footer .social-icons svg, .close svg{
     .social-icons svg{
         width: 2.5rem;
         height: 2.5rem;
+    }
+    .footer-card .card-contents{
+        gap:4rem;
+    }
+    .footer-card .extra-sm-title{
+        font-size: 1.2rem;
+    }
+    .footer-card .card-contents .paragraph{
+        font-size: 1rem;
+    }
+    .footer-card .card-contents .events .event-links, .footer-card .card-contents .nav-links .links, .footer-card .card-contents .contact-info .info {
+        gap:1.5rem;
+    }
+    .footer-card .gap3{
+        gap:2rem;
     }
 }
 @media (max-width:400px) {
@@ -1049,13 +1177,20 @@ footer .social-icons svg, .close svg{
         height: 100vh;
     }
     .overlay{
-        bottom: 5%;   
+        bottom: 5%;
     }
     .overlay img.hashtext{
         bottom: 10%;
     }
     .large-title{
         font-size: 1.8rem;
+    }
+    .paragraph{
+        font-size: 0.9rem;
+    }
+    .footer-card .card-contents .images img{
+        width: 7.5rem;
+        height: 7.5rem;
     }
 }
 
