@@ -12,7 +12,7 @@ body {
 main{
     display: flex;
     flex-direction: column;
-    gap: 16rem;
+    gap: 15rem;
 }
 .h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6{
     margin-bottom: 0 !important;
@@ -40,30 +40,24 @@ main{
 }
 /* Classes for font sizes */
 .large-title{
-    font-size: 5rem;
-    font-weight: 800;
-    line-height: 4.5rem;
-}
-.main-title {
     font-size: 3.5rem;
     font-weight: 800;
     line-height: 3rem;
 }
-
 .mid-title {
-    font-size: 2.5rem;
-    font-weight: 700;
+    font-size: 2rem;
+    font-weight: 800;
     line-height: 3rem;
 }
 
 .low-title {
-    font-size: 1.8rem;
+    font-size: 1.7rem;
     font-weight: 600;
 }
 
 .small-title {
-    font-size: 2rem;
-    font-weight: 600;
+    font-size: 1.7rem;
+    font-weight: 800;
     line-height: 2.5rem;
 }
 .author-title{
@@ -104,7 +98,7 @@ main{
     font-weight: 600;
 }
 .paragraph{
-    font-size: 1.2rem;
+    font-size: 1.15rem;
     line-height: 2rem;
 }
 
@@ -170,8 +164,8 @@ header {
 }
 
 .bar svg,.ticket svg{
-    height: 40px;
-    width: 40px;
+    height: 2.5rem;
+    width: 2.5rem;
 }
 
 .bar svg path,
@@ -186,10 +180,10 @@ header {
     color: #000;
 }
 .close svg{
-    width: 3rem;
-    height: 3rem;
+    width: 2.5rem;
+    height: 2.5rem;
     transition: .3s ease-in;
-    margin-top: 2rem;
+    margin-top: 2.5rem;
 }
 .close svg:hover path{
     fill: #000;
@@ -200,7 +194,7 @@ header {
 }
 
 .logo img{
-    width: 200px;
+    width: 180px;
 }
 /* Navbar design */
 /* Slide down design */
@@ -222,7 +216,7 @@ header {
 .ham-contents .nav-links a::after{
     content: '';
     display: block;
-    height:0.2rem;
+    height:0.15rem;
     width: 100%;
     background-color: #FCD406;
     transform: scaleX(0);
@@ -245,7 +239,7 @@ header {
     transform: translateY(70%);
 }
 .ham-contents .overlay img{
-    scale: 2.5;
+    scale: 2;
     opacity: .1;
     z-index: 1;
 }
@@ -255,14 +249,13 @@ header {
 
 .ham-contents .end-content{
     margin-top: 10rem;
-    padding-bottom: 10rem;
 }
 .active{
     left: 0% !important;
 }
 .close-svg{
-    width: 3rem;
-    height: 3rem;
+    width: 2rem;
+    height: 2rem;
 }
 /* Slide down design */
 /* Body design */
@@ -323,9 +316,9 @@ header {
 /* Body design */
 /* Events design */
 .browse a{
-    padding: 1.5rem 3rem;
+    padding: 1rem 3rem;
     font-weight: 600;
-    font-size: 1.5rem;
+    font-size: 1.25rem;
 }
 .event-details .card, .blogs-details .card {
     background: #181818;
@@ -434,7 +427,7 @@ header {
 .contact-form{
     background: #0F0F0F;
     width: 74rem;
-    padding: 4rem;
+    padding: 3rem;
     margin: auto;
 }
 .contact-form form{
@@ -443,7 +436,7 @@ header {
 .submit{
     padding: 1.2rem 3rem;
 }
-.contact-contents>.paragraph{
+.contact-title>.paragraph{
     width: 59.375rem;
     margin: auto;
 }
@@ -566,16 +559,16 @@ footer .end-content{
         transform: translateY(0) rotate(0deg);
     }
     20% {
-        transform: translateY(-20px) translateX(10px) rotate(-20deg);
+        transform: translateY(-20px) translateX(20px) rotate(-20deg);
     }
     40% {
-        transform: translateY(-10px)  rotate(-10deg);
+        transform: translateY(-10px) translateX(10px) rotate(-15deg);
     }
     60% {
-        transform: translateY(5px) rotate(0deg);
+        transform: translateY(5px) rotate(10deg);
     }
     80% {
-        transform: translateY(10px) rotate(10deg);
+        transform: translateY(10px) rotate(15deg);
     }
 }
 /* Apply the animation to the Blue torch */
@@ -588,7 +581,7 @@ footer .end-content{
         transform: translateY(0) rotate(0deg);
     }
     20% {
-        transform: translateY(10px) translateX(20px) rotate(-20deg);
+        transform: translateY(10px) translateX(-10px) rotate(-20deg);
     }
     40% {
         transform: translateY(-5px) rotate(10deg);
@@ -600,13 +593,9 @@ footer .end-content{
         transform: translateY(-15px) rotate(20deg);
     }
 }
-footer .social-icons svg{
-    width: 4rem;
-    height: 4rem;
-}
 .social-icons svg{
-    width: 4rem;
-    height: 4rem;
+    width: 3rem;
+    height: 3rem;
 }
 .social-icons svg, .social-icons svg path{
     transition: .3s ease-in;
@@ -621,19 +610,19 @@ footer .social-icons svg{
     background: rgba(15, 15, 15, 0.50);
     backdrop-filter: blur(40px);
     z-index: 2;
-    padding: 4rem;
+    padding: 3rem;
     width: 100%;
 }
 .footer-card .card-contents{
     display: flex;
     align-items: flex-start;
-    gap: 8rem;
+    gap: 5rem;
 }
 .footer-card .card-contents .col{
     flex: 0.25;
 }
 .footer-contents{
-    width: 80vw;
+    width: 90vw;
     margin: auto;
 }
 .footer-card .card-contents .events .event-links .links{
@@ -643,11 +632,7 @@ footer .social-icons svg{
     gap:2.5rem;
 }
 .footer-card .card-contents .event-title{
-    font-size: 1.25rem;
     font-weight:700;
-}
-.footer-card .card-contents .paragraph{
-    font-size: 1.25rem;
 }
 .footer-card .card-contents .paragraph span.event-link{
     font-weight:400 !important;
@@ -662,8 +647,8 @@ footer .social-icons svg{
     color: #FCD406;
 }
 footer .end-content svg{
-    height: 4rem;
-    width: 4rem;
+    height: 3rem;
+    width: 3rem;
 }
 /* Footer design */
 /* Validation color */
@@ -709,7 +694,7 @@ footer .end-content svg{
     .contact-form form .gap2{
         gap: 3.5rem;
     }
-    .contact-contents>.paragraph{
+    .contact-title>.paragraph{
         width: 90%;
     }
     .footer-card .card-contents{
@@ -736,9 +721,6 @@ footer .end-content svg{
 
 }
 @media (max-width:767px) {
-    .main-title{
-        line-height: 4rem;
-    }
     .video, .bg-img{
         height: 95vh;
     }
@@ -767,7 +749,7 @@ footer .end-content svg{
     .service-details .row .col-12{
         width: 100% !important;
     }
-    .contact-contents>.paragraph{
+    .contact-title>.paragraph{
         width: 90%;
     }
     .yellow-torch .torch>svg, .blue-torch .torch>svg{
@@ -793,10 +775,6 @@ footer .end-content svg{
     .large-title{
         font-size: 2.8rem;
     }
-    .main-title{
-        font-size: 2.4rem;
-        line-height: 3rem;
-    }
     .low-title {
         font-size: 1.3rem;
         line-height: 1.7rem;
@@ -809,8 +787,8 @@ footer .end-content svg{
         line-height: 1.1rem;
     }
     .mid-title{
-        font-size: 1.5rem;
-        line-height: 1.8rem;
+        font-size: 1.8rem;
+        line-height: 2.5rem;
     }
     .small-bold{
         font-size: 0.9rem;
@@ -861,11 +839,10 @@ footer .end-content svg{
     }
     .browse a{
         font-size: 1.2rem;
-        padding: 0.8rem 1.8rem;
     }
     .large-title{
         font-size: 2.3rem;
-        line-height: 3rem;
+        line-height: 2.8rem;
     }
     .next svg{
         width: 40px;
@@ -886,7 +863,7 @@ footer .end-content svg{
         width: 2.5rem;
         height: 2.5rem;
     }
-    .contact-contents>.paragraph{
+    .contact-title>.paragraph{
         width: 100%;
         line-height: 1.8rem;
     }
@@ -981,12 +958,15 @@ footer .end-content svg{
     .gap4{
         gap:3rem;
     }
+    .hero.gap4{
+        gap: 4rem;
+    }
     .author-title{
         font-size: 0.9rem;
     }
     .large-title{
         font-size: 2rem;
-        line-height: 3rem;
+        line-height: 2.5rem;
     }
     .low-title
     {
@@ -994,6 +974,7 @@ footer .end-content svg{
     }
     .small-title{
         font-size: 1.3rem;
+        line-height: 2rem;
     }
     .extra-sm-title{
         font-size: 1rem;
@@ -1001,20 +982,12 @@ footer .end-content svg{
     .extra-sm-bold{
         font-size: 0.6rem;
     }
-    .main-title{
-        font-size: 2rem;
-    }
     .medium-bold{
         font-size: 0.9rem;
         line-height: 1.1rem;
     }
     .mid-title{
-        font-size: 1.3rem;
-    }
-
-    .small-bold{
-        font-size: 0.8rem;
-        font-weight: 800;
+        font-size: 1.4rem;
     }
     .small-text{
         font-size: 1rem;
@@ -1032,7 +1005,6 @@ footer .end-content svg{
     }
     .browse a:not(.flex-buttons a){
         font-size: 1rem;
-        padding: 1.2rem 4rem;
     }
     .flex-buttons a{
         font-size: 0.9rem;
@@ -1150,7 +1122,7 @@ footer .end-content svg{
         height: 2.5rem;
     }
     .footer-card .card-contents{
-        gap:4rem;
+        gap:3rem;
     }
     .footer-card .extra-sm-title{
         font-size: 1.2rem;

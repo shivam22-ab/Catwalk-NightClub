@@ -19,14 +19,14 @@ body {
     font-size: 1.2rem;
     font-weight: 600;
 }
-.links{
+.pagination  .links{
     width: 4rem;
     height: 4rem;
 }
-.links:hover a, .links.active a{
+.pagination  .links:hover a, .pagination  .links.active a{
     color: #000;
 }
-.links.active{
+.pagination  .links.active{
     background: #FCD406;
 }
 /* Pagination design */
@@ -39,7 +39,7 @@ body {
     .list{
         padding-top: 8rem;
     }
-    .links{
+    .pagination  .links{
         width: 3rem;
         height: 3rem;
     }
