@@ -12,10 +12,14 @@ body {
 main{
     display: flex;
     flex-direction: column;
-    gap: 15rem;
+    gap: 10rem;
 }
-.h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6{
+h1, h2, h3, h4, h5, h6, p{
     margin-bottom: 0 !important;
+}
+.card-body{
+    padding-left: 1.5rem !important;
+    padding-right: 1.5rem !important;
 }
 /* Custom classes */
 .dark {
@@ -210,8 +214,8 @@ header {
     transition-property: left;
 }
 .ham-contents{
-    width: 100%;
-    height: 100%;
+    width: 100vw;
+    height: 100vh;
 }
 .ham-contents .nav-links a::after{
     content: '';
@@ -243,13 +247,10 @@ header {
     opacity: .1;
     z-index: 1;
 }
-.ham-contents .nav-links a, .ham-contents .end-content .social-icons{
+.ham-contents .nav-links a, .ham-contents .end-content{
     z-index: 2;
 }
 
-.ham-contents .end-content{
-    margin-top: 10rem;
-}
 .active{
     left: 0% !important;
 }
@@ -335,20 +336,18 @@ header {
   .event-details .col-lg-5, .gallery-details .col-lg-6 {
     display: flex;
   }
-
-  .event-details .col-lg-5 .card {
-    flex: 1;
-  }
-
-  .event-details .col-lg-7 .card-img-top,
-  .event-details .col-lg-5 .card-img-top {
+  .event-details .col-lg-7 .card-img-top
+ {
     height: 100%;
+    object-fit: cover;
+  }
+  .event-details .col-lg-5 .card-img-top{
+    height: 15rem;
     object-fit: cover;
   }
   .event-details .col-lg-5{
     flex-direction: column;
   }
-
 /* Events design */
 /* Gallery design */
 .show{
@@ -365,8 +364,7 @@ header {
 /* Testimonials design */
 .testimonial-left .card, .service-details .card{
     background: #0F0F0F;
-    scale: 1;
-    padding: 3rem;
+    padding: 2.5rem;
 }
 .testimonial-left .card .card-header svg{
     width: 60px;
@@ -388,10 +386,6 @@ header {
 }
 .next button:hover svg{
     color: #000;
-}
-.testimonial-img{
-    height: 750px;
-    object-fit: cover;
 }
 
 .testimonial-details .overlay {
@@ -426,12 +420,12 @@ header {
 
 .contact-form{
     background: #0F0F0F;
-    width: 74rem;
-    padding: 3rem;
+    width: 65%;
+    padding: 2.5rem;
     margin: auto;
 }
 .contact-form form{
-    gap: 3.5rem;
+    gap: 2.5rem;
 }
 .submit{
     padding: 1.2rem 3rem;
@@ -463,6 +457,12 @@ header {
     color: #BCBCBC;
     font-size: 1.2rem;
 }
+
+.contact-form .form-group textarea:focus, .contact-form .form-group input:focus
+{
+    outline: none !important;
+    border: 2px solid #FCD406 !important;
+}
 /* Custom checkbox style */
 .check {
     appearance: none;
@@ -493,14 +493,14 @@ header {
 .check:checked:before, .submit, .contact-form form label {
     color: #BCBCBC;
 }
-
 .submit {
     background: inherit;
     border: 2px solid #BCBCBC;
     transition: .3s ease-in;
 }
 .submit:hover{
-    background: #BCBCBC;
+    background: #FCD406;
+    border: 2px solid #FCD406;
     color: #000;
 }
 /* contact design */
@@ -643,7 +643,10 @@ footer .end-content{
     flex-shrink: 0;
     object-fit: cover;
 }
-.footer-card .card-contents a.paragraph:hover{
+.footer-card span.event-link a{
+    color: #c2c2c2;
+}
+.footer-card .card-contents a.paragraph:hover, .footer-card span.event-link a:hover{
     color: #FCD406;
 }
 footer .end-content svg{
@@ -688,11 +691,8 @@ footer .end-content svg{
     .contact-form form .row .col.form-group{
         width: 100% !important;
     }
-    .contact-form form{
-        gap: 3.5rem;
-    }
-    .contact-form form .gap2{
-        gap: 3.5rem;
+    .contact-form form, .contact-form .row{
+        gap: 2rem;
     }
     .contact-title>.paragraph{
         width: 90%;
@@ -702,9 +702,6 @@ footer .end-content svg{
     }
 }
 @media (max-width:900px) {
-    main{
-        gap: 10rem;
-    }
     .club-description .container{
         max-width: 90%;
     }
@@ -713,10 +710,6 @@ footer .end-content svg{
     }
     .small-title{
         font-size: 1.4rem;
-    }
-
-    .testimonial-img{
-        height: 600px;
     }
 
 }
@@ -733,7 +726,10 @@ footer .end-content svg{
     .show{
         display: flex !important;
     }
-
+    .event-details .col-lg-5 .card-img-top{
+        height: 100%;
+        object-fit: cover;
+      }
     .gallery .left-col{
         padding: 0 1rem !important;
     }
@@ -826,9 +822,6 @@ footer .end-content svg{
     }
     .testimonial-details.px-4{
         padding: auto 1.2rem !important;
-    }
-    .testimonial-img{
-        height: 400px;
     }
     .testimonial-left .card .card-header svg{
         width: 40px;
@@ -1040,7 +1033,7 @@ footer .end-content svg{
         padding: 2rem;
     }
     .contact-form form .gap2, .contact-form form{
-        gap: 2rem;
+        gap: 1.5rem;
     }
     .submit{
         padding: 1rem 2rem;

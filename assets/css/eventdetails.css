@@ -3,9 +3,6 @@
     padding: 0;
     box-sizing: border-box;
 }
-.event-info{
-    gap: 10rem;
-}
 .general-info{
     height: 100vh;
 }
@@ -155,9 +152,6 @@
     }
     .general-details .time{
         font-size: 1.2rem;
-    }
-    .event-info{
-        gap: 0;
     }
     .detail-info{
         gap: 1rem;
