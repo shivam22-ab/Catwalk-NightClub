@@ -611,7 +611,7 @@ footer .end-content{
     backdrop-filter: blur(40px);
     z-index: 2;
     padding: 3rem;
-    width: 100%;
+    width: auto;
 }
 .footer-card .card-contents{
     display: flex;
@@ -944,10 +944,6 @@ footer .end-content svg{
     .footer-card .row .col-12{
         width: 42% !important;
     }
-    .end-content{
-        padding-left: 1.5rem;
-        padding-right: 1.5rem;
-    }
     footer .end-content svg{
         height: 3rem;
         width: 3rem;
@@ -995,6 +991,9 @@ footer .end-content svg{
     .paragraph{
         font-size: 1rem;
         line-height: 1.6rem;
+    }
+    .close svg{
+        margin-top: 1.5rem;
     }
     .overlay{
         height:25%;
@@ -1139,7 +1138,6 @@ footer .end-content svg{
 }
 @media (max-width:400px) {
     .ham-contents .end-content{
-        margin-top: 8rem;
         padding-bottom: 8rem;
     }
     .nav-links.gap3{
