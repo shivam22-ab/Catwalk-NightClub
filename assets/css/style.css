@@ -51,7 +51,6 @@ h1, h2, h3, h4, h5, h6, p{
 .mid-title {
     font-size: 2rem;
     font-weight: 800;
-    line-height: 3rem;
 }
 
 .low-title {
@@ -187,7 +186,7 @@ header {
     width: 2.5rem;
     height: 2.5rem;
     transition: .3s ease-in;
-    margin-top: 2.5rem;
+    margin-top: 2.2rem;
 }
 .close svg:hover path{
     fill: #000;
@@ -425,7 +424,7 @@ header {
     margin: auto;
 }
 .contact-form form{
-    gap: 2.5rem;
+    gap: 2rem;
 }
 .submit{
     padding: 1.2rem 3rem;
@@ -478,7 +477,7 @@ header {
 
 .check:checked {
     background: #070707;
-    color: #BCBCBC;
+    color: #FCD406;
 }
 .check:before {
     content: '\2713'; /* Checkmark symbol */
@@ -638,8 +637,8 @@ footer .end-content{
     font-weight:400 !important;
 }
 .footer-card .card-contents .images img{
-    width: 8.5625rem;
-    height: 8.5rem;
+    width: 8rem;
+    height: 8rem;
     flex-shrink: 0;
     object-fit: cover;
 }
@@ -685,8 +684,11 @@ footer .end-content svg{
         flex-direction: column-reverse;
         gap: 1.5rem;
     }
-    .testimonial-details .row .col-lg-6{
-        width: 100% !important;
+    .testimonial-details .right-image{
+        height:40rem;
+    }
+    .contact-form{
+        width: 95%;
     }
     .contact-form form .row .col.form-group{
         width: 100% !important;
@@ -742,6 +744,9 @@ footer .end-content svg{
     .testimonial-details{
         padding-bottom: 0;
     }
+    .testimonial-details .right-image{
+        height:35rem;
+    }
     .service-details .row .col-12{
         width: 100% !important;
     }
@@ -758,7 +763,9 @@ footer .end-content svg{
 }
 
 @media (max-width:600px) {
-
+    main{
+        gap:8rem;
+    }
     .logo img{
         width: 100px;
     }
@@ -784,7 +791,6 @@ footer .end-content svg{
     }
     .mid-title{
         font-size: 1.8rem;
-        line-height: 2.5rem;
     }
     .small-bold{
         font-size: 0.9rem;
@@ -817,8 +823,11 @@ footer .end-content svg{
         width: 50px;
         height: 50px;
     }
-    .testimonial-left .card, .service-details .card{
-        padding: 2rem;
+    .service-details .card{
+        padding: 1.5rem;
+    }
+    .testimonial-left .card{
+        padding: 2.25rem;
     }
     .testimonial-details.px-4{
         padding: auto 1.2rem !important;
@@ -829,6 +838,9 @@ footer .end-content svg{
     }
     .testimonial-details .low-title{
         padding-right: 1rem;
+    }
+    .testimonial-details .right-image{
+        height:30rem;
     }
     .browse a{
         font-size: 1.2rem;
@@ -844,8 +856,9 @@ footer .end-content svg{
     .contact-form .form-group input::placeholder, .form-group textarea::placeholder{
         font-size: 1rem;
      }
-    .contact-form, .footer-card{
-        padding: 2.5rem;
+    .contact-form{
+        padding: 1.5rem;
+        width: 90%;
     }
     .check:before {
         width: 2.5rem;
@@ -930,12 +943,19 @@ footer .end-content svg{
     }
     .footer-card{
         width: 90vw;
+        padding:1.5rem;
+    }
+    .footer-card .card-contents .gap3{
+        gap:2rem;
     }
     .footer-card .footer-contents .row .col-sm-4{
         width: 42% !important;
     }
     .footer-card .row .col-12{
         width: 42% !important;
+    }
+    .footer-card .extra-sm-title{
+        font-size: 1.25rem;
     }
     footer .end-content svg{
         height: 3rem;
@@ -986,7 +1006,7 @@ footer .end-content svg{
         line-height: 1.6rem;
     }
     .close svg{
-        margin-top: 1.5rem;
+        margin-top: 1.25rem;
     }
     .overlay{
         height:25%;
@@ -1010,7 +1030,10 @@ footer .end-content svg{
     .card-body a{
         font-size: 0.9rem;
     }
-    .testimonial-left .card, .service-details .card{
+    .testimonial-details .right-image{
+        height:25rem;
+    }
+    .service-details .card{
         padding: 1.5rem;
     }
     .testimonial-left .card .card-header svg{
@@ -1024,13 +1047,14 @@ footer .end-content svg{
     .contact{
         padding-bottom: 5rem;
     }
+
     .contact-form .form-group input:not(#checkbox) {
         height: 3.5rem;
         font-size: 0.8rem;
         padding: 1rem;
     }
     .contact-form, .contact-form, .footer-card{
-        padding: 2rem;
+        padding: 1.6rem;
     }
     .contact-form form .gap2, .contact-form form{
         gap: 1.5rem;

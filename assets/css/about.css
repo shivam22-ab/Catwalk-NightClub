@@ -19,6 +19,61 @@
   height: 100%;
   background-image: linear-gradient(to right, rgba(7, 7, 7, 1) 15%, rgba(255, 255, 255, 0) 100%);
 }
+.dj-details .bottom-row p{
+  line-height: 1.8rem;
+}
+/* Style for navigation arrows */
+.swiper-button-next:after, .swiper-button-prev:after{
+  font-size: 1.25rem !important;
+  font-weight: 800 !important;
+}
+.swiper-button-next:after{
+  margin-left: 5px;
+}
+.swiper-button-prev:after{
+  margin-right: 2px;
+}
+.swiper-button-next, .swiper-button-prev {
+  position: absolute !important;
+}
+.swiper-button-prev, .swiper-button-next{
+  color: #FCD406 !important; 
+  background: #0b0b0b !important;
+  border: 2px solid #FCD406;
+  padding: 1.5rem;
+  transform: translateY(-100px);
+}
+.container{
+  overflow: hidden;
+}
+/* Style for pagination indicators */
+.swiper-pagination {
+    bottom: 10px;
+    position: static !important;
+}
+.swiper-pagination-bullet:not(.swiper-pagination-bullet-active) {
+    width: 0.75rem !important;
+    height: 0.75rem !important;
+    background-color:  #FCD406 !important;
+    border-radius: 0 !important;
+    opacity: 1;
+}
+.swiper-pagination-bullet-active{
+  width: 0.75rem !important;
+  height: 0.75rem !important;
+  background-color: inherit !important;
+  border: 2px solid #FCD406 !important;
+  border-radius: 0 !important;
+  opacity: 1;
+  border: 2px solid #FCD406 !important;
+}
+.swiper-pagination-bullet-active {
+    background-color: #000;
+}
+.swiper-notification{
+  display: none !important;
+
+}
 @media (max-width:992px){
   .about .title{
     text-align: center;
@@ -31,5 +86,23 @@
     width: 100%;
     height: 35%;
     background-image: linear-gradient(to top, rgba(7, 7, 7, 1) 15%, rgba(255, 255, 255, 0) 100%);
+  }
+  .swiper-button-prev, .swiper-button-next{
+    transform: translateY(-50px);
+  }
+}
+@media (max-width:480px) {
+  .swiper-button-prev, .swiper-button-next{
+    padding: 1rem;
+    width: 2.5rem !important;
+    height: 2.5rem !important;
+  }
+  
+  .swiper-button-next:after, .swiper-button-prev:after{
+    font-size: 0.9rem !important;
+  }
+  .dj-details .bottom-row p{
+    font-size: 0.9rem;
+    line-height: 1.5rem;
   }
 }
